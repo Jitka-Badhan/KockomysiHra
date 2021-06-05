@@ -9,6 +9,7 @@ const Item = ({ pic }) => {
 const Items = () => {
   const buildings = data.buildings.map((item) => {
     return {
+      key: item.name,
       name: item.name,
       imgUrl: item.mapImg,
     };
@@ -22,17 +23,17 @@ const Items = () => {
     <div className="container inventory__items">
       <div className="inventory__column">
         {column1.map((item) => (
-          <Item pic={item.imgUrl} />
+          <Item pic={item.imgUrl} key={item.key} />
         ))}
       </div>
       <div className="inventory__column">
         {column2.map((item) => (
-          <Item pic={item.imgUrl} />
+          <Item pic={item.imgUrl} key={item.key} />
         ))}
       </div>
       <div className="inventory__column">
         {column3.map((item) => (
-          <Item pic={item.imgUrl} />
+          <Item pic={item.imgUrl} key={item.key} />
         ))}
       </div>
     </div>

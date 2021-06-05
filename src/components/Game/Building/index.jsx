@@ -104,31 +104,46 @@ const Building = ({ name, backHome }) => {
               </div>
             </div>
           </div>
-        </>}
-      {Step === 2 &&
+        </>
+      )}
+      {Step === 2 && (
         <>
-          {answer.points === 1 &&
+          {answer.points === 1 && (
             <div className="card game__quizz__result">
-              <img src="/assets/cross.svg" alt="cross" className="top-right cancel" />
               <img
-                src="assets/quizzes/cat_dead.png"
-                className="result__img"
+                src="/assets/cross.svg"
+                alt="cross"
+                className="top-right cancel"
               />
+              <img src="assets/quizzes/cat_dead.png" className="result__img" />
               <div className="result__text">
                 <h4>Bravo!</h4>
                 <p></p>
                 <p>{answer.finished}</p>
                 <p></p>
-                <p>Tvé R se zvyšuje o <strong>1</strong>.</p>
+                <p>
+                  Tvé R se zvyšuje o <strong>1</strong>.
+                </p>
               </div>
               <div className="card__buttons">
-                <button className="cancel" onClick={() => { setStep(0) }}>Ok</button>
+                <button
+                  className="cancel"
+                  onClick={() => {
+                    setStep(0);
+                  }}
+                >
+                  Ok
+                </button>
               </div>
             </div>
-          }
-          {answer.points === 0 &&
+          )}
+          {answer.points === 0 && (
             <div className="card game__quizz__result">
-              <img src="/assets/cross.svg" alt="cross" className="top-right cancel" />
+              <img
+                src="/assets/cross.svg"
+                alt="cross"
+                className="top-right cancel"
+              />
               <img
                 src="assets/quizzes/cat_healthy.png"
                 className="result__img"
@@ -138,35 +153,54 @@ const Building = ({ name, backHome }) => {
                 <p></p>
                 <p>{answer.finished}</p>
                 <p></p>
-                <p>Tvé R se zvyšuje o <strong>0</strong> bodů.</p>
+                <p>
+                  Tvé R se zvyšuje o <strong>0</strong> bodů.
+                </p>
               </div>
               <div className="card__buttons">
-                <button className="cancel" onClick={() => { setStep(0) }} >Ok</button>
+                <button
+                  className="cancel"
+                  onClick={() => {
+                    setStep(0);
+                  }}
+                >
+                  Ok
+                </button>
               </div>
             </div>
-          }
-          {answer.points !== 0 && answer.points !== 1 &&
+          )}
+          {answer.points !== 0 && answer.points !== 1 && (
             <div className="card game__quizz__result">
-              <img src="/assets/cross.svg" alt="cross" className="top-right cancel" />
               <img
-                src="assets/quizzes/cat_sick.png"
-                className="result__img"
+                src="/assets/cross.svg"
+                alt="cross"
+                className="top-right cancel"
               />
+              <img src="assets/quizzes/cat_sick.png" className="result__img" />
               <div className="result__text">
                 <h4>Mohlo to být lepší...</h4>
                 <p></p>
                 <p>{answer.finished}</p>
                 <p></p>
-                <p>Tvé R se zvyšuje o <strong>{answer.points}</strong> bodů.</p>
+                <p>
+                  Tvé R se zvyšuje o <strong>{answer.points}</strong> bodů.
+                </p>
               </div>
               <div className="card__buttons">
-                <button className="cancel" onClick={() => { setStep(0) }}>Ok</button>
+                <button
+                  className="cancel"
+                  onClick={() => {
+                    setStep(0);
+                  }}
+                >
+                  Ok
+                </button>
               </div>
             </div>
-          }
+          )}
         </>
-      }
-    </div >
+      )}
+    </div>
   );
 };
 
