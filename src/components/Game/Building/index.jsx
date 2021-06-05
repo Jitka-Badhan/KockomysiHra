@@ -25,7 +25,6 @@ const Building = ({ name, backHome }) => {
           <div className="card__content">
             <img
               src={selectedBuilding.cardImg}
-              alt="empty bar"
               className="building__img"
             />
             <div className="building__text">
@@ -35,7 +34,7 @@ const Building = ({ name, backHome }) => {
               ))}
             </div>
             <div className="card__buttons">
-              <button className="cancel" onClick={() => backHome(undefined)}>
+              <button className="cancel" onClick={() => backHome()}>
                 Zpět na mapu
               </button>
               <button
@@ -93,9 +92,7 @@ const Building = ({ name, backHome }) => {
                   <div className="card__buttons">
                     <button
                       className="cancel"
-                      onClick={() => {
-                        setStep(0);
-                      }}
+                      onClick={() => backHome()}
                     >
                       Zrušit
                     </button>
@@ -128,9 +125,7 @@ const Building = ({ name, backHome }) => {
               <div className="card__buttons">
                 <button
                   className="cancel"
-                  onClick={() => {
-                    setStep(0);
-                  }}
+                  onClick={() => backHome(undefined)}
                 >
                   Ok
                 </button>
@@ -160,9 +155,7 @@ const Building = ({ name, backHome }) => {
               <div className="card__buttons">
                 <button
                   className="cancel"
-                  onClick={() => {
-                    setStep(0);
-                  }}
+                  onClick={() => backHome(undefined)}
                 >
                   Ok
                 </button>
@@ -189,9 +182,7 @@ const Building = ({ name, backHome }) => {
               <div className="card__buttons">
                 <button
                   className="cancel"
-                  onClick={() => {
-                    setStep(0);
-                  }}
+                  onClick={() => backHome(undefined)}
                 >
                   Ok
                 </button>
