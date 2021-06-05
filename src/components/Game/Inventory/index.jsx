@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const Map = () => {
+const Inventory = () => {
   return (
 
   );
 }
 
-export default Map;
+export default Inventory;
