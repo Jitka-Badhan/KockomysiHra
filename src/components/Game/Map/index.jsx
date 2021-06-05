@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-import '../data.js';
 
 import Building from '../Building';
 
@@ -71,6 +70,8 @@ const mapItemsIndexes = [
 ];
 
 const Map = ({ changeCard }) => {
+  const [selectedBuilding, setSelectedBuilding] = useState(null);
+
   const clicked = (e) => {
     const clickedX = e.screenX;
     const clickedY = e.screenY;
@@ -82,7 +83,8 @@ const Map = ({ changeCard }) => {
         clickedY > item.startY &&
         clickedY < item.endY
       ) {
-        changeCard(<Building />);
+        setSelectedBuilding(item.name);
+        changeCard(item.name);
       }
     });
   };
