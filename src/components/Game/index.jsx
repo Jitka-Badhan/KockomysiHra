@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useImmer } from 'use-immer';
 import './style.css';
 import data from '../../data.js';
 
@@ -8,7 +9,7 @@ import Inventory from './Inventory';
 import Map from './Map';
 
 const Game = () => {
-  const [myData, setMyData] = useState(data);
+  const [myData, setMyData] = useImmer(data);
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
 
   return (

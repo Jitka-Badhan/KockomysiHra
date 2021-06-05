@@ -13,7 +13,7 @@ const Inventory = ({ myData, setSelectedBuilding }) => {
           <hr />
         </div>
 
-        <Counters />
+        <Counters myData={myData} />
         <Items myData={myData} setSelectedBuilding={setSelectedBuilding} />
       </div>
     </div>

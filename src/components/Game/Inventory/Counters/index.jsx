@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.css';
 
-const Counters = () => {
+const Counters = ({ myData }) => {
+  console.log(myData);
+
   return (
     <div className="container game__counters">
       <div className="game__counter test_tubes">
@@ -11,11 +13,11 @@ const Counters = () => {
           className="test_tube__img"
         />
         <div className="test__tube">
-          <div className="test_tube__count">5</div>
+          <div className="test_tube__count">{myData.scores.tubes}</div>
         </div>
       </div>
       <div className="countR">
-        <div className="countR__count">1.0</div>
+        <div className="countR__count">{myData.scores.R.toFixed(1)}</div>
       </div>
       <div className="game__counter watch">
         <img
