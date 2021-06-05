@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './style.css';
 
-const GameNav = () => {
+const GameNav = (save) => {
   return (
     <div className="container navigation game__nav">
       <Link to="/">
@@ -20,15 +20,15 @@ const GameNav = () => {
           alt="book icon"
         />
         <p>Pravidla</p>
-        </Link>
-      <a href="">
+      </Link>
+      <button onClick={save}>
         <img
           className="nav__icon rules"
           src="/assets/bookmark.svg"
           alt="book icon"
         />
         <p>Uložit</p>
-      </a>
+      </button>
     </div>
   );
 };

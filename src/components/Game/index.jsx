@@ -10,7 +10,7 @@ import Map from './Map';
 const Game = () => {
   const [myData, setMyData] = useState(data);
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
-  const [remainingSeconds, setRemainingSeconds] = useState(10);
+  const [remainingSeconds, setRemainingSeconds] = useState(3600);
 
   useEffect(() => {
     const interval = setInterval(() => {
