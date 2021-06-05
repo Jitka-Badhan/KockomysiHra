@@ -119,7 +119,7 @@ const data = {
       ],
       quizz: {
         name: 'Knihovna',
-        pic: '/assets/quizzes/Library_riddle.png',
+        pic: '/assets/quizzes/Library_riddle.jpeg',
         text: 'Najdi kočku, co se po studiu setká s nejvíce kočkami.',
         answers: [
           {
@@ -177,7 +177,7 @@ const data = {
       ],
       quizz: {
         name: 'Park',
-        pic: '/assets/quizzes/Garden_riddle.png',
+        pic: '/assets/quizzes/Garden_riddle.jpeg',
         text: 'Ke kterým kočkám se dostaneš?',
         answers: [
           {
@@ -235,7 +235,7 @@ const data = {
       ],
       quizz: {
         name: 'Továrna',
-        pic: '/assets/quizzes/Factory_riddle.png',
+        pic: '/assets/quizzes/Factory_riddle.jpeg',
         text: 'Které číslo hlídá černá kočka?',
         answers: [
           {
@@ -293,7 +293,7 @@ const data = {
       ],
       quizz: {
         name: 'Obchoďák',
-        pic: '/assets/quizzes/Mall_riddle.png',
+        pic: '/assets/quizzes/Mall_riddle.jpeg',
         text: 'Kolik koček je v obrázku ukrytých?',
         answers: [
           {

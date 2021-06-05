@@ -41,3 +41,13 @@
   max-width: 10%;
   max-height: 10%;
 }
+
+.result__img {
+  max-width: 20%;
+  max-height: 20%;
+}
+
+.quizz__img {
+  max-width: 50%;
+  max-height: 50%;
+}
