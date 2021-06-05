@@ -1,0 +1,31 @@
+.game__nav {
+  margin-right: 1.5rem;
+  margin-top: 0;
+  background-color: #197278;
+  border-radius: 5px;
+  justify-content: space-evenly;
+}
+
+.game__nav .nav__icon {
+  filter: invert();
+}
+
+.game__nav > a {
+  margin-right: 0;
+  color: white;
+}
+
+.game__nav > a:hover,
+.game__nav > a:active,
+.game__nav > a:hover {
+  /* background-color: #743880; */
+  background-color: #772e25;
+  color: white;
+  transform: scale(1.2);
+}
+
+.nav__icon:hover,
+.nav__icon:active,
+.nav__icon:focus {
+  filter: invert();
+}
