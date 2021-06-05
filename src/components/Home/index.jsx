@@ -18,7 +18,7 @@ const Home = () => {
           <Link to="/intro" className="button">
             Intro
           </Link>
-          <Link to="/game" className="button">
+          <Link to="/game" className="button" onClick={() => { localStorage.clear() }}>
             Nová hra
           </Link>
           <Link to="/game" className="button">
