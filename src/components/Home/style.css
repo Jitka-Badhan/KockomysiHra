@@ -1,0 +1,43 @@
+.home__main {
+  width: 100%;
+  height: calc(100vh - 3rem);
+}
+
+.home__main h1 {
+  font-family: 'Amatic SC';
+  font-size: 64px;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 2px 2px silver;
+  color: #283d3b;
+}
+
+.home__main > img {
+  max-width: 50vw;
+  max-height: 55vh;
+  margin: 2rem auto;
+}
+
+.home__buttons {
+  justify-content: center;
+}
+
+.home__buttons .button {
+  background-color: #c44536;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  margin-right: 2rem;
+}
+
+.home__buttons .button:last-of-type {
+  margin-right: 0;
+}
+
+.home__buttons .button:hover,
+.home__buttons .button:active,
+.home__buttons .button:focus {
+  background-color: #197278;
+}

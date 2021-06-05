@@ -1,0 +1,21 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #197278;
+  color: white;
+  font-size: smaller;
+  padding: 0.5rem 0;
+}
+
+.footer__button {
+  background-color: #c44536;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 2rem;
+}
