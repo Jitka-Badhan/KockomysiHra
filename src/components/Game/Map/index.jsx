@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-import '../data.js';
 
 import Building from '../Building';
 

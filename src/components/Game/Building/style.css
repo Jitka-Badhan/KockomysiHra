@@ -36,3 +36,8 @@
 .municipal_house h4 {
   margin-bottom: 1rem;
 }
+
+.answer__img {
+  max-width: 10%;
+  max-height: 10%;
+}

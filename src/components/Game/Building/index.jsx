@@ -4,15 +4,19 @@ import { useState } from 'react';
 import data from '../../../data';
 
 const Building = () => {
-  const [showRebus, setShowRebus] = useState(false);
+  const [Step, setStep] = useState(0);
   const [index, setIndex] = useState(0);
   const selectedBuilding = data.buildings[index];
+  const [answer, setAnswer] = useState('')
 
-
+  const buttonClicked = (answer) => {
+    setAnswer(answer);
+    setStep(2);
+  };
 
   return (
     <div className="card game__building">
-      {!showRebus &&
+      {Step === 0 &&
         <>
           <img src="/assets/cross.svg" className="top-right cancel" />
           <div className="card__content">
@@ -25,12 +29,12 @@ const Building = () => {
             </div>
             <div className="card__buttons">
               <button className="cancel">Zpět na mapu</button>
-              <button className="toQuiz" onClick={() => { setShowRebus(true) }}>Přejdi na rébus</button>
+              <button className="toQuiz" onClick={() => { setStep(1) }}>Přejdi na rébus</button>
             </div>
           </div>
         </>}
 
-      {showRebus &&
+      {Step === 1 &&
         <>
           <div className="card game__quizz">
             <img src="/assets/cross.svg" alt="cross" className="top-right cancel" />
@@ -48,11 +52,8 @@ const Building = () => {
                         selectedBuilding.quizz.answers.map(tableCell =>
                           <tr key={tableCell.button} className="answer">
                             <td>
-                              <button className="answer__button" onClick={() => {
-                                if (tableCell.points === 1) {
-
-                                }
-                              }} >{tableCell.button} {
+                              <button className="answer__button" onClick={() => { buttonClicked(tableCell) }
+                              } >{tableCell.button} {
                                   tableCell.text !== '' ? tableCell.text :
                                     <img
                                       src={tableCell.pic}
@@ -66,14 +67,15 @@ const Building = () => {
                     </tbody>
                   </table>
                   <div className="card__buttons">
-                    <button className="cancel" onClick={() => { setShowRebus(false) }}>Zrušit</button>
+                    <button className="cancel" onClick={() => { setStep(0) }}>Zrušit</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </>}
-    </div>
+
+    </div >
   );
 };
 
