@@ -3,20 +3,20 @@ import './style.css';
 
 const Building = () => {
   return (
-    <div classNameName="card game__building">
+    <div className="card game__building">
             <img src="/img/cross.svg" alt="cross" className="top-right cancel">
-            <div classNameName="card__content">
-              <img src="/img/buildings/bar.jpg" alt="empty bar" classNameName="building__img" />
-              <div classNameName="building__text">
+            <div className="card__content">
+              <img src="/img/buildings/bar.jpg" alt="empty bar" className="building__img" />
+              <div className="building__text">
                 <h4>Hospoda</h4>
                 <p>Tohle je místní putyka,</p>
                 <p>kočky tu sedí u mlíka.</p>
                 <p>Nakaž tu, která žere myši</p>
                 <p>a nákaza se prudce zvýší.</p>
               </div>
-              <div classNameName="card__buttons">
-                <button classNameName="cancel">Zpět na mapu</button>
-                <button classNameName="toQuiz">Přejdi na rébus</button>
+              <div className="card__buttons">
+                <button className="cancel">Zpět na mapu</button>
+                <button className="toQuiz">Přejdi na rébus</button>
               </div>
             </div>
           </div>

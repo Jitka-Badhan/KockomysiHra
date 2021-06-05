@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-
+import Navigation from '../Navigation'
 import Header from '../Header';
 import data from '../../data';
 
@@ -11,16 +11,17 @@ const Intro = () => {
 
   return (
     <>
+      <Navigation />
       <Header />
-      <section classNameName="main intro__main">
-        <div classNameName="container intro">
+      <section className="main intro__main">
+        <div className="container intro">
           <img
             src={selectedIntro.img}
             className="intro__img"
           />
           <div className="intro__text">
             {
-              selectedIntro.texts.map(text => <p>{text}</p>)
+              selectedIntro.texts.map(text => <p key={text}>{text}</p>)
             }
           </div>
         </div>
@@ -28,14 +29,14 @@ const Intro = () => {
           <button className="container intro__button" onClick={()=>{setIndex(index-1)}} disabled={index === 0}>
             <p>Předchozí</p>
             <img
-              classNameName="intro__button_img"
+              className="intro__button_img"
               src="/assets/arrow-left.svg"
               alt="arrow icon"
             />
           </button>
           <button className="container intro__button" onClick={()=>{setIndex(index+1)}} disabled={index === data.intro.length - 1}>
             <img
-              classNameName="intro__button_img"
+              className="intro__button_img"
               src="/assets/arrow-right.svg"
               alt="arrow icon"
             />
