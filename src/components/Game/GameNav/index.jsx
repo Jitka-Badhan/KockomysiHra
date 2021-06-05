@@ -21,14 +21,14 @@ const GameNav = (save) => {
         />
         <p>Pravidla</p>
       </Link>
-      <button onClick={save}>
+      <a onClick={save}>
         <img
           className="nav__icon rules"
           src="/assets/bookmark.svg"
           alt="book icon"
         />
         <p>Uložit</p>
-      </button>
+      </a>
     </div>
   );
 };

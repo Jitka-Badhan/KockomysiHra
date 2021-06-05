@@ -3,19 +3,18 @@ import './style.css';
 import { useState } from 'react';
 import data from '../../../data';
 
-const Building = ({ name, backHome }) => {
+const Building = ({ name, backHome, changeR, changeTubes }) => {
   const [Step, setStep] = useState(0);
   const selectedBuilding = data.buildings.find(
     (building) => building.name === name,
   );
 
-
-
-
   console.log(selectedBuilding);
   const [answer, setAnswer] = useState('');
 
   const buttonClicked = (answer) => {
+    changeR(answer.points);
+    changeTubes();
     setAnswer(answer);
     setStep(2);
   };
@@ -26,10 +25,7 @@ const Building = ({ name, backHome }) => {
         <>
           <img src="/assets/cross.svg" className="top-right cancel" />
           <div className="card__content">
-            <img
-              src={selectedBuilding.cardImg}
-              className="building__img"
-            />
+            <img src={selectedBuilding.cardImg} className="building__img" />
             <div className="building__text">
               <h4>{selectedBuilding.name}</h4>
               {selectedBuilding.description.map((text) => (
@@ -93,10 +89,7 @@ const Building = ({ name, backHome }) => {
                     </tbody>
                   </table>
                   <div className="card__buttons">
-                    <button
-                      className="cancel"
-                      onClick={() => backHome()}
-                    >
+                    <button className="cancel" onClick={() => backHome()}>
                       Zrušit
                     </button>
                   </div>
@@ -126,10 +119,7 @@ const Building = ({ name, backHome }) => {
                 </p>
               </div>
               <div className="card__buttons">
-                <button
-                  className="cancel"
-                  onClick={() => backHome(undefined)}
-                >
+                <button className="cancel" onClick={() => backHome(undefined)}>
                   Ok
                 </button>
               </div>
@@ -156,10 +146,7 @@ const Building = ({ name, backHome }) => {
                 </p>
               </div>
               <div className="card__buttons">
-                <button
-                  className="cancel"
-                  onClick={() => backHome(undefined)}
-                >
+                <button className="cancel" onClick={() => backHome(undefined)}>
                   Ok
                 </button>
               </div>
@@ -183,10 +170,7 @@ const Building = ({ name, backHome }) => {
                 </p>
               </div>
               <div className="card__buttons">
-                <button
-                  className="cancel"
-                  onClick={() => backHome(undefined)}
-                >
+                <button className="cancel" onClick={() => backHome(undefined)}>
                   Ok
                 </button>
               </div>

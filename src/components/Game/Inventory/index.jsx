@@ -12,10 +12,11 @@ const Inventory = ({ myData, setSelectedBuilding, remainingSeconds }) => {
           <p>Inventář</p>
           <hr />
         </div>
-
-        <Counters remainingSeconds={remainingSeconds} myData={myData} />
-        <Items myData={myData} setSelectedBuilding={setSelectedBuilding} />
       </div>
+
+      <Counters remainingSeconds={remainingSeconds} myData={myData} />
+
+      <Items myData={myData} setSelectedBuilding={setSelectedBuilding} />
     </div>
   );
 };

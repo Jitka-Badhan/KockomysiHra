@@ -13,6 +13,21 @@ const Game = () => {
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
   const [remainingSeconds, setRemainingSeconds] = useState(3600);
 
+  const changeR = (score) => {
+    setMyData((draft) => {
+      draft.scores.R = draft.scores.R + score;
+    });
+  };
+
+  const changeTubes = () => {
+    setMyData((draft) => {
+      draft.scores.tubes = draft.scores.tubes - 1;
+      draft.scores.tubes > 0
+        ? console.log('Pokračujem')
+        : alert('Došel kočvid');
+    });
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setRemainingSeconds((remainingSeconds) => {
@@ -45,6 +60,8 @@ const Game = () => {
           <Map
             selectedBuilding={selectedBuilding}
             setSelectedBuilding={setSelectedBuilding}
+            changeR={changeR}
+            changeTubes={changeTubes}
           />
         </div>
       </div>

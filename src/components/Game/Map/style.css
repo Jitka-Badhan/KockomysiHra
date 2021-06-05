@@ -7,4 +7,11 @@
 
 .map {
   width: 100%;
+  background-image: url(../../../assets/map/map.jpg);
+  background-size: cover;
+}
+
+#map_of_clickable_objects {
+  width: 100%;
+  opacity: 0.01;
 }

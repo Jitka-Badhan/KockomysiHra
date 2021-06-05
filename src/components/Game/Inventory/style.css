@@ -24,11 +24,11 @@
 .inventory hr {
   /* border: 1px solid rgba(6, 7, 14, 0.5); */
   border: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 0 2rem 1rem 2rem;
+  margin: 0 2rem;
 }
 
 .inventory__items {
-  margin: 0 auto;
+  justify-content: center;
   flex-basis: 38vh;
 }
 
