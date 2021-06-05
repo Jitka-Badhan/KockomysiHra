@@ -3,69 +3,69 @@ import './style.css';
 
 const Quizz = () => {
   return (
-    <div class="card game__quizz">
-      <img src="/img/cross.svg" alt="cross" class="top-right cancel" />
-      <div class="card__content">
-        <div class="container quizz">
+    <div className="card game__quizz">
+      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <div className="card__content">
+        <div className="container quizz">
           <img
             src="/img/quizzes/quizz1.jpeg"
             alt="quizz from library"
-            class="quizz__img"
+            className="quizz__img"
           />
-          <div class="quizz__text">
+          <div className="quizz__text">
             <h4>Najdi kočku, co se po studiu setká s nejvíce kočkami.</h4>
-            <table class="quizz__answers">
-              <tr class="answer">
+            <table className="quizz__answers">
+              <tr className="answer">
                 <td>
-                  <button class="answer__button">A</button>
+                  <button className="answer__button">A</button>
                 </td>
                 <td>
                   <img
                     src="img/quizzes/cat_black.png"
                     alt="black cat"
-                    class="answer__img catA"
+                    className="answer__img catA"
                   />
                 </td>
               </tr>
-              <tr class="answer">
+              <tr className="answer">
                 <td>
-                  <button class="answer__button">B</button>
+                  <button className="answer__button">B</button>
                 </td>
                 <td>
                   <img
                     src="img/quizzes/cat_white.png"
                     alt="white cat"
-                    class="answer__img catB"
+                    className="answer__img catB"
                   />
                 </td>
               </tr>
-              <tr class="answer">
+              <tr className="answer">
                 <td>
-                  <button class="answer__button">C</button>
+                  <button className="answer__button">C</button>
                 </td>
                 <td>
                   <img
                     src="img/quizzes/cat_orange.png"
                     alt="ginger cat"
-                    class="answer__img catC"
+                    className="answer__img catC"
                   />
                 </td>
               </tr>
-              <tr class="answer">
+              <tr className="answer">
                 <td>
-                  <button class="answer__button">C</button>
+                  <button className="answer__button">C</button>
                 </td>
                 <td>
                   <img
                     src="img/quizzes/cat_grey.png"
                     alt="grey cat"
-                    class="answer__img catD"
+                    className="answer__img catD"
                   />
                 </td>
               </tr>
             </table>
-            <div class="card__buttons">
-              <button class="cancel">Zrušit</button>
+            <div className="card__buttons">
+              <button className="cancel">Zrušit</button>
             </div>
           </div>
         </div>

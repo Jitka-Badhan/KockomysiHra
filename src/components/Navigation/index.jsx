@@ -3,10 +3,10 @@ import './style.css';
 
 const Navigation = () => {
   return (
-    <section className="navigation rules__nav">
+    <section classNameName="navigation rules__nav">
       <a href="/domu.html">
         <img
-          className="nav__icon home"
+          classNameName="nav__icon home"
           src="/assets/home.svg"
           alt="home icon"
         />
@@ -14,7 +14,7 @@ const Navigation = () => {
       </a>
       <a href="/hra.html">
         <img
-          className="nav__icon next"
+          classNameName="nav__icon next"
           src="/assets/arrow-next.svg"
           alt="next icon"
         />
