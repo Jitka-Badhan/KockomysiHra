@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Counters = () => {
+const Counters = ({ remainingSeconds }) => {
   return (
     <div className="container game__counters">
       <div className="game__counter test_tubes">
@@ -24,7 +24,7 @@ const Counters = () => {
           className="timer__img"
         />
         <div className="timer">
-          <div className="timer__count">60:00</div>
+          <div className="timer__count">{Math.floor(remainingSeconds / 60)}:{remainingSeconds % 60}</div>
         </div>
       </div>
     </div>
