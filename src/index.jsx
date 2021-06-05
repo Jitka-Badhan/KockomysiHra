@@ -6,6 +6,7 @@ import './style.css';
 import Home from './components/Home';
 import Intro from './components/Intro';
 import Game from './components/Game';
+import Rules from './components/Rules';
 
 const App = () => (
   <Router>
@@ -19,6 +20,9 @@ const App = () => (
         </Route>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/rules">
+          <Rules />
         </Route>
       </Switch>
     </div>
