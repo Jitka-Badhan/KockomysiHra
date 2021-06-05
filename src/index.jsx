@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Intro from './components/Intro';
 import Game from './components/Game';
 import Rules from './components/Rules';
+import Building from './components/Game/Building';
 
 const App = () => (
   <Router>
@@ -23,6 +24,9 @@ const App = () => (
         </Route>
         <Route path="/rules">
           <Rules />
+        </Route>
+        <Route path="/building">
+          <Building />
         </Route>
       </Switch>
     </div>
