@@ -11,8 +11,9 @@ const Intro = () => {
 
   return (
     <>
-      <Navigation />
       <Header />
+      <Navigation />
+ 
       <section className="main intro__main">
         <div className="container intro">
           <img
