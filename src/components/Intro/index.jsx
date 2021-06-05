@@ -12,8 +12,8 @@ const Intro = () => {
   return (
     <>
       <Header />
-      <section className="main intro__main">
-        <div className="container intro">
+      <section classNameName="main intro__main">
+        <div classNameName="container intro">
           <img
             src={selectedIntro.img}
             className="intro__img"
@@ -28,14 +28,14 @@ const Intro = () => {
           <button className="container intro__button" onClick={()=>{setIndex(index-1)}} disabled={index === 0}>
             <p>Předchozí</p>
             <img
-              className="intro__button_img"
+              classNameName="intro__button_img"
               src="/assets/arrow-left.svg"
               alt="arrow icon"
             />
           </button>
           <button className="container intro__button" onClick={()=>{setIndex(index+1)}} disabled={index === data.intro.length - 1}>
             <img
-              className="intro__button_img"
+              classNameName="intro__button_img"
               src="/assets/arrow-right.svg"
               alt="arrow icon"
             />

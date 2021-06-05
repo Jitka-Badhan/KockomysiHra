@@ -1,0 +1,18 @@
+.game__indication {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game__indication h4 {
+  margin: 0;
+}
+
+.indication__img {
+  width: 25vh;
+}
+
+.indication__text p {
+  margin: 0;
+}

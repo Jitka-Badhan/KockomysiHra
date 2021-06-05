@@ -1,0 +1,43 @@
+.inventory {
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: #ff8c61; */
+  background-color: #c44536;
+  border-radius: 5px;
+  height: 75vh;
+  margin-right: 1.5rem;
+}
+
+.inventory__img {
+  display: block;
+  width: 2.5rem;
+  margin: 0 auto;
+}
+
+.inventory__icon p {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin: 5px 0 15px 0;
+}
+
+.inventory hr {
+  /* border: 1px solid rgba(6, 7, 14, 0.5); */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0 2rem 1rem 2rem;
+}
+
+.inventory__items {
+  margin: 0 auto;
+  flex-basis: 38vh;
+}
+
+.inventory__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inventory__column:nth-of-type(2n) {
+  justify-content: space-evenly;
+}

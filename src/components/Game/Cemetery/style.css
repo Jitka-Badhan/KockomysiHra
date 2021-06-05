@@ -1,0 +1,25 @@
+.cemetery__img {
+  width: 70%;
+  max-height: 50%;
+}
+
+.cemetery__text h4,
+.cemetery__text p {
+  margin: 0;
+}
+
+.paragraph {
+  margin-top: 5px;
+}
+
+.paragraph:first-of-type {
+  margin-right: 5rem;
+}
+
+.cemetery__button {
+  margin-left: 2rem;
+}
+
+.cemetery__button:first-of-type {
+  margin-left: 0;
+}
