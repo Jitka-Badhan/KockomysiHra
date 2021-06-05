@@ -1,7 +1,7 @@
 const data = {
   intro : [{
     id : 0,
-    img : '/assets/photos/photo-like-rectangle.png', 
+    img : '/assets/Intro/Intro0.png', 
     texts : [
       'Bylo kdysi krásné město....',
       'Kočkomyšen, název, neslo.',
@@ -12,7 +12,7 @@ const data = {
     ]},
     {
       id : 1,
-      img : '/assets/photos/photo-like-rectangle.png', 
+      img : '/assets/Intro/Intro1.png', 
       texts : [
         'Co však bylo, dávno není,',
         'Kočky k myším zuby cení!',
@@ -23,7 +23,7 @@ const data = {
       ]},
       {
         id : 2,
-        img : '/assets/photos/photo-like-rectangle.png', 
+        img : '/assets/Intro/Intro2.png', 
         texts : [
           'Velký vědec, Míša Myškin,',
           'Pomůže dnes hodným myším.',
@@ -34,7 +34,7 @@ const data = {
         ]},
         {
           id : 3,
-          img : '/assets/photos/photo-like-rectangle.png', 
+          img : '/assets/Intro/Intro3.png', 
           texts : [
             'Pomoz myškám virus šířit,',
             'Vzteklých koček počet snížit.',
@@ -322,3 +322,5 @@ const data = {
     },
   ],
 }
+
+export default data;

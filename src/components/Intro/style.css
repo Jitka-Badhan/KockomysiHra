@@ -45,9 +45,7 @@
   padding: 10px;
 }
 
-.intro__button:hover,
-.intro__button:active,
-.intro__button:focus {
+.intro__button:enabled:hover {
   background-color: #197278;
   transform: scale(1.1);
 }
@@ -67,3 +65,9 @@
 .intro__button > p {
   margin: 0;
 }
+
+button:disabled {
+  background-color: grey;
+}
+
+
