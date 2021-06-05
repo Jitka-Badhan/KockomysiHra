@@ -54,7 +54,7 @@ const mapItemsIndexes = [
     endY: 543,
   },
   {
-    name: 'Zahrada',
+    name: 'Park',
     startX: 292,
     endX: 409,
     startY: 544,
@@ -69,8 +69,8 @@ const mapItemsIndexes = [
   },
 ];
 
-const Map = ({ changeCard }) => {
-  const [selectedBuilding, setSelectedBuilding] = useState(null);
+const Map = () => {
+  const [selectedBuilding, setSelectedBuilding] = useState(undefined);
 
   const clicked = (e) => {
     const clickedX = e.screenX;
@@ -84,22 +84,25 @@ const Map = ({ changeCard }) => {
         clickedY < item.endY
       ) {
         setSelectedBuilding(item.name);
-        changeCard(item.name);
       }
     });
   };
 
   return (
     <div className="card game__map">
-      <div className="card__content">
-        <div className="map__heading">Město Mňau-chen</div>
-        <img
-          src="/assets/mapka_navrh3.png"
-          alt="map of Mnau-chen"
-          className="map"
-          onClick={clicked}
-        />
-      </div>
+      {selectedBuilding ? (
+        <Building name={selectedBuilding} backHome={setSelectedBuilding} />
+      ) : (
+        <div className="card__content">
+          <div className="map__heading">Město Mňau-chen</div>
+          <img
+            src="/assets/mapka_navrh3.png"
+            alt="map of Mnau-chen"
+            className="map"
+            onClick={clicked}
+          />
+        </div>
+      )}
     </div>
   );
 };
