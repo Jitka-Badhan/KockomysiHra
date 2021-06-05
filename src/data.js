@@ -320,6 +320,144 @@ const data = {
       },
       isActive : false,
     },
+    {
+      name : 'Venkovský dům',
+      mapImg : '/assets/buildings/house_rustic_icon.png',
+      cardImg : '/assets/buildings/house_rustic.jpg',
+      function : 'indication',
+      description : ['Nějaké dodatečné info:', 'Hospoda indicie 1', 'Hospoda indicie 2', 'Hospoda indicie 3',],
+      isSolved : false,
+      indication : {
+        isPresent : true,
+        pic : '',
+        description : '',
+      },
+      isActive : false,
+    },
+    {
+      name : 'Moderní dům',
+      mapImg : '/assets/buildings/house_modern_icon.png',
+      cardImg : '/assets/buildings/house_modern.jpg',
+      function : 'indication',
+      description : ['Nějaké dodatečné info:', 'Hospoda indicie 1', 'Hospoda indicie 2', 'Hospoda indicie 3',],
+      isSolved : false,
+      indication : {
+        isPresent : true,
+        pic : '',
+        description : '',
+      },
+      isActive : false,
+    },
+    {
+      name : 'Hřbitov',
+      mapImg : '/assets/buildings/cemetery_icon.png',
+      cardImg : '/assets/buildings/cemetery.jpg',
+      function : 'cemetery',
+      description : ['Tohle je místní putyka,', 'Kočky tu sedí u mlíka.', 'Nakaž tu, která žere myši,', 'Nákaza se prudce zvýší',],
+      quizz : {
+        name : 'Hospoda',
+        pic : '/assets/quizzes/Pub_riddle.png',
+        text : 'Která kočka žere především myši?',
+        answers : [
+          {
+            button : 'A',
+            text : '',
+            pic : '/assets/quizzes/cat_black.png',
+            points : 1,
+          }, 
+          {
+            button : 'B',
+            text : '',
+            pic : '/assets/quizzes/cat_grey.png',
+            points : 0,
+          },
+          {
+            button : 'C',
+            text : '',
+            pic : '/assets/quizzes/cat_sick.png',
+            points : 0,
+          },
+          {
+            button : 'D',
+            text : '',
+            pic : '/assets/quizzes/cat_healthy.png',
+            points : 0,
+          }, 
+        ],
+        solution : 'A',
+        hint : {
+          text : '',
+          pic : '/assets/photos/photo-like_square.png',
+        },
+        isSolved : false,
+        result : {
+          ifCorrect : 'Zde kočky už nezachlastají.',
+          ifPartiallyCorrect : '',
+          ifNotCorrect : 'Kočky si na Tebe dají rundu.',
+        }
+      },
+      indication : {
+        isPresent : false,
+        pic : '',
+        description : '',
+      },
+      isActive : false,
+    },
+    {
+      name : 'Hospoda',
+      mapImg : '/assets/buildings/bar_icon.png',
+      cardImg : '/assets/buildings/bar.jpg',
+      function : 'quizz',
+      description : ['Tohle je místní putyka,', 'Kočky tu sedí u mlíka.', 'Nakaž tu, která žere myši,', 'Nákaza se prudce zvýší',],
+      quizz : {
+        name : 'Hospoda',
+        pic : '/assets/quizzes/Pub_riddle.png',
+        text : 'Která kočka žere především myši?',
+        answers : [
+          {
+            button : 'A',
+            text : '',
+            pic : '/assets/quizzes/cat_black.png',
+            points : 1,
+          }, 
+          {
+            button : 'B',
+            text : '',
+            pic : '/assets/quizzes/cat_grey.png',
+            points : 0,
+          },
+          {
+            button : 'C',
+            text : '',
+            pic : '/assets/quizzes/cat_sick.png',
+            points : 0,
+          },
+          {
+            button : 'D',
+            text : '',
+            pic : '/assets/quizzes/cat_healthy.png',
+            points : 0,
+          }, 
+        ],
+        solution : 'A',
+        hint : {
+          text : '',
+          pic : '/assets/photos/photo-like_square.png',
+        },
+        isSolved : false,
+        result : {
+          ifCorrect : 'Zde kočky už nezachlastají.',
+          ifPartiallyCorrect : '',
+          ifNotCorrect : 'Kočky si na Tebe dají rundu.',
+        }
+      },
+      indication : {
+        isPresent : false,
+        pic : '',
+        description : '',
+      },
+      isActive : false,
+    },
   ],
 }
 
