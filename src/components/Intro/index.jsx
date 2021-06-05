@@ -1,45 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
 import Header from '../Header';
+import data from '../../data';
 
 const Intro = () => {
+  const [index, setIndex] = useState(0);
+  const selectedIntro = data.intro[index];
+
+
   return (
     <>
       <Header />
       <section className="main intro__main">
         <div className="container intro">
           <img
-            src="assets/photos/photo-like_rectangle.png"
-            alt=""
+            src={selectedIntro.img}
             className="intro__img"
           />
           <div className="intro__text">
-            <p>Bylo kdysi krásné město...</p>
-            <p>Kočkomyšen, název, neslo.</p>
-            <p>A v něm pěkně pospolu,</p>
-            <p>dělili se u stolu</p>
-            <p>kočky, myši, kamarádi,</p>
-            <p>Tehdy se zde měli rádi.</p>
+            {
+              selectedIntro.texts.map(text => <p>{text}</p>)
+            }
           </div>
         </div>
         <div className="container intro__buttons">
-          <a href="" className="container intro__button">
+          <button className="container intro__button" onClick={()=>{setIndex(index-1)}} disabled={index === 0}>
             <p>Předchozí</p>
             <img
               className="intro__button_img"
               src="/assets/arrow-left.svg"
               alt="arrow icon"
             />
-          </a>
-          <a href="" className="container intro__button">
+          </button>
+          <button className="container intro__button" onClick={()=>{setIndex(index+1)}} disabled={index === data.intro.length - 1}>
             <img
               className="intro__button_img"
               src="/assets/arrow-right.svg"
               alt="arrow icon"
             />
             <p>Následující</p>
-          </a>
+          </button>
         </div>
       </section>
     </>
