@@ -2,12 +2,22 @@ import React from 'react';
 import './style.css';
 import data from '../../../../data.js';
 
-const Item = ({ pic }) => {
-  return <img src={pic} className="building__detail inactive" />;
+const Item = ({ building, setSelectedBuilding }) => {
+  const handleClick = () => {
+    setSelectedBuilding(building.name);
+  };
+
+  return (
+    <img
+      src={building.imgUrl}
+      className="building__detail inactive"
+      onClick={handleClick}
+    />
+  );
 };
 
-const Items = () => {
-  const buildings = data.buildings.map((item) => {
+const Items = ({ myData, setSelectedBuilding }) => {
+  const buildings = myData.buildings.map((item) => {
     return {
       key: item.name,
       name: item.name,
@@ -23,17 +33,29 @@ const Items = () => {
     <div className="container inventory__items">
       <div className="inventory__column">
         {column1.map((item) => (
-          <Item pic={item.imgUrl} key={item.key} />
+          <Item
+            building={item}
+            key={item.key}
+            setSelectedBuilding={setSelectedBuilding}
+          />
         ))}
       </div>
       <div className="inventory__column">
         {column2.map((item) => (
-          <Item pic={item.imgUrl} key={item.key} />
+          <Item
+            building={item}
+            key={item.key}
+            setSelectedBuilding={setSelectedBuilding}
+          />
         ))}
       </div>
       <div className="inventory__column">
         {column3.map((item) => (
-          <Item pic={item.imgUrl} key={item.key} />
+          <Item
+            building={item}
+            key={item.key}
+            setSelectedBuilding={setSelectedBuilding}
+          />
         ))}
       </div>
     </div>

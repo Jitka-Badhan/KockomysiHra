@@ -69,9 +69,7 @@ const mapItemsIndexes = [
   },
 ];
 
-const Map = () => {
-  const [selectedBuilding, setSelectedBuilding] = useState(undefined);
-
+const Map = ({ selectedBuilding, setSelectedBuilding }) => {
   const clicked = (e) => {
     const clickedX = e.screenX;
     const clickedY = e.screenY;
