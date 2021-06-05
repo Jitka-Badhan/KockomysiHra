@@ -9,15 +9,19 @@ const Home = () => {
     <>
       <section className="main home__main">
         <h1>Kočkomyší hra</h1>
-        <img src="" alt="" className="home__img" />
+        <img
+          src="assets/photos/photo-like_rectangle.png"
+          alt=""
+          className="home__img"
+        />
         <div className="container home__buttons">
           <Link to="/intro" className="button">
             Intro
           </Link>
-          <Link to="/hra" className="button">
+          <Link to="/game" className="button">
             Nová hra
           </Link>
-          <Link to="/hra" className="button">
+          <Link to="/game" className="button">
             Pokračovat ve hře
           </Link>
         </div>

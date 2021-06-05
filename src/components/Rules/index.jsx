@@ -14,7 +14,7 @@ const Rules = () => {
         <div className="rules__column">
           <div className="container rules__rule">
             <img
-              src="img/rules/mapa.png"
+              src="assets/rules/mapa.png"
               alt="printscreen2"
               className="rules__img"
             />
@@ -27,7 +27,7 @@ const Rules = () => {
           </div>
           <div className="container rules__rule">
             <img
-              src="img/rules/budova.png"
+              src="assets/rules/budova.png"
               alt="printscreen3"
               className="rules__img"
             />
@@ -40,7 +40,7 @@ const Rules = () => {
           </div>
           <div className="container rules__rule">
             <img
-              src="img/rules/zkumavka.png"
+              src="assets/rules/zkumavka.png"
               alt="printscreen4"
               className="rules__img"
             />
@@ -52,7 +52,7 @@ const Rules = () => {
           </div>
           <div className="container rules__rule">
             <img
-              src="img/rules/hodinky.png"
+              src="assets/rules/hodinky.png"
               alt="printscreen5"
               className="rules__img"
             />
@@ -69,7 +69,7 @@ const Rules = () => {
         <div className="rules__column">
           <div className="container rules__rule">
             <img
-              src="img/rules/rebus.jpeg"
+              src="assets/rules/rebus.jpeg"
               alt="printscreen5"
               className="rules__img"
             />
@@ -82,7 +82,7 @@ const Rules = () => {
           </div>
           <div className="container rules__rule">
             <img
-              src="img/rules/inventar.png"
+              src="assets/rules/inventar.png"
               alt="printscreen6"
               className="rules__img"
             />
@@ -95,7 +95,7 @@ const Rules = () => {
           </div>
           <div className="container rules__rule">
             <img
-              src="img/rules/ulozit.png"
+              src="assets/rules/ulozit.png"
               alt="printscreen7"
               className="rules__img"
             />
@@ -107,7 +107,7 @@ const Rules = () => {
           </div>
           <div className="container rules__rule">
             <img
-              src="img/rules/question-mark_icon.svg"
+              src="assets/rules/question-mark_icon.svg"
               alt="question mark icon"
               className="rules__img question-mark"
             />

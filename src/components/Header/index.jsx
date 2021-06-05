@@ -21,7 +21,7 @@ const Header = () => {
         </h1>
         <img
           className="header__img"
-          src="img/cat1_white.png"
+          src="assets/cat1_white.png"
           alt="cat_silhouette"
         />
       </div>
