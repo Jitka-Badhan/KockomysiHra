@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useImmer } from 'use-immer';
 import './style.css';
 import data from '../../data.js';
@@ -11,6 +11,21 @@ import Map from './Map';
 const Game = () => {
   const [myData, setMyData] = useImmer(data);
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
+  const [remainingSeconds, setRemainingSeconds] = useState(3600);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRemainingSeconds((remainingSeconds) => {
+        if (remainingSeconds <= 0) {
+          alert('SMITEC!!!');
+          clearInterval(interval);
+          return 0;
+        }
+        return remainingSeconds - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -22,6 +37,7 @@ const Game = () => {
           <Inventory
             myData={myData}
             setSelectedBuilding={setSelectedBuilding}
+            remainingSeconds={remainingSeconds}
           />
         </div>
 

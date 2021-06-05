@@ -9,6 +9,9 @@ const Building = ({ name, backHome }) => {
     (building) => building.name === name,
   );
 
+
+
+
   console.log(selectedBuilding);
   const [answer, setAnswer] = useState('');
 
