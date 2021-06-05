@@ -5,6 +5,7 @@ import Header from '../Header';
 import GameNav from './GameNav';
 import Inventory from './Inventory';
 import Card from './Card';
+import Map from './Map';
 
 const Game = () => {
   return (
@@ -16,10 +17,10 @@ const Game = () => {
           <GameNav />
           <Inventory />
         </div>
-      </div>
 
-      <div className="main game__main">
-        <Card />
+        <div className="main game__main">
+          <Map />
+        </div>
       </div>
     </>
   );

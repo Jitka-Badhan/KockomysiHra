@@ -15,7 +15,7 @@ const Inventory = () => {
         <Counters />
 
         <div className="container inventory__items">
-          <div className="inventory__column">
+          {/* <div className="inventory__column">
             <img
               src="assets/buildings/library_icon.png"
               alt="library"
@@ -60,7 +60,8 @@ const Inventory = () => {
               alt="rustic house"
               className="building__detail inactive"
             />
-          </div>
+          </div> */}
+          Itemy
         </div>
       </div>
     </div>

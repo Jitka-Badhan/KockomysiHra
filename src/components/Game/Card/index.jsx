@@ -1,8 +1,10 @@
 import React from 'react';
 import './style.css';
 
+import Map from '../Map';
+
 const Card = () => {
-  return <div>Tady se má vykreslovat obsah karty</div>;
+  return <Map />;
 };
 
 export default Card;
