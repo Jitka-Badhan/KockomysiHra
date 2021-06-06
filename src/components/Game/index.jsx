@@ -24,6 +24,7 @@ const Game = () => {
   }, []);
 
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
+  const [selectedSort, setSelectedSort] = useState(undefined);
   const [remainingSeconds, setRemainingSeconds] = useState(
     localStorage.getItem('mySave')
       ? JSON.parse(localStorage.getItem('mySave')).myTime
@@ -88,8 +89,11 @@ const Game = () => {
           <Map
             selectedBuilding={selectedBuilding}
             setSelectedBuilding={setSelectedBuilding}
+            selectedSort={selectedSort}
+            setSelectedSort={setSelectedSort}
             changeR={changeR}
             changeTubes={changeTubes}
+            myData={myData}
           />
         </div>
       </div>

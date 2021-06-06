@@ -1,14 +1,20 @@
 import React from 'react';
-import 'style.css';
+import './style.css';
+import { useState } from 'react';
 
-const Cemetery = () => {
+const Cemetery = ({ myData, name, backHome }) => {
+
+  const [Step, setStep] = useState(0);
+  const selectedBuilding = myData.buildings.find(
+    (building) => building.name === name,
+  );
+
   return (
     <div className="card game__cemetery">
-      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <img src="/assets/cross.svg" alt="cross" className="top-right cancel" />
       <div className="card__content">
         <img
-          src="img/buildings/cemetery.jpg"
-          alt="cemetery day"
+          src="assets/buildings/cemetery.jpg"
           className="cemetery__img"
         />
         <div className="cemetery__text">
@@ -56,7 +62,7 @@ const Cemetery = () => {
           />
         </div>
         <div className="card__buttons">
-          <button className="cancel">Zrušit</button>
+          <button className="cancel" onClick={() => backHome()}>Zrušit</button>
         </div>
       </div>
     </div>
