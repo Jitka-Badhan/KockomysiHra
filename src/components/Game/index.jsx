@@ -81,6 +81,7 @@ const Game = () => {
           <Inventory
             myData={myData}
             setSelectedBuilding={setSelectedBuilding}
+            setSelectedSort={setSelectedSort}
             remainingSeconds={remainingSeconds}
           />
         </div>

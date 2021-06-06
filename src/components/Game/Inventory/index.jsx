@@ -7,6 +7,7 @@ import Items from './Items';
 const Inventory = ({
   myData,
   setSelectedBuilding,
+  setSelectedSort,
   remainingSeconds,
   remainingTubes,
   remainingR,
@@ -27,7 +28,11 @@ const Inventory = ({
         myData={myData}
       />
 
-      <Items myData={myData} setSelectedBuilding={setSelectedBuilding} />
+      <Items
+        myData={myData}
+        setSelectedBuilding={setSelectedBuilding}
+        setSelectedSort={setSelectedSort}
+      />
     </div>
   );
 };

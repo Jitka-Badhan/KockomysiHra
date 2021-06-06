@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.css';
-import data from '../../../../data.js';
 
-const Item = ({ building, setSelectedBuilding }) => {
+const Item = ({ building, setSelectedBuilding, setSelectedSort }) => {
   const handleClick = () => {
     setSelectedBuilding(building.name);
+    setSelectedSort(building.sort);
+    console.log(building);
   };
 
   return (
@@ -16,11 +17,12 @@ const Item = ({ building, setSelectedBuilding }) => {
   );
 };
 
-const Items = ({ myData, setSelectedBuilding }) => {
+const Items = ({ myData, setSelectedBuilding, setSelectedSort }) => {
   const buildings = myData.buildings.map((item) => {
     return {
       key: item.name,
       name: item.name,
+      sort: item.sort,
       imgUrl: item.mapImg,
     };
   });
@@ -37,6 +39,7 @@ const Items = ({ myData, setSelectedBuilding }) => {
             building={item}
             key={item.key}
             setSelectedBuilding={setSelectedBuilding}
+            setSelectedSort={setSelectedSort}
           />
         ))}
       </div>
@@ -46,6 +49,7 @@ const Items = ({ myData, setSelectedBuilding }) => {
             building={item}
             key={item.key}
             setSelectedBuilding={setSelectedBuilding}
+            setSelectedSort={setSelectedSort}
           />
         ))}
       </div>
@@ -55,6 +59,7 @@ const Items = ({ myData, setSelectedBuilding }) => {
             building={item}
             key={item.key}
             setSelectedBuilding={setSelectedBuilding}
+            setSelectedSort={setSelectedSort}
           />
         ))}
       </div>

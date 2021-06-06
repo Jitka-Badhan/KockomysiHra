@@ -1,11 +1,10 @@
 import React from 'react';
 import './style.css';
 import { useState } from 'react';
-import data from '../../../data';
 
-const Building = ({ name, backHome, changeR, changeTubes }) => {
+const Building = ({ myData, name, backHome, changeR, changeTubes }) => {
   const [Step, setStep] = useState(0);
-  const selectedBuilding = data.buildings.find(
+  const selectedBuilding = myData.buildings.find(
     (building) => building.name === name,
   );
 
