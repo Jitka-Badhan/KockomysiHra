@@ -57,6 +57,7 @@ const data = {
   buildings: [
     {
       name: 'Hospoda',
+      sort: 'Riddle',
       mapImg: '/assets/buildings/bar_icon.png',
       cardImg: '/assets/buildings/bar.jpg',
       function: 'quizz',
@@ -113,6 +114,7 @@ const data = {
     },
     {
       name: 'Knihovna',
+      sort: 'Riddle',
       mapImg: '/assets/buildings/library_icon.png',
       cardImg: '/assets/buildings/library.jpg',
       function: 'quizz',
@@ -171,6 +173,7 @@ const data = {
     },
     {
       name: 'Park',
+      sort: 'Riddle',
       mapImg: '/assets/buildings/park_icon.png',
       cardImg: '/assets/buildings/park.jpg',
       function: 'quizz',
@@ -229,6 +232,7 @@ const data = {
     },
     {
       name: 'Továrna',
+      sort: 'Riddle',
       mapImg: '/assets/buildings/factory_icon.png',
       cardImg: '/assets/buildings/factory.jpg',
       function: 'quizz',
@@ -287,6 +291,7 @@ const data = {
     },
     {
       name: 'Obchoďák',
+      sort: 'Riddle',
       mapImg: '/assets/buildings/shopping_mall_icon.png',
       cardImg: '/assets/buildings/shopping_mall.jpg',
       function: 'quizz',
@@ -340,6 +345,7 @@ const data = {
     },
     {
       name: 'Venkovský dům',
+      sort: 'House',
       mapImg: '/assets/buildings/house_rustic_icon.png',
       cardImg: '/assets/buildings/house_rustic.jpg',
       function: 'indication',
@@ -359,6 +365,7 @@ const data = {
     },
     {
       name: 'Moderní dům',
+      sort: 'House',
       mapImg: '/assets/buildings/house_modern_icon.png',
       cardImg: '/assets/buildings/house_modern.jpg',
       function: 'indication',
@@ -378,6 +385,7 @@ const data = {
     },
     {
       name: 'Radnice',
+      sort: 'Municipal',
       mapImg: '/assets/buildings/municipal_house_icon.png',
       cardImg: '/assets/buildings/municipal_house_cat.png',
       function: 'bribe_task',
@@ -388,11 +396,12 @@ const data = {
       ],
       isSolved: false,
       result: {
-      isActive: false,
-    },
+        isActive: false,
+      },
     },
     {
       name: 'Hřbitov',
+      sort: 'Cemetery',
       mapImg: '/assets/buildings/cemetery_icon.png',
       cardImg: '/assets/buildings/cemetery.jpg',
       function: 'cemetery',
@@ -417,6 +426,5 @@ const data = {
     },
   ],
 };
-
 
 export default data;

@@ -2,11 +2,8 @@ import React from 'react';
 import './style.css';
 import { useState } from 'react';
 
-const Building = ({ myData, name, backHome, changeR, changeTubes }) => {
+const Building = ({ selectedBuilding, backHome, changeR, changeTubes }) => {
   const [Step, setStep] = useState(0);
-  const selectedBuilding = myData.buildings.find(
-    (building) => building.name === name,
-  );
 
   const [answer, setAnswer] = useState('');
 

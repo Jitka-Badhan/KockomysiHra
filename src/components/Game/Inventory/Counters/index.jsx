@@ -25,7 +25,7 @@ const Counters = ({ remainingSeconds, myData }) => {
         />
         <div className="timer">
           <div className="timer__count">
-            {Math.floor(remainingSeconds / 60)}:
+            {String(Math.floor(remainingSeconds / 60)).padStart(2, 0)}:
             {String(remainingSeconds % 60).padStart(2, 0)}
           </div>
         </div>

@@ -82,10 +82,11 @@ const Map = ({
   myData,
 }) => {
   const clicked = (e) => {
-    setSelectedBuilding(e.target.id);
-    setSelectedSort(e.target.getAttribute('sort'));
-
-    console.log(e.target.getAttribute('sort'));
+    const thisBuilding = myData.buildings.find(
+      (building) => building.name === e.target.id,
+    );
+    setSelectedBuilding(thisBuilding);
+    setSelectedSort(thisBuilding.sort);
   };
 
   return (
@@ -94,7 +95,7 @@ const Map = ({
         <>
           {selectedSort === 'Riddle' && (
             <Building
-              name={selectedBuilding}
+              selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
               changeR={changeR}
               changeTubes={changeTubes}
