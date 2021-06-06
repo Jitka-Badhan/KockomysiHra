@@ -410,13 +410,14 @@ const data = {
         'Mrtvé myšky leží v hrobě.',
         'Nakaž kočky, brachu,',
         'Nepoddej se strachu!',
-        '',
+      ],
+      description2: [
         'Když budeš chtít poradit,',
         'Na mě se můžeš obrátit.',
         'Ale zbytečně mě nezdržuj,',
         'Raději zapoj rozum svůj.',
       ],
-      description2: [
+      description3: [
         'Dobrá rada, ta se cení,',
         'Kočky budou v ohrožení.',
         'Potřebuješ poradit?',
