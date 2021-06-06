@@ -2,10 +2,7 @@ import React from 'react';
 import './style.css';
 
 const Municipal = () => {
-  return (
-    <>
-    </>
-  );
+  return <></>;
 };
 
 export default Municipal;

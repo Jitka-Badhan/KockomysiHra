@@ -1,23 +1,18 @@
 import React from 'react';
 import './style.css';
 
-const Item = ({ building, setSelectedBuilding, setSelectedSort }) => {
-  const handleClick = () => {
-    setSelectedBuilding(building.name);
-    setSelectedSort(building.sort);
-    console.log(building);
-  };
-
+const Item = ({ building, clicked }) => {
   return (
     <img
+      id={building.name}
       src={building.imgUrl}
       className="building__detail inactive"
-      onClick={handleClick}
+      onClick={clicked}
     />
   );
 };
 
-const Items = ({ myData, setSelectedBuilding, setSelectedSort }) => {
+const Items = ({ myData, clicked }) => {
   const buildings = myData.buildings.map((item) => {
     return {
       key: item.name,
@@ -35,32 +30,17 @@ const Items = ({ myData, setSelectedBuilding, setSelectedSort }) => {
     <div className="container inventory__items">
       <div className="inventory__column">
         {column1.map((item) => (
-          <Item
-            building={item}
-            key={item.key}
-            setSelectedBuilding={setSelectedBuilding}
-            setSelectedSort={setSelectedSort}
-          />
+          <Item building={item} key={item.key} clicked={clicked} />
         ))}
       </div>
       <div className="inventory__column">
         {column2.map((item) => (
-          <Item
-            building={item}
-            key={item.key}
-            setSelectedBuilding={setSelectedBuilding}
-            setSelectedSort={setSelectedSort}
-          />
+          <Item building={item} key={item.key} clicked={clicked} />
         ))}
       </div>
       <div className="inventory__column">
         {column3.map((item) => (
-          <Item
-            building={item}
-            key={item.key}
-            setSelectedBuilding={setSelectedBuilding}
-            setSelectedSort={setSelectedSort}
-          />
+          <Item building={item} key={item.key} clicked={clicked} />
         ))}
       </div>
     </div>

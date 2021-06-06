@@ -80,14 +80,15 @@ const Map = ({
   selectedSort,
   setSelectedSort,
   myData,
+  clicked,
 }) => {
-  const clicked = (e) => {
-    const thisBuilding = myData.buildings.find(
-      (building) => building.name === e.target.id,
-    );
-    setSelectedBuilding(thisBuilding);
-    setSelectedSort(thisBuilding.sort);
-  };
+  // const clicked = (e) => {
+  //   const thisBuilding = myData.buildings.find(
+  //     (building) => building.name === e.target.id,
+  //   );
+  //   setSelectedBuilding(thisBuilding);
+  //   setSelectedSort(thisBuilding.sort);
+  // };
 
   return (
     <div className="card game__map">
@@ -104,21 +105,21 @@ const Map = ({
           )}
           {selectedSort === 'Cemetery' && (
             <Cemetery
-              name={selectedBuilding}
+              selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
               myData={myData}
             />
           )}
           {selectedSort === 'House' && (
             <House
-              name={selectedBuilding}
+              selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
               myData={myData}
             />
           )}
           {selectedSort === 'Municipal' && (
             <Municipal
-              name={selectedBuilding}
+              selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
               myData={myData}
             />

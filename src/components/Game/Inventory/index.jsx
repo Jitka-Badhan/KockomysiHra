@@ -6,11 +6,10 @@ import Items from './Items';
 
 const Inventory = ({
   myData,
-  setSelectedBuilding,
-  setSelectedSort,
   remainingSeconds,
   remainingTubes,
   remainingR,
+  clicked,
 }) => {
   return (
     <div className="container inventory">
@@ -28,11 +27,7 @@ const Inventory = ({
         myData={myData}
       />
 
-      <Items
-        myData={myData}
-        setSelectedBuilding={setSelectedBuilding}
-        setSelectedSort={setSelectedSort}
-      />
+      <Items myData={myData} clicked={clicked} />
     </div>
   );
 };

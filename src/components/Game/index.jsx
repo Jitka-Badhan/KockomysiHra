@@ -31,6 +31,14 @@ const Game = () => {
       : 3600,
   );
 
+  const clicked = (e) => {
+    const thisBuilding = myData.buildings.find(
+      (building) => building.name === e.target.id,
+    );
+    setSelectedBuilding(thisBuilding);
+    setSelectedSort(thisBuilding.sort);
+  };
+
   const changeR = (score) => {
     setMyData((draft) => {
       draft.scores.R = draft.scores.R + score;
@@ -80,9 +88,8 @@ const Game = () => {
           <GameNav />
           <Inventory
             myData={myData}
-            setSelectedBuilding={setSelectedBuilding}
-            setSelectedSort={setSelectedSort}
             remainingSeconds={remainingSeconds}
+            clicked={clicked}
           />
         </div>
 
@@ -94,6 +101,7 @@ const Game = () => {
             setSelectedSort={setSelectedSort}
             changeR={changeR}
             changeTubes={changeTubes}
+            clicked={clicked}
             myData={myData}
           />
         </div>
