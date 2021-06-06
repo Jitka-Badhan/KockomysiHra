@@ -9,6 +9,7 @@ const Cemetery = ({ myData, name, backHome }) => {
     (building) => building.name === name,
   );
 
+
   return (
     <div className="card game__cemetery">
       <img src="/assets/cross.svg" alt="cross" className="top-right cancel" />
@@ -18,20 +19,10 @@ const Cemetery = ({ myData, name, backHome }) => {
           className="cemetery__img"
         />
         <div className="cemetery__text">
-          <h4>Hřbitov</h4>
+          <h4>{selectedBuilding.name}</h4>
           <div className="container">
-            <div className="paragraph">
-              <p>Tady u nás na hřbitově</p>
-              <p>mrtvé myšky leží v hrobě.</p>
-              <p>Nakaž kočky, brachu,</p>
-              <p>nepoddej se strachu!</p>
-            </div>
-            <div className="paragraph">
-              <p>Když budeš chtít poradit,</p>
-              <p>na mě se můžeš obrátit.</p>
-              <p>Ale zbytečně mě nezdržuj,</p>
-              <p>raději zapoj rozum svůj.</p>
-            </div>
+            {selectedBuilding.description1.map((text) => (
+              <p key={text}>{text}</p>))}
           </div>
         </div>
         <div className="cemetery__buttons">
