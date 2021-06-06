@@ -2,6 +2,7 @@ const data = {
   scores: {
     R: 0,
     tubes: 5,
+    timeOnSave: undefined,
   },
   intro: [
     {

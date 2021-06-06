@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Counters = ({ remainingSeconds, myData }) => {
+const Counters = ({ remainingSeconds, remainingTubes, remainingR, myData }) => {
   return (
     <div className="container game__counters">
       <div className="game__counter test_tubes">

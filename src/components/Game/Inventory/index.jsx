@@ -4,7 +4,13 @@ import './style.css';
 import Counters from './Counters';
 import Items from './Items';
 
-const Inventory = ({ myData, setSelectedBuilding, remainingSeconds }) => {
+const Inventory = ({
+  myData,
+  setSelectedBuilding,
+  remainingSeconds,
+  remainingTubes,
+  remainingR,
+}) => {
   return (
     <div className="container inventory">
       <div className="inventory__header">
@@ -14,7 +20,12 @@ const Inventory = ({ myData, setSelectedBuilding, remainingSeconds }) => {
         </div>
       </div>
 
-      <Counters remainingSeconds={remainingSeconds} myData={myData} />
+      <Counters
+        remainingSeconds={remainingSeconds}
+        remainingTubes={remainingTubes}
+        remainingR={remainingR}
+        myData={myData}
+      />
 
       <Items myData={myData} setSelectedBuilding={setSelectedBuilding} />
     </div>

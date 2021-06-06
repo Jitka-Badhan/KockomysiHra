@@ -10,8 +10,25 @@ import Map from './Map';
 
 const Game = () => {
   const [myData, setMyData] = useImmer(data);
+
+  useEffect(() => {
+    const loadedSave = JSON.parse(localStorage.getItem('mySave'));
+
+    loadedSave
+      ? setMyData((draft) => {
+          draft.scores.timeOnSave = loadedSave.myTime;
+          draft.scores.tubes = loadedSave.myTubes;
+          draft.scores.R = loadedSave.myR;
+        })
+      : console.log('Nic k načtení');
+  }, []);
+
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
-  const [remainingSeconds, setRemainingSeconds] = useState(localStorage.getItem('myTime') || 3600);
+  const [remainingSeconds, setRemainingSeconds] = useState(
+    localStorage.getItem('mySave')
+      ? JSON.parse(localStorage.getItem('mySave')).myTime
+      : 3600,
+  );
 
   const changeR = (score) => {
     setMyData((draft) => {
@@ -36,14 +53,21 @@ const Game = () => {
           clearInterval(interval);
           return 0;
         }
+        save(remainingSeconds);
         return remainingSeconds - 1;
       });
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [myData]);
 
-  const save = () => {
-    localStorage.setItem('myTime', remainingSeconds)
+  const save = (remainingSeconds) => {
+    const mySave = JSON.stringify({
+      myTime: remainingSeconds,
+      myTubes: myData.scores.tubes,
+      myR: myData.scores.R,
+    });
+
+    localStorage.setItem('mySave', mySave);
   };
 
   return (
@@ -52,7 +76,7 @@ const Game = () => {
 
       <div className="container game">
         <div className="container game__side">
-          <GameNav save={save} />
+          <GameNav />
           <Inventory
             myData={myData}
             setSelectedBuilding={setSelectedBuilding}
