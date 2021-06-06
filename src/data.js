@@ -387,14 +387,11 @@ const data = {
       ],
       isSolved: false,
       result: {
-        ifCorrect: 'Bystré oko, to se hned pozná.',
-        ifPartiallyCorrect: 'Mršky se Ti schovaly.',
-        ifNotCorrect: 'Už z těch koček blbneš, tolik jich tam není.',
-      },
       isActive: false,
     },
+    },
     {
-      name: 'Hřbitov',
+      name: 'Cemetery',
       mapImg: '/assets/buildings/cemetery_icon.png',
       cardImg: '/assets/buildings/cemetery.jpg',
       function: 'cemetery',
@@ -404,116 +401,9 @@ const data = {
         'Nakaž tu, která žere myši,',
         'Nákaza se prudce zvýší',
       ],
-      quizz: {
-        name: 'Hospoda',
-        pic: '/assets/quizzes/Pub_riddle.png',
-        text: 'Která kočka žere především myši?',
-        answers: [
-          {
-            button: 'A',
-            text: '',
-            pic: '/assets/quizzes/cat_black.png',
-            points: 1,
-          },
-          {
-            button: 'B',
-            text: '',
-            pic: '/assets/quizzes/cat_grey.png',
-            points: 0,
-          },
-          {
-            button: 'C',
-            text: '',
-            pic: '/assets/quizzes/cat_sick.png',
-            points: 0,
-          },
-          {
-            button: 'D',
-            text: '',
-            pic: '/assets/quizzes/cat_healthy.png',
-            points: 0,
-          },
-        ],
-        solution: 'A',
-        hint: {
-          text: '',
-          pic: '/assets/photos/photo-like_square.png',
-        },
-        isSolved: false,
-        result: {
-          ifCorrect: 'Zde kočky už nezachlastají.',
-          ifPartiallyCorrect: '',
-          ifNotCorrect: 'Kočky si na Tebe dají rundu.',
-        },
-      },
-      indication: {
-        isPresent: false,
-        pic: '',
-        description: '',
-      },
-      isActive: false,
-    },
-    {
-      name: 'Hospoda',
-      mapImg: '/assets/buildings/bar_icon.png',
-      cardImg: '/assets/buildings/bar.jpg',
-      function: 'quizz',
-      description: [
-        'Tohle je místní putyka,',
-        'Kočky tu sedí u mlíka.',
-        'Nakaž tu, která žere myši,',
-        'Nákaza se prudce zvýší',
-      ],
-      quizz: {
-        name: 'Hospoda',
-        pic: '/assets/quizzes/Pub_riddle.png',
-        text: 'Která kočka žere především myši?',
-        answers: [
-          {
-            button: 'A',
-            text: '',
-            pic: '/assets/quizzes/cat_black.png',
-            points: 1,
-          },
-          {
-            button: 'B',
-            text: '',
-            pic: '/assets/quizzes/cat_grey.png',
-            points: 0,
-          },
-          {
-            button: 'C',
-            text: '',
-            pic: '/assets/quizzes/cat_sick.png',
-            points: 0,
-          },
-          {
-            button: 'D',
-            text: '',
-            pic: '/assets/quizzes/cat_healthy.png',
-            points: 0,
-          },
-        ],
-        solution: 'A',
-        hint: {
-          text: '',
-          pic: '/assets/photos/photo-like_square.png',
-        },
-        isSolved: false,
-        result: {
-          ifCorrect: 'Zde kočky už nezachlastají.',
-          ifPartiallyCorrect: '',
-          ifNotCorrect: 'Kočky si na Tebe dají rundu.',
-        },
-      },
-      indication: {
-        isPresent: false,
-        pic: '',
-        description: '',
-      },
-      isActive: false,
     },
   ],
 };
+
 
 export default data;

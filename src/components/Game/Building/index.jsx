@@ -9,7 +9,6 @@ const Building = ({ name, backHome, changeR, changeTubes }) => {
     (building) => building.name === name,
   );
 
-  console.log(selectedBuilding);
   const [answer, setAnswer] = useState('');
 
   const buttonClicked = (answer) => {

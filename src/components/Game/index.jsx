@@ -11,6 +11,7 @@ import Map from './Map';
 const Game = () => {
   const [myData, setMyData] = useImmer(data);
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
+  const [selectedSort, setSelectedSort] = useState(undefined);
   const [remainingSeconds, setRemainingSeconds] = useState(localStorage.getItem('myTime') || 3600);
 
   const changeR = (score) => {
@@ -64,8 +65,11 @@ const Game = () => {
           <Map
             selectedBuilding={selectedBuilding}
             setSelectedBuilding={setSelectedBuilding}
+            selectedSort={selectedSort}
+            setSelectedSort={setSelectedSort}
             changeR={changeR}
             changeTubes={changeTubes}
+            myData={myData}
           />
         </div>
       </div>
