@@ -83,14 +83,6 @@ const Map = ({
   myData,
   clicked,
 }) => {
-  // const clicked = (e) => {
-  //   const thisBuilding = myData.buildings.find(
-  //     (building) => building.name === e.target.id,
-  //   );
-  //   setSelectedBuilding(thisBuilding);
-  //   setSelectedSort(thisBuilding.sort);
-  // };
-
   return (
     <div className="card game__map">
       {selectedBuilding ? (
@@ -146,7 +138,6 @@ const Map = ({
                 ry="12.2"
                 style={{ fill: '#fff' }}
                 id="Knihovna"
-                sort="Riddle"
                 onClick={clicked}
               />
 
@@ -157,7 +148,6 @@ const Map = ({
                 ry="11.15"
                 style={{ fill: '#fff' }}
                 id="Hospoda"
-                sort="Riddle"
                 onClick={clicked}
               />
 
@@ -168,7 +158,6 @@ const Map = ({
                 ry="10.37"
                 style={{ fill: '#fff' }}
                 id="Venkovský dům"
-                sort="House"
                 onClick={clicked}
               />
 
@@ -179,7 +168,6 @@ const Map = ({
                 ry="13.62"
                 style={{ fill: '#fff' }}
                 id="Továrna"
-                sort="Riddle"
                 onClick={clicked}
               />
 
@@ -190,7 +178,6 @@ const Map = ({
                 ry="17.01"
                 style={{ fill: '#fff' }}
                 id="Radnice"
-                sort="Municipal"
                 onClick={clicked}
               />
 
@@ -201,7 +188,6 @@ const Map = ({
                 ry="10.01"
                 style={{ fill: '#fff' }}
                 id="Moderní dům"
-                sort="House"
                 onClick={clicked}
               />
 
@@ -212,7 +198,6 @@ const Map = ({
                 ry="14.99"
                 style={{ fill: '#fff' }}
                 id="Park"
-                sort="Riddle"
                 onClick={clicked}
               />
 
@@ -223,7 +208,6 @@ const Map = ({
                 ry="15.41"
                 style={{ fill: '#fff' }}
                 id="Obchoďák"
-                sort="Riddle"
                 onClick={clicked}
               />
 
@@ -234,7 +218,6 @@ const Map = ({
                 ry="16.57"
                 style={{ fill: '#fff' }}
                 id="Hřbitov"
-                sort="Cemetery"
                 onClick={clicked}
               />
             </svg>

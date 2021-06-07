@@ -5,42 +5,44 @@ const Item = ({ building, clicked }) => {
   return (
     <img
       id={building.name}
-      src={building.imgUrl}
-      className="building__detail inactive"
+      src={building.mapImg}
+      className={
+        building.isActive ? 'building__detail' : 'building__detail inactive'
+      }
       onClick={clicked}
     />
   );
 };
 
 const Items = ({ myData, clicked }) => {
-  const buildings = myData.buildings.map((item) => {
-    return {
-      key: item.name,
-      name: item.name,
-      imgUrl: item.mapImg,
-    };
-  });
-
-  const column1 = buildings.slice(0, 3);
-  const column2 = buildings.slice(3, 5);
-  const column3 = buildings.slice(5, 8);
+  const buildingsToSchow = myData.buildings.filter(
+    (building) => building.sort !== 'Cemetery',
+  );
 
   return (
     <div className="container inventory__items">
       <div className="inventory__column">
-        {column1.map((item) => (
-          <Item building={item} key={item.key} clicked={clicked} />
-        ))}
+        {buildingsToSchow
+          .filter((building) => building.column === '1')
+          .map((item) => (
+            <Item building={item} key={item.name} clicked={clicked} />
+          ))}
       </div>
+
       <div className="inventory__column">
-        {column2.map((item) => (
-          <Item building={item} key={item.key} clicked={clicked} />
-        ))}
+        {buildingsToSchow
+          .filter((building) => building.column === '2')
+          .map((item) => (
+            <Item building={item} key={item.name} clicked={clicked} />
+          ))}
       </div>
+
       <div className="inventory__column">
-        {column3.map((item) => (
-          <Item building={item} key={item.key} clicked={clicked} />
-        ))}
+        {buildingsToSchow
+          .filter((building) => building.column === '3')
+          .map((item) => (
+            <Item building={item} key={item.name} clicked={clicked} />
+          ))}
       </div>
     </div>
   );

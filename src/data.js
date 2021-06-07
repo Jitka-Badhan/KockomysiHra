@@ -275,7 +275,7 @@ const data = {
       name: 'Obchoďák',
       sort: 'Riddle',
       mapImg: '/assets/buildings/shopping_mall_icon.png',
-      column: '2',
+      column: '1',
       cardImg: '/assets/buildings/shopping_mall.jpg',
       description: [
         'Kočky rády shopuji,',
@@ -359,6 +359,7 @@ const data = {
       name: 'Radnice',
       sort: 'Municipal',
       mapImg: '/assets/buildings/municipal_house_icon.png',
+      column: '2',
       cardImg: '/assets/buildings/municipal_house_cat.png',
       description: [
         'Mám klíč,',
