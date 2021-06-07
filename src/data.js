@@ -398,28 +398,23 @@ const data = {
   ],
   winner_ranks: [
     {
-      scoreUp: null,
-      scoreDown: null,
+      score_breakpoint: null,
       name: 'Starosta města Myschen',
     },
     {
-      scoreUp: null,
-      scoreDown: null,
+      score_breakpoint: null,
       name: 'Ministr zdravotnictví',
     },
     {
-      scoreUp: null,
-      scoreDown: null,
+      score_breakpoint: null,
       name: 'Velvyslanec',
     },
     {
-      scoreUp: null,
-      scoreDown: null,
+      score_breakpoint: null,
       name: 'Člen městské rady',
     },
     {
-      scoreUp: null,
-      scoreDown: null,
+      score_breakpoint: null,
       name: 'Vězeň',
     },
   ],
