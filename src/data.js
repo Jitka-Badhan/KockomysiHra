@@ -59,8 +59,8 @@ const data = {
       name: 'Hospoda',
       sort: 'Riddle',
       mapImg: '/assets/buildings/bar_icon.png',
+      column: '3',
       cardImg: '/assets/buildings/bar.jpg',
-      function: 'quizz',
       description: [
         'Tohle je místní putyka,',
         'Kočky tu sedí u mlíka.',
@@ -107,17 +107,14 @@ const data = {
         },
         isSolved: false,
       },
-      indication: {
-        isPresent: false,
-      },
       isActive: false,
     },
     {
       name: 'Knihovna',
       sort: 'Riddle',
       mapImg: '/assets/buildings/library_icon.png',
+      column: '1',
       cardImg: '/assets/buildings/library.jpg',
-      function: 'quizz',
       description: [
         'Nad knížkami potichoučku,',
         'Sedí kočky pěkně v hloučku.',
@@ -164,19 +161,14 @@ const data = {
         },
         isSolved: false,
       },
-      indication: {
-        isPresent: false,
-        pic: '',
-        description: '',
-      },
       isActive: false,
     },
     {
       name: 'Park',
       sort: 'Riddle',
       mapImg: '/assets/buildings/park_icon.png',
+      column: '2',
       cardImg: '/assets/buildings/park.jpg',
-      function: 'quizz',
       description: [
         'V zahradě se kočky hřejou,',
         'myši loví, pak se smějou.',
@@ -223,19 +215,14 @@ const data = {
         },
         isSolved: false,
       },
-      indication: {
-        isPresent: false,
-        pic: '',
-        description: '',
-      },
       isActive: false,
     },
     {
       name: 'Továrna',
       sort: 'Riddle',
       mapImg: '/assets/buildings/factory_icon.png',
+      column: '3',
       cardImg: '/assets/buildings/factory.jpg',
-      function: 'quizz',
       description: [
         'Jednou týdně, v sobotu,',
         'Mají kočky robotu.',
@@ -282,19 +269,14 @@ const data = {
         },
         isSolved: false,
       },
-      indication: {
-        isPresent: false,
-        pic: '',
-        description: '',
-      },
       isActive: false,
     },
     {
       name: 'Obchoďák',
       sort: 'Riddle',
       mapImg: '/assets/buildings/shopping_mall_icon.png',
+      column: '2',
       cardImg: '/assets/buildings/shopping_mall.jpg',
-      function: 'quizz',
       description: [
         'Kočky rády shopuji,',
         'Mlíčko si zde kupují.',
@@ -347,8 +329,8 @@ const data = {
       name: 'Venkovský dům',
       sort: 'House',
       mapImg: '/assets/buildings/house_rustic_icon.png',
+      column: '1',
       cardImg: '/assets/buildings/house_rustic.jpg',
-      function: 'indication',
       description: [
         'Nějaké dodatečné info:',
         'Hospoda indicie 1',
@@ -356,19 +338,14 @@ const data = {
         'Hospoda indicie 3',
       ],
       isSolved: false,
-      indication: {
-        isPresent: true,
-        pic: '',
-        description: '',
-      },
       isActive: false,
     },
     {
       name: 'Moderní dům',
       sort: 'House',
       mapImg: '/assets/buildings/house_modern_icon.png',
+      column: '3',
       cardImg: '/assets/buildings/house_modern.jpg',
-      function: 'indication',
       description: [
         'Nějaké dodatečné info:',
         'Hospoda indicie 1',
@@ -376,11 +353,6 @@ const data = {
         'Hospoda indicie 3',
       ],
       isSolved: false,
-      indication: {
-        isPresent: true,
-        pic: '',
-        description: '',
-      },
       isActive: false,
     },
     {
@@ -388,7 +360,6 @@ const data = {
       sort: 'Municipal',
       mapImg: '/assets/buildings/municipal_house_icon.png',
       cardImg: '/assets/buildings/municipal_house_cat.png',
-      function: 'bribe_task',
       description: [
         'Mám klíč,',
         'ale není zadarmo...',
@@ -404,7 +375,6 @@ const data = {
       sort: 'Cemetery',
       mapImg: '/assets/buildings/cemetery_icon.png',
       cardImg: '/assets/buildings/cemetery.jpg',
-      function: 'cemetery',
       description1: [
         'Tady u nás na hřbitově,',
         'Mrtvé myšky leží v hrobě.',
@@ -426,6 +396,33 @@ const data = {
       visited: false,
     },
   ],
+  winner_ranks: [
+    {
+      scoreUp: null,
+      scoreDown: null,
+      name: 'Starosta města Myschen'
+    }
+    {
+      scoreUp: null,
+      scoreDown: null,
+      name: 'Ministr zdravotnictví'
+    }
+    {
+      scoreUp: null,
+      scoreDown: null,
+      name: 'Velvyslanec'
+    }
+    {
+      scoreUp: null,
+      scoreDown: null,
+      name: 'Člen městské rady'
+    }
+    {
+      scoreUp: null,
+      scoreDown: null,
+      name: 'Vězeň'
+    }
+  ]
 };
 
 export default data;

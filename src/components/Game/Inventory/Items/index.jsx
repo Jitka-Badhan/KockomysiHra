@@ -17,7 +17,6 @@ const Items = ({ myData, clicked }) => {
     return {
       key: item.name,
       name: item.name,
-      sort: item.sort,
       imgUrl: item.mapImg,
     };
   });
