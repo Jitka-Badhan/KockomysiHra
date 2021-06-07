@@ -103,6 +103,7 @@ const Game = () => {
             changeTubes={changeTubes}
             clicked={clicked}
             myData={myData}
+            setMyData={setMyData}
           />
         </div>
       </div>

@@ -79,6 +79,7 @@ const Map = ({
   changeTubes,
   selectedSort,
   setSelectedSort,
+  setMyData,
   myData,
   clicked,
 }) => {
@@ -108,6 +109,7 @@ const Map = ({
               selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
               myData={myData}
+              setMyData={setMyData}
             />
           )}
           {selectedSort === 'House' && (

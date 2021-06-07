@@ -1,7 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const House = () => {
+const House = ({selectedBuilding, backHome, myData}) => {
+
   return (
     <>
     </>
