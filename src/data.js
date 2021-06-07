@@ -69,7 +69,7 @@ const data = {
       ],
       quizz: {
         name: 'Hospoda',
-        pic: '/assets/quizzes/Pub_riddle.png',
+        pic: '/assets/quizzes/Pub_final_better.png',
         text: 'Která kočka žere především myši?',
         answers: [
           {
@@ -177,7 +177,7 @@ const data = {
       ],
       quizz: {
         name: 'Park',
-        pic: '/assets/quizzes/Garden_riddle.jpeg',
+        pic: '/assets/quizzes/Bludiste_final3.jpg',
         text: 'Ke kterým kočkám se dostaneš?',
         answers: [
           {
@@ -231,7 +231,7 @@ const data = {
       ],
       quizz: {
         name: 'Továrna',
-        pic: '/assets/quizzes/Factory_riddle.jpeg',
+        pic: '/assets/quizzes/Sudoku_final.jpg',
         text: 'Které číslo hlídá černá kočka?',
         answers: [
           {
@@ -331,6 +331,7 @@ const data = {
       mapImg: '/assets/buildings/house_rustic_icon.png',
       column: '1',
       cardImg: '/assets/buildings/house_rustic.jpg',
+      hintImg: '/assets/buildings/library_hint_better.png',
       description: [
         'Nějaké dodatečné info:',
         'Hospoda indicie 1',
@@ -346,6 +347,7 @@ const data = {
       mapImg: '/assets/buildings/house_modern_icon.png',
       column: '3',
       cardImg: '/assets/buildings/house_modern.jpg',
+      hintImg: '/assets/buildings/pub_hint.jpg',
       description: [
         'Nějaké dodatečné info:',
         'Hospoda indicie 1',
@@ -360,7 +362,7 @@ const data = {
       sort: 'Municipal',
       mapImg: '/assets/buildings/municipal_house_icon.png',
       column: '2',
-      cardImg: '/assets/buildings/municipal_house_cat.png',
+      cardImg: '/assets/buildings/municipal_w_cat.jpg',
       description: [
         'Mám klíč,',
         'ale není zadarmo...',
