@@ -17,4 +17,5 @@
 
 .inactive {
   filter: grayscale();
+  pointer-events: none;
 }

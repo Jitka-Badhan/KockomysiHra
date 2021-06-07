@@ -35,8 +35,13 @@ const Game = () => {
     const thisBuilding = myData.buildings.find(
       (building) => building.name === e.target.id,
     );
+    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+
     setSelectedBuilding(thisBuilding);
     setSelectedSort(thisBuilding.sort);
+    setMyData((draft) => {
+      draft.buildings[thisBuildingIndex].isActive = true;
+    });
   };
 
   const changeR = (score) => {
@@ -95,10 +100,9 @@ const Game = () => {
 
         <div className="main game__main">
           <Map
-            selectedBuilding={selectedBuilding}
             setSelectedBuilding={setSelectedBuilding}
+            selectedBuilding={selectedBuilding}
             selectedSort={selectedSort}
-            setSelectedSort={setSelectedSort}
             changeR={changeR}
             changeTubes={changeTubes}
             clicked={clicked}
