@@ -14,13 +14,12 @@ const Game = () => {
   useEffect(() => {
     const loadedSave = JSON.parse(localStorage.getItem('mySave'));
 
-    loadedSave
-      ? setMyData((draft) => {
-          draft.scores.timeOnSave = loadedSave.myTime;
-          draft.scores.tubes = loadedSave.myTubes;
-          draft.scores.R = loadedSave.myR;
-        })
-      : console.log('Nic k načtení');
+    loadedSave &&
+      setMyData((draft) => {
+        draft.scores.timeOnSave = loadedSave.myTime;
+        draft.scores.tubes = loadedSave.myTubes;
+        draft.scores.R = loadedSave.myR;
+      });
   }, []);
 
   const [selectedBuilding, setSelectedBuilding] = useState(undefined);
@@ -35,16 +34,12 @@ const Game = () => {
     const thisBuilding = myData.buildings.find(
       (building) => building.name === e.target.id,
     );
-    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
     const cemeteryIndex = myData.buildings.indexOf(
       myData.buildings.find((building) => building.sort === 'Cemetery'),
     );
 
     setSelectedBuilding(thisBuilding);
     setSelectedSort(thisBuilding.sort);
-    setMyData((draft) => {
-      draft.buildings[thisBuildingIndex].isActive = true;
-    });
 
     thisBuilding.sort === 'Cemetery' &&
       setMyData((draft) => {
@@ -61,9 +56,7 @@ const Game = () => {
   const changeTubes = () => {
     setMyData((draft) => {
       draft.scores.tubes = draft.scores.tubes - 1;
-      draft.scores.tubes > 0
-        ? console.log('Pokračujem')
-        : alert('Došel kočvid');
+      draft.scores.tubes > 0 || alert('Došel kočvid');
     });
   };
 

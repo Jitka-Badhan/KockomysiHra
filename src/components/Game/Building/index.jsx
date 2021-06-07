@@ -2,7 +2,14 @@ import React from 'react';
 import './style.css';
 import { useState } from 'react';
 
-const Building = ({ selectedBuilding, backHome, changeR, changeTubes }) => {
+const Building = ({
+  selectedBuilding,
+  backHome,
+  changeR,
+  changeTubes,
+  myData,
+  setMyData,
+}) => {
   const [Step, setStep] = useState(0);
 
   const [answer, setAnswer] = useState('');
@@ -34,7 +41,16 @@ const Building = ({ selectedBuilding, backHome, changeR, changeTubes }) => {
               <button
                 className="toQuiz"
                 onClick={() => {
+                  const thisBuilding = myData.buildings.find(
+                    (building) => building.name === selectedBuilding.name,
+                  );
+                  const thisBuildingIndex =
+                    myData.buildings.indexOf(thisBuilding);
+
                   setStep(1);
+                  setMyData((draft) => {
+                    draft.buildings[thisBuildingIndex].isActive = true;
+                  });
                 }}
               >
                 Přejdi na rébus
