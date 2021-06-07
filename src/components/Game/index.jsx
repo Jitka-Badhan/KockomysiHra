@@ -36,12 +36,20 @@ const Game = () => {
       (building) => building.name === e.target.id,
     );
     const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+    const cemeteryIndex = myData.buildings.indexOf(
+      myData.buildings.find((building) => building.sort === 'Cemetery'),
+    );
 
     setSelectedBuilding(thisBuilding);
     setSelectedSort(thisBuilding.sort);
     setMyData((draft) => {
       draft.buildings[thisBuildingIndex].isActive = true;
     });
+
+    thisBuilding.sort === 'Cemetery' &&
+      setMyData((draft) => {
+        draft.buildings[cemeteryIndex].visited = true;
+      });
   };
 
   const changeR = (score) => {

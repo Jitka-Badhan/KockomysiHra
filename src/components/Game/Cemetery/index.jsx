@@ -1,9 +1,7 @@
 import React from 'react';
 import './style.css';
-import { useState } from 'react';
 
-const Cemetery = ({ myData, setMyData, selectedBuilding, backHome }) => {
-
+const Cemetery = ({ selectedBuilding, backHome }) => {
   return (
     <div className="card game__cemetery">
       {selectedBuilding.visited === false && (
@@ -66,7 +64,6 @@ const Cemetery = ({ myData, setMyData, selectedBuilding, backHome }) => {
               </button>
             </div>
           </div>
-
         </>
       )}
 
@@ -125,7 +122,6 @@ const Cemetery = ({ myData, setMyData, selectedBuilding, backHome }) => {
               </button>
             </div>
           </div>
-          {selectedBuilding.visited = true};
         </>
       )}
     </div>
