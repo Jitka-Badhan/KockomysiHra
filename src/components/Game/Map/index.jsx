@@ -34,8 +34,8 @@ const Map = ({
             <Cemetery
               selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
-              myData={myData}
-              setMyData={setMyData}
+              // myData={myData}
+              // setMyData={setMyData}
             />
           )}
           {selectedSort === 'House' && (
