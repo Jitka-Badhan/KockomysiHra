@@ -400,29 +400,29 @@ const data = {
     {
       scoreUp: null,
       scoreDown: null,
-      name: 'Starosta města Myschen'
-    }
+      name: 'Starosta města Myschen',
+    },
     {
       scoreUp: null,
       scoreDown: null,
-      name: 'Ministr zdravotnictví'
-    }
+      name: 'Ministr zdravotnictví',
+    },
     {
       scoreUp: null,
       scoreDown: null,
-      name: 'Velvyslanec'
-    }
+      name: 'Velvyslanec',
+    },
     {
       scoreUp: null,
       scoreDown: null,
-      name: 'Člen městské rady'
-    }
+      name: 'Člen městské rady',
+    },
     {
       scoreUp: null,
       scoreDown: null,
-      name: 'Vězeň'
-    }
-  ]
+      name: 'Vězeň',
+    },
+  ],
 };
 
 export default data;
