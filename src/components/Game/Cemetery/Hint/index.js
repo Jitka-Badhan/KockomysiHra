@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Hint = () => {
+const Hint = ({ quizzToHint, backHome }) => {
   return (
     <div className="card game__hints">
       <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
@@ -12,16 +12,14 @@ const Hint = () => {
       />
       <h4>Zde je tvoje nápověda:</h4>
       <div className="hint">
-        <h4>Knihovna</h4>
-        <img
-          src="img/quizzes/hint_bar.png"
-          alt="hint for quizz of bar"
-          className="hint__img"
-        />
-        <p>Každý obrázek reprezentuje jeden znak.</p>
+        <h4>{quizzToHint.name}</h4>
+        <img src={quizzToHint.hint.pic} className="hint__img" />
+        <p>{quizzToHint.hint.text}</p>
       </div>
       <div className="card__buttons">
-        <button className="cancel">Ok</button>
+        <button className="cancel" onClick={() => backHome()}>
+          Ok
+        </button>
       </div>
     </div>
   );

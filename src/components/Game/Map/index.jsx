@@ -9,9 +9,11 @@ import Municipal from '../Municipal';
 const Map = ({
   selectedBuilding,
   setSelectedBuilding,
+  selectedSort,
   changeR,
   changeTubes,
-  selectedSort,
+  remainingSeconds,
+  setRemainingSeconds,
   setMyData,
   myData,
   clicked,
@@ -23,7 +25,7 @@ const Map = ({
           {selectedSort === 'Riddle' && (
             <Building
               selectedBuilding={selectedBuilding}
-              backHome={setSelectedBuilding}
+              setSelectedBuilding={setSelectedBuilding}
               changeR={changeR}
               changeTubes={changeTubes}
               myData={myData}
@@ -34,15 +36,19 @@ const Map = ({
             <Cemetery
               selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
-              // myData={myData}
-              // setMyData={setMyData}
+              myData={myData}
+              clicked={clicked}
+              remainingSeconds={remainingSeconds}
+              setRemainingSeconds={setRemainingSeconds}
+              setMyData={setMyData}
             />
           )}
           {selectedSort === 'House' && (
             <House
               selectedBuilding={selectedBuilding}
-              backHome={setSelectedBuilding}
+              setSelectedBuilding={setSelectedBuilding}
               myData={myData}
+              setMyData={setMyData}
             />
           )}
           {selectedSort === 'Municipal' && (
@@ -73,6 +79,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Knihovna"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Knihovna',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -83,6 +96,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Hospoda"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Hospoda',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -93,6 +113,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Venkovský dům"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Venkovský dům',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -103,6 +130,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Továrna"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Továrna',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -113,6 +147,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Radnice"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Radnice',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -123,6 +164,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Moderní dům"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Moderní dům',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -133,6 +181,12 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Park"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find((building) => building.name === 'Park')
+                    .isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse
@@ -143,6 +197,13 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Obchoďák"
                 onClick={clicked}
+                className={
+                  !myData.buildings.find(
+                    (building) => building.name === 'Obchoďák',
+                  ).isActive
+                    ? 'disabled'
+                    : undefined
+                }
               />
 
               <ellipse

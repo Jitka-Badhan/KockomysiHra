@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
-const Cemetery = ({ selectedBuilding, backHome }) => {
+import Hint from './Hint';
+
+const Cemetery = ({
+  selectedBuilding,
+  remainingSeconds,
+  setRemainingSeconds,
+  backHome,
+  myData,
+  setMyData,
+}) => {
+  const [visited, setVisited] = useState(selectedBuilding.visited);
+  const [hintWasChosen, setHintWasChosen] = useState(false);
+  const [quizzToHint, setQuizzToHint] = useState(undefined);
+
+  const approveVisited = () => {
+    const thisBuilding = myData.buildings.find(
+      (building) => building.name === selectedBuilding.name,
+    );
+    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+
+    setMyData((draft) => {
+      draft.buildings[thisBuildingIndex].visited = true;
+    });
+
+    setVisited(true);
+  };
+
+  const showTheHint = (e) => {
+    const hintFor = myData.buildings.find(
+      (building) => building.name === e.target.id,
+    ).quizz;
+    setQuizzToHint(hintFor);
+    setHintWasChosen(true);
+    setRemainingSeconds(remainingSeconds - 300);
+  };
+
   return (
     <div className="card game__cemetery">
-      {selectedBuilding.visited === false && (
+      {!visited && !hintWasChosen && (
         <>
           <img
             src="/assets/cross.svg"
@@ -35,12 +70,15 @@ const Cemetery = ({ selectedBuilding, backHome }) => {
               <button className="cancel" onClick={() => backHome()}>
                 Zrušit
               </button>
+              <button className="cancel" onClick={approveVisited}>
+                Nápověda
+              </button>
             </div>
           </div>
         </>
       )}
 
-      {selectedBuilding.visited === true && (
+      {visited && !hintWasChosen && (
         <>
           <img
             src="/assets/cross.svg"
@@ -63,31 +101,21 @@ const Cemetery = ({ selectedBuilding, backHome }) => {
               </div>
             </div>
             <div className="cemetery__buttons">
-              <img
-                src="assets/buildings/library_icon.png"
-                alt="library"
-                className="cemetery__button building__detail"
-              />
-              <img
-                src="assets/buildings/shopping_mall_icon.png"
-                alt="shopping mall"
-                className="cemetery__button building__detail"
-              />
-              <img
-                src="assets/buildings/factory_icon.png"
-                alt="factory"
-                className="cemetery__button building__detail"
-              />
-              <img
-                src="assets/buildings/park_icon.png"
-                alt="park with pond and bridge"
-                className="cemetery__button building__detail"
-              />
-              <img
-                src="assets/buildings/bar_icon.png"
-                alt="bar"
-                className="cemetery__button building__detail"
-              />
+              {myData.buildings
+                .filter((building) => building.sort === 'Riddle')
+                .map((item) => (
+                  <img
+                    key={item.name}
+                    id={item.name}
+                    src={item.mapImg}
+                    className={
+                      item.quizz.isActive
+                        ? 'cemetery__button building__detail'
+                        : 'cemetery__button building__detail inactive'
+                    }
+                    onClick={showTheHint}
+                  />
+                ))}
             </div>
             <div className="card__buttons">
               <button className="cancel" onClick={() => backHome()}>
@@ -96,6 +124,9 @@ const Cemetery = ({ selectedBuilding, backHome }) => {
             </div>
           </div>
         </>
+      )}
+      {selectedBuilding.visited && hintWasChosen && (
+        <Hint quizzToHint={quizzToHint} backHome={backHome} />
       )}
     </div>
   );

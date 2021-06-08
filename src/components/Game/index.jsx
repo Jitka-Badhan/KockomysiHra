@@ -14,11 +14,22 @@ const Game = () => {
   useEffect(() => {
     const loadedSave = JSON.parse(localStorage.getItem('mySave'));
 
+    const cemeteryIndex = myData.buildings.indexOf(
+      myData.buildings.find((building) => building.sort === 'Cemetery'),
+    );
+
     loadedSave &&
       setMyData((draft) => {
         draft.scores.timeOnSave = loadedSave.myTime;
         draft.scores.tubes = loadedSave.myTubes;
         draft.scores.R = loadedSave.myR;
+        draft.buildings[cemeteryIndex].visited = loadedSave.cemeteryVisited;
+
+        loadedSave.buildings.forEach((record, index) => {
+          draft.buildings[index].isActive = record.isActive;
+          draft.buildings[index].quizz.isActive = record.quizzActive;
+          draft.buildings[index].quizz.isSolved = record.quizzSolved;
+        });
       });
   }, []);
 
@@ -40,11 +51,6 @@ const Game = () => {
 
     setSelectedBuilding(thisBuilding);
     setSelectedSort(thisBuilding.sort);
-
-    thisBuilding.sort === 'Cemetery' &&
-      setMyData((draft) => {
-        draft.buildings[cemeteryIndex].visited = true;
-      });
   };
 
   const changeR = (score) => {
@@ -76,10 +82,26 @@ const Game = () => {
   }, [myData]);
 
   const save = (remainingSeconds) => {
+    const buildingsToSave = myData.buildings
+      .filter((building) => building.sort !== 'Cemetery')
+      .map((building) => {
+        return {
+          name: building.name,
+          isActive: building.isActive,
+          quizzActive: building.quizz.isActive,
+          quizzSolved: building.quizz.isSolved,
+        };
+      });
+    const cemetery = myData.buildings.find(
+      (building) => building.sort === 'Cemetery',
+    );
+
     const mySave = JSON.stringify({
       myTime: remainingSeconds,
       myTubes: myData.scores.tubes,
       myR: myData.scores.R,
+      buildings: buildingsToSave,
+      cemeteryVisited: cemetery.visited,
     });
 
     localStorage.setItem('mySave', mySave);
@@ -106,6 +128,8 @@ const Game = () => {
             selectedSort={selectedSort}
             changeR={changeR}
             changeTubes={changeTubes}
+            remainingSeconds={remainingSeconds}
+            setRemainingSeconds={setRemainingSeconds}
             clicked={clicked}
             myData={myData}
             setMyData={setMyData}

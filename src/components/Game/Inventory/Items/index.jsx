@@ -7,7 +7,9 @@ const Item = ({ building, clicked }) => {
       id={building.name}
       src={building.mapImg}
       className={
-        building.isActive ? 'building__detail' : 'building__detail inactive'
+        building.quizz.isActive
+          ? 'building__detail'
+          : 'building__detail inactive'
       }
       onClick={clicked}
     />

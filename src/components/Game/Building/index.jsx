@@ -4,26 +4,67 @@ import { useState } from 'react';
 
 const Building = ({
   selectedBuilding,
-  backHome,
+  setSelectedBuilding,
   changeR,
   changeTubes,
   myData,
   setMyData,
 }) => {
-  const [Step, setStep] = useState(0);
-
+  const [quizzActive, setQuizzActive] = useState(
+    selectedBuilding.quizz.isActive,
+  );
+  const [quizzSolved, setQuizzSolved] = useState(
+    selectedBuilding.quizz.isSolved,
+  );
+  const [buildingActive, setBuildingActive] = useState(
+    selectedBuilding.isActive,
+  );
   const [answer, setAnswer] = useState('');
+
+  const backHome = () => {
+    const thisBuilding = myData.buildings.find(
+      (building) => building.name === selectedBuilding.name,
+    );
+    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+
+    setMyData((draft) => {
+      draft.buildings[thisBuildingIndex].quizz.isActive = quizzActive;
+      draft.buildings[thisBuildingIndex].quizz.isSolved = quizzSolved;
+      draft.buildings[thisBuildingIndex].isActive = buildingActive;
+    });
+
+    setSelectedBuilding(undefined);
+  };
+
+  const quizzSolvedAndReturn = () => {
+    const indicationBuilding = myData.buildings.find(
+      (building) => building.belongsTo === selectedBuilding.name,
+    );
+    const indicationBuildingIndex =
+      myData.buildings.indexOf(indicationBuilding);
+
+    setMyData((draft) => {
+      indicationBuilding &&
+        (draft.buildings[indicationBuildingIndex].isActive = buildingActive);
+      indicationBuilding &&
+        (draft.buildings[indicationBuildingIndex].quizz.isActive = quizzActive);
+    });
+
+    backHome();
+  };
 
   const buttonClicked = (answer) => {
     changeR(answer.points);
     changeTubes();
     setAnswer(answer);
-    setStep(2);
+    setQuizzSolved(true);
+    setQuizzActive(false);
+    setBuildingActive(false);
   };
 
   return (
     <div className="card game__building">
-      {Step === 0 && (
+      {!quizzActive && !quizzSolved && (
         <>
           <img src="/assets/cross.svg" className="top-right cancel" />
           <div className="card__content">
@@ -35,22 +76,13 @@ const Building = ({
               ))}
             </div>
             <div className="card__buttons">
-              <button className="cancel" onClick={() => backHome()}>
+              <button className="cancel" onClick={backHome}>
                 Zpět na mapu
               </button>
               <button
                 className="toQuiz"
                 onClick={() => {
-                  const thisBuilding = myData.buildings.find(
-                    (building) => building.name === selectedBuilding.name,
-                  );
-                  const thisBuildingIndex =
-                    myData.buildings.indexOf(thisBuilding);
-
-                  setStep(1);
-                  setMyData((draft) => {
-                    draft.buildings[thisBuildingIndex].isActive = true;
-                  });
+                  setQuizzActive(true);
                 }}
               >
                 Přejdi na rébus
@@ -60,7 +92,7 @@ const Building = ({
         </>
       )}
 
-      {Step === 1 && (
+      {quizzActive && (
         <>
           <div className="card game__quizz">
             <img
@@ -100,7 +132,7 @@ const Building = ({
                     </tbody>
                   </table>
                   <div className="card__buttons">
-                    <button className="cancel" onClick={() => backHome()}>
+                    <button className="cancel" onClick={backHome}>
                       Zrušit
                     </button>
                   </div>
@@ -110,7 +142,7 @@ const Building = ({
           </div>
         </>
       )}
-      {Step === 2 && (
+      {quizzSolved && (
         <>
           {answer.points === 1 && (
             <div className="card game__quizz__result">
@@ -130,7 +162,7 @@ const Building = ({
                 </p>
               </div>
               <div className="card__buttons">
-                <button className="cancel" onClick={() => backHome(undefined)}>
+                <button className="cancel" onClick={quizzSolvedAndReturn}>
                   Ok
                 </button>
               </div>
@@ -157,7 +189,7 @@ const Building = ({
                 </p>
               </div>
               <div className="card__buttons">
-                <button className="cancel" onClick={() => backHome(undefined)}>
+                <button className="cancel" onClick={quizzSolvedAndReturn}>
                   Ok
                 </button>
               </div>
@@ -181,7 +213,7 @@ const Building = ({
                 </p>
               </div>
               <div className="card__buttons">
-                <button className="cancel" onClick={() => backHome(undefined)}>
+                <button className="cancel" onClick={quizzSolvedAndReturn}>
                   Ok
                 </button>
               </div>

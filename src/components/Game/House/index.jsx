@@ -1,38 +1,42 @@
 import React from 'react';
 import './style.css';
 
-const House = ({selectedBuilding, backHome}) => {
+const House = ({
+  selectedBuilding,
+  setSelectedBuilding,
+  myData,
+  setMyData,
+}) => {
+  const backHome = () => {
+    const thisBuilding = myData.buildings.find(
+      (building) => building.name === selectedBuilding.name,
+    );
+    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+
+    setMyData((draft) => {
+      draft.buildings[thisBuildingIndex].quizz.isActive = true;
+    });
+
+    setSelectedBuilding(undefined);
+  };
 
   return (
-    <>
-    <img
-            src="/assets/cross.svg"
-            alt="cross"
-            className="top-right cancel"
-          />
-          <div className="card__content">
-            <img
-              src="assets/buildings/house_modern.jpg"
-              className="cemetery__img"
-            />
-            <div className="cemetery__text">
-              <h4>{selectedBuilding.name}</h4>
-              <div className="container">
-                <div>
-                <img
-                  src="assets/quizzes/hint_pub.jpg"
-                  className="cemetery__img"
-                />
-                </div>
-              </div>
-            </div>
-            <div className="card__buttons">
-              <button className="cancel" onClick={() => backHome()}>
-                Zrušit
-              </button>
-            </div>
-          </div>
-    </>
+    <div className="card game__indication">
+      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <h4>{selectedBuilding.name}</h4>
+      <img src={selectedBuilding.cardImg} className="building__img" />
+      <img src={selectedBuilding.hintImg} className="indication__img" />
+      <div className="indication__text">
+        {selectedBuilding.description.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
+      </div>
+      <div className="card__buttons">
+        <button className="cancel" onClick={backHome}>
+          Ok
+        </button>
+      </div>
+    </div>
   );
 };
 
