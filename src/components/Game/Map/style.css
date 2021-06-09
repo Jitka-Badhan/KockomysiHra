@@ -13,6 +13,9 @@
 
 #map_of_clickable_objects {
   width: 100%;
+}
+
+.invisible {
   opacity: 0.01;
 }
 

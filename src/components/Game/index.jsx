@@ -17,6 +17,9 @@ const Game = () => {
     const cemeteryIndex = myData.buildings.indexOf(
       myData.buildings.find((building) => building.sort === 'Cemetery'),
     );
+    const shoppingMallIndex = myData.buildings.indexOf(
+      myData.buildings.find((building) => building.name === 'Obchoďák'),
+    );
 
     loadedSave &&
       setMyData((draft) => {
@@ -24,6 +27,7 @@ const Game = () => {
         draft.scores.tubes = loadedSave.myTubes;
         draft.scores.R = loadedSave.myR;
         draft.buildings[cemeteryIndex].visited = loadedSave.cemeteryVisited;
+        draft.buildings[shoppingMallIndex].didMutate = loadedSave.mallMutated;
 
         loadedSave.buildings.forEach((item, index) => {
           draft.buildings[index].isActive = item.isActive;
@@ -95,6 +99,9 @@ const Game = () => {
     const cemetery = myData.buildings.find(
       (building) => building.sort === 'Cemetery',
     );
+    const shoppingMall = myData.buildings.find(
+      (building) => building.name === 'Obchoďák',
+    );
 
     const mySave = JSON.stringify({
       myTime: remainingSeconds,
@@ -102,6 +109,7 @@ const Game = () => {
       myR: myData.scores.R,
       buildings: buildingsToSave,
       cemeteryVisited: cemetery.visited,
+      mallMutated: shoppingMall.didMutate,
     });
 
     localStorage.setItem('mySave', mySave);

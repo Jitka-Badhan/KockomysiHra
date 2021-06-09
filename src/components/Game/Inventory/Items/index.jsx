@@ -3,20 +3,29 @@ import './style.css';
 
 const Item = ({ myData, building, clicked }) => {
   return (
-    <img
-      id={building.name}
-      src={building.mapImg}
-      className={
-        building.quizz.isActive
-          ? 'building__detail'
-          : building.name !== 'Obchoďák'
-          ? 'building__detail inactive'
-          : building.didMutate
-          ? 'building__detail mutated'
-          : 'building__detail inactive'
-      }
-      onClick={clicked}
-    />
+    <div className="toStamp">
+      <div
+        className={
+          building.quizz.isActive
+            ? 'building__detail'
+            : building.name !== 'Obchoďák' || !building.didMutate
+            ? 'building__detail inactive'
+            : 'building__detail mutated'
+        }
+        onClick={clicked}
+      >
+        <img id={building.name} src={building.mapImg} />
+      </div>
+      <img
+        src="../../../../assets/logo_mouse_footprint_red.png"
+        className={
+          !building.quizz.isSolved ||
+          (building.name === 'Obchoďák' && building.didMutate)
+            ? 'stamp__quest__done hidden'
+            : 'stamp__quest__done'
+        }
+      />
+    </div>
   );
 };
 

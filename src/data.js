@@ -330,7 +330,6 @@ const data = {
       },
       isActive: true,
       didMutate: false,
-      showSpecialItem: false,
     },
     {
       name: 'Venkovský dům',
