@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Item = ({ building, clicked }) => {
+const Item = ({ myData, building, clicked }) => {
   return (
     <img
       id={building.name}
@@ -9,6 +9,10 @@ const Item = ({ building, clicked }) => {
       className={
         building.quizz.isActive
           ? 'building__detail'
+          : building.name !== 'Obchoďák'
+          ? 'building__detail inactive'
+          : building.didMutate
+          ? 'building__detail mutated'
           : 'building__detail inactive'
       }
       onClick={clicked}
@@ -27,7 +31,12 @@ const Items = ({ myData, clicked }) => {
         {buildingsToSchow
           .filter((building) => building.column === '1')
           .map((item) => (
-            <Item building={item} key={item.name} clicked={clicked} />
+            <Item
+              myData={myData}
+              building={item}
+              key={item.name}
+              clicked={clicked}
+            />
           ))}
       </div>
 

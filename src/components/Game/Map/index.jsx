@@ -56,6 +56,7 @@ const Map = ({
               selectedBuilding={selectedBuilding}
               backHome={setSelectedBuilding}
               myData={myData}
+              setMyData={setMyData}
             />
           )}
         </>

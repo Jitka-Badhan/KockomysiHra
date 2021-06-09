@@ -25,10 +25,10 @@ const Game = () => {
         draft.scores.R = loadedSave.myR;
         draft.buildings[cemeteryIndex].visited = loadedSave.cemeteryVisited;
 
-        loadedSave.buildings.forEach((record, index) => {
-          draft.buildings[index].isActive = record.isActive;
-          draft.buildings[index].quizz.isActive = record.quizzActive;
-          draft.buildings[index].quizz.isSolved = record.quizzSolved;
+        loadedSave.buildings.forEach((item, index) => {
+          draft.buildings[index].isActive = item.isActive;
+          draft.buildings[index].quizz.isActive = item.quizzActive;
+          draft.buildings[index].quizz.isSolved = item.quizzSolved;
         });
       });
   }, []);

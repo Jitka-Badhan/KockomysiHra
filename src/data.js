@@ -329,6 +329,7 @@ const data = {
         isSolved: false,
       },
       isActive: true,
+      didMutate: false,
     },
     {
       name: 'Venkovský dům',
@@ -365,11 +366,17 @@ const data = {
       sort: 'Municipal',
       mapImg: '/assets/buildings/municipal_house_icon.png',
       column: '2',
-      cardImg: '/assets/buildings/municipal_w_cat.jpg',
+      cardImg: [
+        '/assets/quizzes/municipal_w_cat.jpg',
+        '/assets/quizzes/municipal_w_milk.jpg',
+      ],
       description: [
-        'Mám klíč,',
-        'ale není zadarmo...',
-        'Kušuj, nebo tě sežeru!',
+        ['Mám klíč,', 'ale není zadarmo...', 'Kušuj, nebo tě sežeru!'],
+        [
+          'Áááá, přesně to jsem potřeboval.',
+          'Zde máš čipovou kartu do továrny',
+          'a táhni mi z očí!',
+        ],
       ],
       quizz: {
         isActive: false,

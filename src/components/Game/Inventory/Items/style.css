@@ -19,3 +19,8 @@
   filter: grayscale();
   pointer-events: none;
 }
+
+.mutated {
+  content: url(../../../../assets/milk.png);
+  pointer-events: none;
+}

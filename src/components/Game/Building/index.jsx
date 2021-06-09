@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import { useState } from 'react';
 
+import Milk from './Milk';
+
 const Building = ({
   selectedBuilding,
   setSelectedBuilding,
@@ -10,6 +12,8 @@ const Building = ({
   myData,
   setMyData,
 }) => {
+  const selectedBuildingIndex = myData.buildings.indexOf(selectedBuilding);
+
   const [quizzActive, setQuizzActive] = useState(
     selectedBuilding.quizz.isActive,
   );
@@ -20,20 +24,18 @@ const Building = ({
     selectedBuilding.isActive,
   );
   const [answer, setAnswer] = useState('');
+  const [pointsRecieved, setPointsRecieved] = useState(0);
+
+  const [specialItem, setSpecialItem] = useState(false);
 
   const backHome = () => {
-    const thisBuilding = myData.buildings.find(
-      (building) => building.name === selectedBuilding.name,
-    );
-    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
-
     setMyData((draft) => {
-      draft.buildings[thisBuildingIndex].quizz.isActive = quizzActive;
-      draft.buildings[thisBuildingIndex].quizz.isSolved = quizzSolved;
-      draft.buildings[thisBuildingIndex].isActive = buildingActive;
+      draft.buildings[selectedBuildingIndex].quizz.isActive = quizzActive;
+      draft.buildings[selectedBuildingIndex].quizz.isSolved = quizzSolved;
+      draft.buildings[selectedBuildingIndex].isActive = buildingActive;
     });
 
-    setSelectedBuilding(undefined);
+    selectedBuilding.name === 'Obchoďák' || setSelectedBuilding(undefined);
   };
 
   const quizzSolvedAndReturn = () => {
@@ -43,6 +45,9 @@ const Building = ({
     const indicationBuildingIndex =
       myData.buildings.indexOf(indicationBuilding);
 
+    changeR(pointsRecieved);
+    changeTubes();
+
     setMyData((draft) => {
       indicationBuilding &&
         (draft.buildings[indicationBuildingIndex].isActive = buildingActive);
@@ -50,12 +55,18 @@ const Building = ({
         (draft.buildings[indicationBuildingIndex].quizz.isActive = quizzActive);
     });
 
+    if (selectedBuilding.name === 'Obchoďák') {
+      setMyData((draft) => {
+        draft.buildings[selectedBuildingIndex].didMutate = true;
+      });
+      setSpecialItem(true);
+    }
+
     backHome();
   };
 
   const buttonClicked = (answer) => {
-    changeR(answer.points);
-    changeTubes();
+    setPointsRecieved(answer.points);
     setAnswer(answer);
     setQuizzSolved(true);
     setQuizzActive(false);
@@ -91,7 +102,6 @@ const Building = ({
           </div>
         </>
       )}
-
       {quizzActive && (
         <>
           <div className="card game__quizz">
@@ -142,7 +152,7 @@ const Building = ({
           </div>
         </>
       )}
-      {quizzSolved && (
+      {quizzSolved && !specialItem && (
         <>
           {answer.points === 1 && (
             <div className="card game__quizz__result">
@@ -221,6 +231,7 @@ const Building = ({
           )}
         </>
       )}
+      {specialItem && <Milk setSelectedBuilding={setSelectedBuilding} />}
     </div>
   );
 };

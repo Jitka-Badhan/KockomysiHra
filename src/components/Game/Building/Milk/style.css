@@ -1,0 +1,18 @@
+.game__specialItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game__specialItem h4 {
+  margin: 0;
+}
+
+.specialItem__img {
+  max-height: 40%;
+}
+
+.specialItem__text p {
+  margin: 0;
+}
