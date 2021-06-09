@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Item = ({ myData, building, clicked }) => {
+const Item = ({ building, clicked }) => {
   return (
     <div className="toStamp">
       <div

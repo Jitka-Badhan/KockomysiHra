@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Milk = ({ setSelectedBuilding }) => {
+const Milk = ({ setSelectedBuilding, selectedBuilding, backHome }) => {
   return (
     <div className="card game__specialItem">
       <img src="/img/cross.svg" alt="cross" className="top-right cancel" />

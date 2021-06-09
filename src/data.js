@@ -273,7 +273,7 @@ const data = {
         isActive: false,
         isSolved: false,
       },
-      isActive: true,
+      isActive: false,
     },
     {
       name: 'Obchoďák',

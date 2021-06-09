@@ -25,7 +25,6 @@ const Building = ({
   );
   const [answer, setAnswer] = useState('');
   const [pointsRecieved, setPointsRecieved] = useState(0);
-
   const [specialItem, setSpecialItem] = useState(false);
 
   const backHome = () => {
@@ -35,7 +34,7 @@ const Building = ({
       draft.buildings[selectedBuildingIndex].isActive = buildingActive;
     });
 
-    selectedBuilding.name !== 'Obchoďák' || !selectedBuilding.quizz.isActive
+    selectedBuilding.name !== 'Obchoďák' || !quizzSolved
       ? setSelectedBuilding()
       : setSpecialItem(true);
   };
@@ -55,13 +54,11 @@ const Building = ({
         (draft.buildings[indicationBuildingIndex].isActive = buildingActive);
       indicationBuilding &&
         (draft.buildings[indicationBuildingIndex].quizz.isActive = quizzActive);
+      indicationBuilding &&
+        (draft.buildings[indicationBuildingIndex].quizz.isSolved = quizzSolved);
+      selectedBuilding.name === 'Obchoďák' &&
+        (draft.buildings[selectedBuildingIndex].didMutate = true);
     });
-
-    if (selectedBuilding.name === 'Obchoďák') {
-      setMyData((draft) => {
-        draft.buildings[selectedBuildingIndex].didMutate = true;
-      });
-    }
 
     backHome();
   };
@@ -103,7 +100,7 @@ const Building = ({
           </div>
         </>
       )}
-      {quizzActive && (
+      {quizzActive && !quizzSolved && (
         <>
           <div className="card game__quizz">
             <img

@@ -16,10 +16,7 @@ const Cemetery = ({
   const [quizzToHint, setQuizzToHint] = useState(undefined);
 
   const approveVisited = () => {
-    const thisBuilding = myData.buildings.find(
-      (building) => building.name === selectedBuilding.name,
-    );
-    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+    const thisBuildingIndex = myData.buildings.indexOf(selectedBuilding);
 
     setMyData((draft) => {
       draft.buildings[thisBuildingIndex].visited = true;
@@ -125,7 +122,7 @@ const Cemetery = ({
           </div>
         </>
       )}
-      {selectedBuilding.visited && hintWasChosen && (
+      {visited && hintWasChosen && (
         <Hint quizzToHint={quizzToHint} backHome={backHome} />
       )}
     </div>
