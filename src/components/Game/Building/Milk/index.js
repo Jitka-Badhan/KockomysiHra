@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.css';
 
-const Milk = ({ setSelectedBuilding, selectedBuilding, backHome }) => {
+import CrossButton from '../../../CrossButton';
+
+const Milk = ({ setSelectedBuilding }) => {
   return (
     <div className="card game__specialItem">
-      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <CrossButton closeIt={() => setSelectedBuilding()} />
       <h4>V budově jsi něco našel</h4>
       <img src="../../../assets/milk.png" className="specialItem__img" />
       <div className="specialItem__text">

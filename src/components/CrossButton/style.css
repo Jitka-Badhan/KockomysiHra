@@ -1,0 +1,15 @@
+.top-right {
+  position: absolute;
+  width: 2.5rem;
+  top: 5px;
+  right: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.top-right:hover,
+.top-right:active,
+.top-right:focus {
+  /* background-color: #f9dc5c; */
+  background-color: #197278;
+}

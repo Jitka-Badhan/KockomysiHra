@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 
 import Hint from './Hint';
+import CrossButton from '../../CrossButton';
 
 const Cemetery = ({
   selectedBuilding,
@@ -38,11 +39,7 @@ const Cemetery = ({
     <div className="card game__cemetery">
       {!visited && !hintWasChosen && (
         <>
-          <img
-            src="/assets/cross.svg"
-            alt="cross"
-            className="top-right cancel"
-          />
+          <CrossButton closeIt={() => backHome()} />
           <div className="card__content">
             <img
               src="assets/buildings/cemetery.jpg"
@@ -77,11 +74,7 @@ const Cemetery = ({
 
       {visited && !hintWasChosen && (
         <>
-          <img
-            src="/assets/cross.svg"
-            alt="cross"
-            className="top-right cancel"
-          />
+          <CrossButton closeIt={() => backHome()} />
           <div className="card__content">
             <img
               src="assets/buildings/cemetery.jpg"

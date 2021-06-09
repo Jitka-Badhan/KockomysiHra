@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 
+import CrossButton from '../../CrossButton';
+
 const House = ({
   selectedBuilding,
   setSelectedBuilding,
@@ -22,7 +24,7 @@ const House = ({
 
   return (
     <div className="card game__indication">
-      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <CrossButton closeIt={backHome} />
       <h4>{selectedBuilding.name}</h4>
       <img src={selectedBuilding.cardImg} className="building__img" />
       <img src={selectedBuilding.hintImg} className="indication__img" />

@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 
+import CrossButton from '../../CrossButton';
+
 const Municipal = ({ selectedBuilding, backHome, myData, setMyData }) => {
   const selectedBuildingIndex = myData.buildings.indexOf(selectedBuilding);
   const shoppingMallBuilding = myData.buildings.find(
@@ -37,7 +39,9 @@ const Municipal = ({ selectedBuilding, backHome, myData, setMyData }) => {
 
   return (
     <div className="card game__building municipal_house">
-      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <CrossButton
+        closeIt={situation === 0 ? activateQuizz : quizzSolvedAndReturn}
+      />
       <div className="card__content">
         {
           <>
