@@ -23,16 +23,17 @@
 }
 
 .rules__img {
-  width: 7rem;
+  min-width: 7rem;
+  max-width: 7rem;
   margin-right: 2rem;
   border: 3px solid #283d3b;
   border-radius: 50%;
 }
 
-.question-mark {
+/* .question-mark {
   height: 3rem;
   padding: 2rem;
-}
+} */
 
 .rules__rule:nth-of-type(2n + 2) > .rules__img {
   margin-right: 0;
