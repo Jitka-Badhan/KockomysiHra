@@ -85,7 +85,21 @@ const Map = ({
                     (building) => building.name === 'Knihovna',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="40"
+                y="14"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Knihovna',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -102,7 +116,21 @@ const Map = ({
                     (building) => building.name === 'Hospoda',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="104"
+                y="43"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Hospoda',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -119,7 +147,21 @@ const Map = ({
                     (building) => building.name === 'Venkovský dům',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="133"
+                y="9"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Venkovský dům',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -136,7 +178,21 @@ const Map = ({
                     (building) => building.name === 'Továrna',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="165"
+                y="17"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Továrna',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -153,7 +209,21 @@ const Map = ({
                     (building) => building.name === 'Radnice',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="144"
+                y="55"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Radnice',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -170,7 +240,21 @@ const Map = ({
                     (building) => building.name === 'Moderní dům',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="80"
+                y="78"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Moderní dům',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -186,7 +270,20 @@ const Map = ({
                   !myData.buildings.find((building) => building.name === 'Park')
                     .isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="26"
+                y="100"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find((building) => building.name === 'Park')
+                    .quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -203,7 +300,21 @@ const Map = ({
                     (building) => building.name === 'Obchoďák',
                   ).isActive
                     ? 'disabled'
-                    : undefined
+                    : 'invisible'
+                }
+              />
+              <image
+                x="38"
+                y="55"
+                width="1rem"
+                height="1rem"
+                href="assets/logo_mouse_footprint.png"
+                className={
+                  myData.buildings.find(
+                    (building) => building.name === 'Obchoďák',
+                  ).quizz.isSolved
+                    ? undefined
+                    : 'disabled'
                 }
               />
 
@@ -215,6 +326,7 @@ const Map = ({
                 style={{ fill: '#fff' }}
                 id="Hřbitov"
                 onClick={clicked}
+                className="invisible"
               />
             </svg>
           </div>

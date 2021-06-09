@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
+
+import CrossButton from '../../CrossButton';
 
 const Municipal = ({ selectedBuilding, backHome, myData, setMyData }) => {
   const selectedBuildingIndex = myData.buildings.indexOf(selectedBuilding);
@@ -21,11 +23,15 @@ const Municipal = ({ selectedBuilding, backHome, myData, setMyData }) => {
     const shoppingMallIndex = myData.buildings.indexOf(
       myData.buildings.find((building) => building.name === 'Obchoďák'),
     );
+    const factoryIndex = myData.buildings.indexOf(
+      myData.buildings.find((building) => building.name === 'Továrna'),
+    );
     setMyData((draft) => {
       draft.buildings[selectedBuildingIndex].quizz.isActive = false;
       draft.buildings[selectedBuildingIndex].quizz.isSolved = true;
       draft.buildings[selectedBuildingIndex].isActive = false;
       draft.buildings[shoppingMallIndex].didMutate = false;
+      draft.buildings[factoryIndex].isActive = true;
     });
 
     backHome();
@@ -33,7 +39,9 @@ const Municipal = ({ selectedBuilding, backHome, myData, setMyData }) => {
 
   return (
     <div className="card game__building municipal_house">
-      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <CrossButton
+        closeIt={situation === 0 ? activateQuizz : quizzSolvedAndReturn}
+      />
       <div className="card__content">
         {
           <>

@@ -273,7 +273,7 @@ const data = {
         isActive: false,
         isSolved: false,
       },
-      isActive: true,
+      isActive: false,
     },
     {
       name: 'Obchoďák',
@@ -330,7 +330,6 @@ const data = {
       },
       isActive: true,
       didMutate: false,
-      showSpecialItem: false,
     },
     {
       name: 'Venkovský dům',

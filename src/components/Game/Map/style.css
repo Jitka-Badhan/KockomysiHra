@@ -13,9 +13,12 @@
 
 #map_of_clickable_objects {
   width: 100%;
+}
+
+.invisible {
   opacity: 0.01;
 }
 
 .disabled {
-  pointer-events: none;
+  display: none;
 }

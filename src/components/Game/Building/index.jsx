@@ -3,6 +3,7 @@ import './style.css';
 import { useState } from 'react';
 
 import Milk from './Milk';
+import CrossButton from '../../CrossButton';
 
 const Building = ({
   selectedBuilding,
@@ -25,7 +26,6 @@ const Building = ({
   );
   const [answer, setAnswer] = useState('');
   const [pointsRecieved, setPointsRecieved] = useState(0);
-
   const [specialItem, setSpecialItem] = useState(false);
 
   const backHome = () => {
@@ -35,7 +35,7 @@ const Building = ({
       draft.buildings[selectedBuildingIndex].isActive = buildingActive;
     });
 
-    selectedBuilding.name !== 'Obchoďák' || !selectedBuilding.quizz.isActive
+    selectedBuilding.name !== 'Obchoďák' || !quizzSolved
       ? setSelectedBuilding()
       : setSpecialItem(true);
   };
@@ -55,13 +55,11 @@ const Building = ({
         (draft.buildings[indicationBuildingIndex].isActive = buildingActive);
       indicationBuilding &&
         (draft.buildings[indicationBuildingIndex].quizz.isActive = quizzActive);
+      indicationBuilding &&
+        (draft.buildings[indicationBuildingIndex].quizz.isSolved = quizzSolved);
+      selectedBuilding.name === 'Obchoďák' &&
+        (draft.buildings[selectedBuildingIndex].didMutate = true);
     });
-
-    if (selectedBuilding.name === 'Obchoďák') {
-      setMyData((draft) => {
-        draft.buildings[selectedBuildingIndex].didMutate = true;
-      });
-    }
 
     backHome();
   };
@@ -78,7 +76,7 @@ const Building = ({
     <div className="card game__building">
       {!quizzActive && !quizzSolved && (
         <>
-          <img src="/assets/cross.svg" className="top-right cancel" />
+          <CrossButton closeIt={backHome} />
           <div className="card__content">
             <img src={selectedBuilding.cardImg} className="building__img" />
             <div className="building__text">
@@ -103,14 +101,10 @@ const Building = ({
           </div>
         </>
       )}
-      {quizzActive && (
+      {quizzActive && !quizzSolved && (
         <>
           <div className="card game__quizz">
-            <img
-              src="/assets/cross.svg"
-              alt="cross"
-              className="top-right cancel"
-            />
+            <CrossButton closeIt={backHome} />
             <div className="card__content">
               <div className="container quizz">
                 <img src={selectedBuilding.quizz.pic} className="quizz__img" />
@@ -157,11 +151,7 @@ const Building = ({
         <>
           {answer.points === 1 && (
             <div className="card game__quizz__result">
-              <img
-                src="/assets/cross.svg"
-                alt="cross"
-                className="top-right cancel"
-              />
+              <CrossButton closeIt={quizzSolvedAndReturn} />
               <img src="assets/quizzes/cat_dead.png" className="result__img" />
               <div className="result__text">
                 <h4>Bravo!</h4>
@@ -181,11 +171,7 @@ const Building = ({
           )}
           {answer.points === 0 && (
             <div className="card game__quizz__result">
-              <img
-                src="/assets/cross.svg"
-                alt="cross"
-                className="top-right cancel"
-              />
+              <CrossButton closeIt={quizzSolvedAndReturn} />
               <img
                 src="assets/quizzes/cat_healthy.png"
                 className="result__img"
@@ -208,11 +194,7 @@ const Building = ({
           )}
           {answer.points !== 0 && answer.points !== 1 && (
             <div className="card game__quizz__result">
-              <img
-                src="/assets/cross.svg"
-                alt="cross"
-                className="top-right cancel"
-              />
+              <CrossButton closeIt={quizzSolvedAndReturn} />
               <img src="assets/quizzes/cat_sick.png" className="result__img" />
               <div className="result__text">
                 <h4>Mohlo to být lepší...</h4>

@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.css';
 
+import CrossButton from '../../../CrossButton';
+
 const Hint = ({ quizzToHint, backHome }) => {
   return (
     <div className="card game__hints">
-      <img src="/img/cross.svg" alt="cross" className="top-right cancel" />
+      <CrossButton closeIt={() => backHome()} />
       <img
         src="img/photos/photo-like_square.png"
         alt="mysterious mouse in hood"

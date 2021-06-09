@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 
 import Hint from './Hint';
+import CrossButton from '../../CrossButton';
 
 const Cemetery = ({
   selectedBuilding,
@@ -16,10 +17,7 @@ const Cemetery = ({
   const [quizzToHint, setQuizzToHint] = useState(undefined);
 
   const approveVisited = () => {
-    const thisBuilding = myData.buildings.find(
-      (building) => building.name === selectedBuilding.name,
-    );
-    const thisBuildingIndex = myData.buildings.indexOf(thisBuilding);
+    const thisBuildingIndex = myData.buildings.indexOf(selectedBuilding);
 
     setMyData((draft) => {
       draft.buildings[thisBuildingIndex].visited = true;
@@ -41,11 +39,7 @@ const Cemetery = ({
     <div className="card game__cemetery">
       {!visited && !hintWasChosen && (
         <>
-          <img
-            src="/assets/cross.svg"
-            alt="cross"
-            className="top-right cancel"
-          />
+          <CrossButton closeIt={() => backHome()} />
           <div className="card__content">
             <img
               src="assets/buildings/cemetery.jpg"
@@ -80,11 +74,7 @@ const Cemetery = ({
 
       {visited && !hintWasChosen && (
         <>
-          <img
-            src="/assets/cross.svg"
-            alt="cross"
-            className="top-right cancel"
-          />
+          <CrossButton closeIt={() => backHome()} />
           <div className="card__content">
             <img
               src="assets/buildings/cemetery.jpg"
@@ -125,7 +115,7 @@ const Cemetery = ({
           </div>
         </>
       )}
-      {selectedBuilding.visited && hintWasChosen && (
+      {visited && hintWasChosen && (
         <Hint quizzToHint={quizzToHint} backHome={backHome} />
       )}
     </div>
