@@ -3,7 +3,9 @@
   margin: 0 auto;
   height: calc(100vh - 4rem);
   max-width: 90vw;
+  cursor: url(../../assets/mouse_silhouette.png), pointer, auto;
 }
+
 
 /* Hra sidebar */
 

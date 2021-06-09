@@ -16,6 +16,10 @@ body {
   /* width: 920px; */
 }
 
+div {
+  cursor: url(./assets/mouse_silhouette.png), pointer, auto;
+}
+
 h1 {
   margin: 0;
 }
@@ -40,5 +44,7 @@ section {
 .container {
   display: flex;
 }
+
+
 
 

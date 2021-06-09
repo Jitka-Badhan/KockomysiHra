@@ -2,6 +2,9 @@ import React from 'react';
 import './style.css';
 
 const Rules = () => {
+
+
+
   return (
     <section className="rules__main">
       <div className="rules__intro">
@@ -59,9 +62,8 @@ const Rules = () => {
             <div className="rules__text">
               Získáváš také digitální <strong>hodinky</strong>, které Ti
               odměřují čas. Na vyřešení všech rébusů máš
-              <strong>60 minut</strong>, než kočky zareagují na epidemii a
-              zavedou přísná opatření. Potom číslo R poroste jen o 25% původní
-              hodnoty.
+              <strong> 60&nbsp;minut</strong>, než kočky zareagují na epidemii a
+              zavedou přísná opatření. Potom se číslo R již nezvyšuje.
             </div>
           </div>
         </div>
@@ -88,7 +90,7 @@ const Rules = () => {
             />
             <div className="rules__text">
               Všechny nalezené rébusy a indicie se Ti ukládají do
-              <strong>inventáře</strong>. Můžeš tak rozpracovat více rébusů
+              <strong> inventáře</strong>. Můžeš tak rozpracovat více rébusů
               zároveň a vracet se k nim bez použití mapy. Inventář je plně
               automatický – stačí jen kliknout na co potřebuješ.
             </div>
@@ -100,22 +102,19 @@ const Rules = () => {
               className="rules__img"
             />
             <div className="rules__text">
-              <strong>Uložení hry</strong> zvol tehdy, když potřebuješ na
-              nějakou dobu odjet z města a k misi se vrátit později. Přenést se
-              v čase zpět do uloženého stavu mise je možné z domovské stránky.
+              <strong>Uložení hry</strong> probíhá automaticky. Pokud tedy potřebuješ na nějakou dobu odjet z města a načerpat nové síly, o svůj pokrok nepřijdeš.
             </div>
           </div>
           <div className="container rules__rule">
             <img
-              src="assets/rules/question-mark_icon.svg"
+              src="../../assets/rules/question-mark_icon.svg"
               alt="question mark icon"
-              className="rules__img question-mark"
+              className="rules__img"
             />
             <div className="rules__text">
-              V městě Mňau-chen je jedno místo, kam můžeš chodit pro
-              <strong>nápovědu</strong>, když Ti nepůjde vyřešit rébus. Získání
-              nápovědy Tě však stojí drahocenný čas – za každou radu zaplatíš 5
-              min z celkového limitu.
+              V městě Mňau-chen je jedno místo, kam můžeš chodit pro 
+              <strong> nápovědu</strong>, když Ti nepůjde vyřešit rébus. Získání
+              nápovědy Tě však stojí drahocenný čas – za každou radu zaplatíš 5&nbsp;min z celkového limitu.
             </div>
           </div>
         </div>
