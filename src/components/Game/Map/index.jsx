@@ -5,6 +5,7 @@ import Building from '../Building';
 import Cemetery from '../Cemetery';
 import House from '../House';
 import Municipal from '../Municipal';
+import Magnifier from '../../Magnifier';
 
 const Map = ({
   selectedBuilding,
@@ -18,6 +19,9 @@ const Map = ({
   myData,
   clicked,
 }) => {
+  const [magnify, setMagnify] = useState(false);
+  const toggleMagnify = () => setMagnify(!magnify);
+
   return (
     <div className="card game__map">
       {selectedBuilding ? (
@@ -28,6 +32,8 @@ const Map = ({
               setSelectedBuilding={setSelectedBuilding}
               changeR={changeR}
               changeTubes={changeTubes}
+              magnify={magnify}
+              toggleMagnify={toggleMagnify}
               myData={myData}
               setMyData={setMyData}
             />
@@ -40,6 +46,8 @@ const Map = ({
               clicked={clicked}
               remainingSeconds={remainingSeconds}
               setRemainingSeconds={setRemainingSeconds}
+              magnify={magnify}
+              toggleMagnify={toggleMagnify}
               setMyData={setMyData}
             />
           )}
@@ -47,6 +55,8 @@ const Map = ({
             <House
               selectedBuilding={selectedBuilding}
               setSelectedBuilding={setSelectedBuilding}
+              magnify={magnify}
+              toggleMagnify={toggleMagnify}
               myData={myData}
               setMyData={setMyData}
             />

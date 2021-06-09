@@ -21,3 +21,8 @@
 .indication__text p {
   margin: 0;
 }
+
+.magnifier__button {
+  width: 2rem;
+  margin-left: 5px;
+}

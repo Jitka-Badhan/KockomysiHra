@@ -37,17 +37,95 @@
   margin-bottom: 1rem;
 }
 
-.answer__img {
-  max-width: 10%;
-  max-height: 10%;
+/* Rébusy */
+
+.quizz {
+  justify-content: center;
+  align-items: center;
 }
 
-.result__img {
-  max-width: 20%;
-  max-height: 20%;
+.quizz__imgs {
+  position: relative;
+  width: 70vh;
+  max-height: 70vh;
 }
 
 .quizz__img {
-  max-width: 85%;
-  max-height: 85%;
+  position: relative;
+  width: 100%;
+}
+
+.magnifier__icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 2.5rem;
+  /* margin-left: 5px; */
+}
+
+.quizz__text {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 25%;
+}
+
+.quizz__text button {
+  height: 3rem;
+  width: 5rem;
+  margin: 0.5rem auto;
+}
+
+.answer {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.answer__button {
+  background-color: #f9dc5c;
+  color: black;
+  font-weight: 700;
+  height: 4rem;
+  width: 50rem;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.answer__button > img {
+  height: 100%;
+}
+
+.answer__button:hover,
+.answer__button:active,
+.answer__button:focus {
+  background-color: #743880;
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Vyhodnocení rébusů */
+
+.game__quizz__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game__quizz_result h4 {
+  margin: 0;
+}
+
+.result__img {
+  width: 50vh;
+}
+
+.result__img__bonus {
+  width: 5vw;
+}
+
+.result__text p {
+  margin: 0;
 }

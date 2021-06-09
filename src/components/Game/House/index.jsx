@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
 import CrossButton from '../../CrossButton';
+import Magnifier from '../../Magnifier';
 
 const House = ({
   selectedBuilding,
   setSelectedBuilding,
+  magnify,
+  toggleMagnify,
   myData,
   setMyData,
 }) => {
@@ -23,22 +26,39 @@ const House = ({
   };
 
   return (
-    <div className="card game__indication">
-      <CrossButton closeIt={backHome} />
-      <h4>{selectedBuilding.name}</h4>
-      <img src={selectedBuilding.cardImg} className="building__img" />
-      <img src={selectedBuilding.hintImg} className="indication__img" />
-      <div className="indication__text">
-        {selectedBuilding.description.map((item, index) => (
-          <p key={index}>{item}</p>
-        ))}
-      </div>
-      <div className="card__buttons">
-        <button className="cancel" onClick={backHome}>
-          Ok
-        </button>
-      </div>
-    </div>
+    <>
+      {!magnify && (
+        <div className="card game__indication">
+          <CrossButton closeIt={backHome} />
+          <h4>{selectedBuilding.name}</h4>
+          <img src={selectedBuilding.cardImg} className="building__img" />
+          <div>
+            <img src={selectedBuilding.hintImg} className="indication__img" />
+            <img
+              src="../../../assets/magnifier.svg"
+              className="magnifier__button"
+              onClick={toggleMagnify}
+            />
+          </div>
+          <div className="indication__text">
+            {selectedBuilding.description.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </div>
+          <div className="card__buttons">
+            <button className="cancel" onClick={backHome}>
+              Ok
+            </button>
+          </div>
+        </div>
+      )}
+      {magnify && (
+        <Magnifier
+          imgToMagnify={selectedBuilding.hintImg}
+          toggleMagnify={toggleMagnify}
+        />
+      )}
+    </>
   );
 };
 
