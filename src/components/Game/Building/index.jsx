@@ -35,7 +35,9 @@ const Building = ({
       draft.buildings[selectedBuildingIndex].isActive = buildingActive;
     });
 
-    selectedBuilding.name === 'Obchoďák' || setSelectedBuilding(undefined);
+    selectedBuilding.name !== 'Obchoďák' || !selectedBuilding.quizz.isActive
+      ? setSelectedBuilding()
+      : setSpecialItem(true);
   };
 
   const quizzSolvedAndReturn = () => {
@@ -59,7 +61,6 @@ const Building = ({
       setMyData((draft) => {
         draft.buildings[selectedBuildingIndex].didMutate = true;
       });
-      setSpecialItem(true);
     }
 
     backHome();
