@@ -16,7 +16,8 @@ body {
 }
 
 div {
-  cursor: url(./assets/mouse_silhouette.png), pointer, auto;
+  /* cursor: pointer; */
+  /* cursor: url(../public/Mouse\ Normal\ Select.cur), pointer, auto; */
 }
 
 h1 {

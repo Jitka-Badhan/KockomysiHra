@@ -21,18 +21,6 @@ const GameNav = () => {
         />
         <p>Pravidla</p>
       </Link>
-      {/* <a
-        onClick={() => {
-          save(remainingSeconds);
-        }}
-      >
-        <img
-          className="nav__icon rules"
-          src="/assets/bookmark.svg"
-          alt="book icon"
-        />
-        <p>Uložit</p>
-      </a> */}
     </div>
   );
 };

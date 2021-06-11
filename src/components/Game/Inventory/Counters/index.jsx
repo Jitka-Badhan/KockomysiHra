@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Counters = ({ remainingSeconds, myData }) => {
+const Counters = ({ myData }) => {
   return (
     <div className="container game__counters">
       <div className="game__counter test_tubes">
@@ -25,8 +25,8 @@ const Counters = ({ remainingSeconds, myData }) => {
         />
         <div className="timer">
           <div className="timer__count">
-            {String(Math.floor(remainingSeconds / 60)).padStart(2, 0)}:
-            {String(remainingSeconds % 60).padStart(2, 0)}
+            {String(Math.floor(myData.scores.timeOnSave / 60)).padStart(2, 0)}:
+            {String(myData.scores.timeOnSave % 60).padStart(2, 0)}
           </div>
         </div>
       </div>

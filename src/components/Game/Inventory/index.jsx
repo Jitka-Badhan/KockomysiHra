@@ -4,13 +4,7 @@ import './style.css';
 import Counters from './Counters';
 import Items from './Items';
 
-const Inventory = ({
-  myData,
-  remainingSeconds,
-  remainingTubes,
-  remainingR,
-  clicked,
-}) => {
+const Inventory = ({ myData, clicked }) => {
   return (
     <div className="container inventory">
       <div className="inventory__header">
@@ -20,12 +14,7 @@ const Inventory = ({
         </div>
       </div>
 
-      <Counters
-        remainingSeconds={remainingSeconds}
-        remainingTubes={remainingTubes}
-        remainingR={remainingR}
-        myData={myData}
-      />
+      <Counters myData={myData} />
 
       <Items myData={myData} clicked={clicked} />
     </div>

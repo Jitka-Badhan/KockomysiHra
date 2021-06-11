@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Header = () => {
+const Header = ({ pageName }) => {
   return (
     <header>
       <div className="container header">
@@ -17,7 +17,7 @@ const Header = () => {
             alt="mouse footprint"
             className="logo__img"
           />
-          <span className="page_name">pravidla</span>
+          <span className="page_name">{pageName}</span>
         </h1>
         <img
           className="header__img"
