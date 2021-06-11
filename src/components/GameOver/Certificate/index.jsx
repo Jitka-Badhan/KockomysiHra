@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-const Certificate = ({ riddles, time, score, rank }) => {
-  console.log(rank);
+const Certificate = ({ myData, myScores }) => {
+  const rank = myData.winner_ranks.find(
+    (item) => item.scoreUp >= myScores.score && item.scoreDown < myScores.score,
+  );
+
   return (
     <div className="container certificate">
       <div className="certificate__photo">
@@ -14,7 +17,7 @@ const Certificate = ({ riddles, time, score, rank }) => {
         />
         <div className="certificate__text">
           <div>{rank.name}</div>
-          <div>Myšák</div>
+          <div>{myScores.nick}</div>
         </div>
         <img src="/assets/seal.png" alt="seal" className="certificate__seal" />
       </div>
@@ -29,15 +32,19 @@ const Certificate = ({ riddles, time, score, rank }) => {
             <tbody>
               <tr className="score__quizzes">
                 <td>Rébusy:</td>
-                <td>{riddles}</td>
+                <td>{myScores.riddles}</td>
               </tr>
               <tr className="score__time">
                 <td>Čas:</td>
-                <td>{time}</td>
+                <td>
+                  {String(Math.floor(myScores.time / 60)).padStart(2, 0) +
+                    ':' +
+                    String(myScores.time % 60).padStart(2, 0)}
+                </td>
               </tr>
               <tr className="score__R">
                 <td>Číslo R:</td>
-                <td>{score}</td>
+                <td>{myScores.score}</td>
               </tr>
             </tbody>
           </table>
@@ -58,7 +65,11 @@ const Certificate = ({ riddles, time, score, rank }) => {
             <img src="/assets/print.svg" alt="print icon" />
             <p>Tiskni</p>
           </a>
-          <Link to="/" className="button next">
+          <Link
+            to="/"
+            className="button next"
+            // onClick={() => localStorage.clear()}
+          >
             <img src="/assets/home.svg" alt="arrow next" />
             <p>Konec</p>
           </Link>
