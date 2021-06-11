@@ -77,7 +77,7 @@ const Cemetery = ({
           <CrossButton closeIt={() => backHome()} />
           <div className="card__content">
             <img
-              src="assets/buildings/cemetery.jpg"
+              src="assets/buildings/cemetery_inside2.jpg"
               className="cemetery__img"
             />
             <div className="cemetery__text">
