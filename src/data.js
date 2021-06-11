@@ -415,27 +415,27 @@ const data = {
     {
       scoreUp: 5,
       scoreDown: 4,
-      name: 'Starosta města Myschen',
+      name: 'Si král!',
     },
     {
       scoreUp: 4,
       scoreDown: 3,
-      name: 'Ministr zdravotnictví',
+      name: 'Stal si se ministrem zdravotnictví!',
     },
     {
       scoreUp: 3,
       scoreDown: 2,
-      name: 'Velvyslanec',
+      name: 'Agent "nick"',
     },
     {
       scoreUp: 2,
       scoreDown: 1,
-      name: 'Člen městské rady',
+      name: 'Zaměstnanec továrny',
     },
     {
       scoreUp: 1,
       scoreDown: 0,
-      name: 'Vězeň',
+      name: 'Skončil si ve vězení.... ',
     },
   ],
 };

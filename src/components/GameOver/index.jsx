@@ -13,10 +13,10 @@ const GameOver = ({ myData }) => {
     ':' +
     String(myTime % 60).padStart(2, 0);
   const score = myData.scores.R;
-  const rank = myData.winner_ranks.filter(
+  const rank = myData.winner_ranks.find(
     (item) => item.scoreUp >= score && item.scoreDown < score,
-  )[0];
-  console.log(rank[0]);
+  );
+  console.log(rank);
 
   return (
     <>
