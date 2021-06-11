@@ -8,7 +8,7 @@ const Hint = ({ quizzToHint, backHome }) => {
     <div className="card game__hints">
       <CrossButton closeIt={() => backHome()} />
       <img
-        src="img/photos/photo-like_square.png"
+        src="assets/quizzes/in_cape.png"
         alt="mysterious mouse in hood"
         className="hint__mouse__img"
       />

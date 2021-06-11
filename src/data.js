@@ -61,7 +61,7 @@ const data = {
       sort: 'Riddle',
       mapImg: '/assets/buildings/bar_icon.png',
       column: '3',
-      cardImg: '/assets/buildings/bar.jpg',
+      cardImg: '/assets/buildings/bar.png',
       description: [
         'Tohle je místní putyka,',
         'Kočky tu sedí u mlíka.',
@@ -116,7 +116,7 @@ const data = {
       sort: 'Riddle',
       mapImg: '/assets/buildings/library_icon.png',
       column: '1',
-      cardImg: '/assets/buildings/library.jpg',
+      cardImg: '/assets/buildings/library.png',
       description: [
         'Nad knížkami potichoučku,',
         'Sedí kočky pěkně v hloučku.',
@@ -125,7 +125,7 @@ const data = {
       ],
       quizz: {
         name: 'Knihovna',
-        pic: '/assets/quizzes/Library_riddle.jpeg',
+        pic: '/assets/quizzes/library_newest.png',
         text: 'Najdi kočku, co se po studiu setká s nejvíce kočkami.',
         answers: [
           {
@@ -171,7 +171,7 @@ const data = {
       sort: 'Riddle',
       mapImg: '/assets/buildings/park_icon.png',
       column: '2',
-      cardImg: '/assets/buildings/park.jpg',
+      cardImg: '/assets/buildings/park.png',
       description: [
         'V zahradě se kočky hřejou,',
         'myši loví, pak se smějou.',
@@ -226,7 +226,7 @@ const data = {
       sort: 'Riddle',
       mapImg: '/assets/buildings/factory_icon.png',
       column: '3',
-      cardImg: '/assets/buildings/factory.jpg',
+      cardImg: '/assets/buildings/factory.png',
       description: [
         'Jednou týdně, v sobotu,',
         'Mají kočky robotu.',
@@ -240,17 +240,17 @@ const data = {
         answers: [
           {
             button: 'A',
-            text: '1',
+            text: '2',
             pic: '',
             points: 0,
             finished: 'Matematika Ti moc nejde...',
           },
           {
             button: 'B',
-            text: '3',
+            text: '4',
             pic: '',
             points: 0,
-            finished: 'Matematika Ti moc nejde...',
+            finished: 'Černá kočka jde s virem domů.',
           },
           {
             button: 'C',
@@ -261,10 +261,10 @@ const data = {
           },
           {
             button: 'D',
-            text: '9',
+            text: '8',
             pic: '',
             points: 1,
-            finished: 'Černá kočka jde s virem domů.',
+            finished: 'Matematika Ti moc nejde...',
           },
         ],
         hint: {
@@ -281,7 +281,7 @@ const data = {
       sort: 'Riddle',
       mapImg: '/assets/buildings/shopping_mall_icon.png',
       column: '1',
-      cardImg: '/assets/buildings/shopping_mall.jpg',
+      cardImg: '/assets/buildings/shopping_mall.png',
       description: [
         'Kočky rády shopuji,',
         'Mlíčko si zde kupují.',
@@ -354,7 +354,7 @@ const data = {
       mapImg: '/assets/buildings/house_modern_icon.png',
       column: '3',
       cardImg: '/assets/buildings/house_modern.jpg',
-      hintImg: '/assets/quizzes/pub_hint.jpg',
+      hintImg: '/assets/quizzes/pub_hint_better.png',
       description: ['V budově byla ukryta tato indicie.'],
       quizz: {
         isActive: false,
@@ -372,7 +372,7 @@ const data = {
         '/assets/quizzes/municipal_w_milk.jpg',
       ],
       description: [
-        ['Mám klíč,', 'ale není zadarmo...', 'Kušuj, nebo tě sežeru!'],
+        ['Mám přístupovou kartu do továrny,', 'ale není zadarmo...', 'Kušuj, nebo tě sežeru!'],
         [
           'Áááá, přesně to jsem potřeboval.',
           'Zde máš čipovou kartu do továrny',
@@ -415,27 +415,27 @@ const data = {
     {
       scoreUp: 5,
       scoreDown: 4,
-      name: 'Starosta města Myschen',
+      name: 'Si král!',
     },
     {
       scoreUp: 4,
       scoreDown: 3,
-      name: 'Ministr zdravotnictví',
+      name: 'Stal si se ministrem zdravotnictví!',
     },
     {
       scoreUp: 3,
       scoreDown: 2,
-      name: 'Velvyslanec',
+      name: 'Agent "nick"',
     },
     {
       scoreUp: 2,
       scoreDown: 1,
-      name: 'Člen městské rady',
+      name: 'Zaměstnanec továrny',
     },
     {
       scoreUp: 1,
       scoreDown: 0,
-      name: 'Vězeň',
+      name: 'Skončil si ve vězení.... ',
     },
   ],
 };

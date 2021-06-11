@@ -10,7 +10,7 @@ const Home = () => {
       <section className="main home__main">
         <h1>Kočkomyší hra</h1>
         <img
-          src="assets/photos/photo-like_rectangle.png"
+          src="assets/Intro/main_pic.png"
           alt=""
           className="home__img"
         />
