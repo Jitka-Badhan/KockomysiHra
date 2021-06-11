@@ -15,17 +15,18 @@
 }
 
 .certificate__text > div {
-  font-family: 'Pacifico';
+  /* font-family: 'Pacifico'; */
   font-size: 28px;
   position: absolute;
   top: 70%;
   width: 100%;
   text-align: center;
   font-weight: 700;
+  color: #197278;
 }
 
 .certificate__text > div:first-of-type {
-  font-family: 'Pacifico';
+  /* font-family: 'Pacifico'; */
   font-size: 28px;
   top: 60%;
 }
