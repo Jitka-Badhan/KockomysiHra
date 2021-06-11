@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useImmer } from 'use-immer';
 import './style.css';
-import data from '../../data.js';
+import data from '../../data';
 
 import Header from '../Header';
 import GameNav from './GameNav';
 import Inventory from './Inventory';
 import Map from './Map';
+import TheEnd from './TheEnd';
 
-const Game = ({ myData, setMyData }) => {
-  const history = useHistory();
+const Game = () => {
+  const [myData, setMyData] = useImmer(data);
+  const [theEnd, setTheEnd] = useState(false);
+  const [endSituation, setEndSituation] = useState(0);
 
   useEffect(() => {
     const loadedSave = JSON.parse(localStorage.getItem('mySave'));
@@ -66,15 +69,20 @@ const Game = ({ myData, setMyData }) => {
   const changeTubes = () => {
     setMyData((draft) => {
       draft.scores.tubes = draft.scores.tubes - 1;
-      draft.scores.tubes > 0 || history.push('/game-over');
+      draft.scores.tubes > 0 || runTheEnd('kočvid');
     });
+  };
+
+  const runTheEnd = (situation) => {
+    setEndSituation(situation);
+    setTheEnd(true);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRemainingSeconds((remainingSeconds) => {
         if (remainingSeconds <= 0) {
-          history.push('/game-over');
+          runTheEnd('čas');
           clearInterval(interval);
           return 0;
         }
@@ -128,20 +136,23 @@ const Game = ({ myData, setMyData }) => {
           <Inventory myData={myData} clicked={clicked} />
         </div>
 
-        <div className="main game__main">
-          <Map
-            setSelectedBuilding={setSelectedBuilding}
-            selectedBuilding={selectedBuilding}
-            selectedSort={selectedSort}
-            remainingSeconds={remainingSeconds}
-            setRemainingSeconds={setRemainingSeconds}
-            changeR={changeR}
-            changeTubes={changeTubes}
-            clicked={clicked}
-            myData={myData}
-            setMyData={setMyData}
-          />
-        </div>
+        {!theEnd && (
+          <div className="main game__main">
+            <Map
+              setSelectedBuilding={setSelectedBuilding}
+              selectedBuilding={selectedBuilding}
+              selectedSort={selectedSort}
+              remainingSeconds={remainingSeconds}
+              setRemainingSeconds={setRemainingSeconds}
+              changeR={changeR}
+              changeTubes={changeTubes}
+              clicked={clicked}
+              myData={myData}
+              setMyData={setMyData}
+            />
+          </div>
+        )}
+        {theEnd && <TheEnd situation={endSituation} myData={myData} />}
       </div>
     </>
   );

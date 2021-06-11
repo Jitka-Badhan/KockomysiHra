@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { render } from 'react-dom';
-import { useImmer } from 'use-immer';
 import './style.css';
-import data from './data';
 
 import Home from './components/Home';
 import Intro from './components/Intro';
@@ -12,8 +10,6 @@ import Rules from './components/Rules';
 import GameOver from './components/GameOver';
 
 const App = () => {
-  const [myData, setMyData] = useImmer(data);
-
   return (
     <Router>
       <div>
@@ -22,7 +18,7 @@ const App = () => {
             <Intro />
           </Route>
           <Route exact path="/game">
-            <Game myData={myData} setMyData={setMyData} />
+            <Game />
           </Route>
           <Route exact path="/">
             <Home />
@@ -31,7 +27,7 @@ const App = () => {
             <Rules />
           </Route>
           <Route exact path="/game-over">
-            <GameOver myData={myData} />
+            <GameOver />
           </Route>
         </Switch>
       </div>

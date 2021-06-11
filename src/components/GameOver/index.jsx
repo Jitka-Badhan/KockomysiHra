@@ -4,16 +4,25 @@ import { db } from '../../db';
 
 import Header from '../Header';
 import Certificate from './Certificate';
-import data from '../../data';
 
-const GameOver = ({ myData }) => {
+const GameOver = () => {
   const [myScores, setMyScores] = useState(undefined);
+  const player_id = localStorage.getItem('player_id');
 
   useEffect(() => {
-    db.collection('players').onSnapshot((snapshot) => {
-      const scores = snapshot.docs.map((doc) => doc.data());
-      setMyScores(scores.find((item) => item.nick === 'Kocour'));
-    });
+    db.collection('players')
+      .doc(player_id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setMyScores(doc.data());
+        } else {
+          console.log('No such document in Firestore!');
+        }
+      })
+      .catch((error) => {
+        console.log('Error getting document from Firestore:', error);
+      });
   }, []);
 
   return (
@@ -22,7 +31,7 @@ const GameOver = ({ myData }) => {
         <>
           <Header pageName="vyhodnocení" />
           <section className="main certificate__main">
-            <Certificate myData={myData} myScores={myScores} />
+            <Certificate myScores={myScores} />
           </section>
         </>
       )}

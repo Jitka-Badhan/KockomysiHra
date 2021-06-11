@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
+import data from '../../../data';
 
-const Certificate = ({ myData, myScores }) => {
-  const rank = myData.winner_ranks.find(
-    (item) => item.scoreUp >= myScores.score && item.scoreDown < myScores.score,
-  );
+const Certificate = ({ myScores }) => {
+  const rank =
+    myScores.score > 0
+      ? data.winner_ranks.find(
+          (item) =>
+            item.scoreUp >= myScores.score && item.scoreDown < myScores.score,
+        )
+      : data.winner_ranks.find((item) => item.scoreDown === 0);
 
   return (
     <div className="container certificate">

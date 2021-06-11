@@ -1,9 +1,10 @@
 const data = {
+  player_nick: '',
   scores: {
     R: 0,
     tubes: 5,
     timeOnStart: 360,
-    timeOnSave: undefined,
+    timeOnSave: 360,
   },
   intro: [
     {
@@ -372,7 +373,11 @@ const data = {
         '/assets/quizzes/municipal_w_milk.jpg',
       ],
       description: [
-        ['Mám přístupovou kartu do továrny,', 'ale není zadarmo...', 'Kušuj, nebo tě sežeru!'],
+        [
+          'Mám přístupovou kartu do továrny,',
+          'ale není zadarmo...',
+          'Kušuj, nebo tě sežeru!',
+        ],
         [
           'Áááá, přesně to jsem potřeboval.',
           'Zde máš čipovou kartu do továrny',
