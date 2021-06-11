@@ -15,8 +15,8 @@
 }
 
 .certificate__text > div {
-  font-family: 'Amatic SC';
-  font-size: 32px;
+  font-family: 'Pacifico';
+  font-size: 28px;
   position: absolute;
   top: 70%;
   width: 100%;
@@ -24,10 +24,10 @@
   font-weight: 700;
 }
 
-.certificate__text > div:last-of-type {
+.certificate__text > div:first-of-type {
   font-family: 'Pacifico';
-  font-size: 24px;
-  top: 80%;
+  font-size: 28px;
+  top: 60%;
 }
 
 .certificate__seal {
@@ -49,6 +49,10 @@
 
 .scores__heading > div:first-of-type {
   font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Amatic SC';
+  font-size: 38px;
+  font-weight: 700;
 }
 
 .scores__heading,
@@ -58,6 +62,7 @@
 
 .scores__score h4 {
   margin: 0;
+  text-decoration: underline;
 }
 
 .scores__score > table {
@@ -96,4 +101,8 @@
 .certificate__buttons p:active,
 .certificate__buttons p:focus {
   background-color: #197278;
+}
+
+.score__R td {
+  font-weight: 700;
 }

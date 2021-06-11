@@ -16,27 +16,27 @@ const Certificate = ({ myScores }) => {
     <div className="container certificate">
       <div className="certificate__photo">
         <img
-          src="/assets/photos/photo-like_portrait.png"
+          src={rank.pic}
           alt="photo of mouse puppet"
           className="certificate__img"
         />
         <div className="certificate__text">
+          <div>Agent: {myScores.nick}</div>
           <div>{rank.name}</div>
-          <div>{myScores.nick}</div>
         </div>
         <img src="/assets/seal.png" alt="seal" className="certificate__seal" />
       </div>
       <div className="container certificate__scores">
         <div className="scores__heading">
-          <div>Je po boji a kočky strádají...</div>
-          <div>Z Mňou-chenu se stal Myš-shen. Děkujeme za pomoc, agente!</div>
+          <div>{rank.name}</div>
+          <div>{rank.text}</div>
         </div>
         <div className="scores__score">
-          <h4>Tvoje skóre:</h4>
+          <h4>Výsledek Tvého snažení</h4>
           <table>
             <tbody>
               <tr className="score__quizzes">
-                <td>Rébusy:</td>
+                <td>Vyřešené rébusy:</td>
                 <td>{myScores.riddles}</td>
               </tr>
               <tr className="score__time">
@@ -56,10 +56,6 @@ const Certificate = ({ myScores }) => {
         </div>
         <div className="scores__rank">
           Mezi ostatními ses umístil na <strong>X. místě</strong> z 11.
-        </div>
-        <div className="scores__title__text">
-          <div>Vysloužil sis hodnost:</div>
-          <div className="scores__title">{rank.name}</div>
         </div>
         <div className="container certificate__buttons">
           <a href="" className="button share">
