@@ -2,6 +2,7 @@ const data = {
   scores: {
     R: 0,
     tubes: 5,
+    timeOnStart: 360,
     timeOnSave: undefined,
   },
   intro: [
@@ -412,23 +413,28 @@ const data = {
   ],
   winner_ranks: [
     {
-      score_breakpoint: null,
+      scoreUp: 5,
+      scoreDown: 4,
       name: 'Starosta města Myschen',
     },
     {
-      score_breakpoint: null,
+      scoreUp: 4,
+      scoreDown: 3,
       name: 'Ministr zdravotnictví',
     },
     {
-      score_breakpoint: null,
+      scoreUp: 3,
+      scoreDown: 2,
       name: 'Velvyslanec',
     },
     {
-      score_breakpoint: null,
+      scoreUp: 2,
+      scoreDown: 1,
       name: 'Člen městské rady',
     },
     {
-      score_breakpoint: null,
+      scoreUp: 1,
+      scoreDown: 0,
       name: 'Vězeň',
     },
   ],

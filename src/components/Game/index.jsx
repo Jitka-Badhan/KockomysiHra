@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useImmer } from 'use-immer';
+import { useHistory } from 'react-router-dom';
 import './style.css';
 import data from '../../data.js';
 
@@ -8,8 +8,8 @@ import GameNav from './GameNav';
 import Inventory from './Inventory';
 import Map from './Map';
 
-const Game = () => {
-  const [myData, setMyData] = useImmer(data);
+const Game = ({ myData, setMyData }) => {
+  const history = useHistory();
 
   useEffect(() => {
     const loadedSave = JSON.parse(localStorage.getItem('mySave'));
@@ -42,7 +42,7 @@ const Game = () => {
   const [remainingSeconds, setRemainingSeconds] = useState(
     localStorage.getItem('mySave')
       ? JSON.parse(localStorage.getItem('mySave')).myTime
-      : 3600,
+      : data.scores.timeOnStart,
   );
 
   const clicked = (e) => {
@@ -66,7 +66,7 @@ const Game = () => {
   const changeTubes = () => {
     setMyData((draft) => {
       draft.scores.tubes = draft.scores.tubes - 1;
-      draft.scores.tubes > 0 || alert('Došel kočvid');
+      draft.scores.tubes > 0 || history.push('/game-over');
     });
   };
 
@@ -74,18 +74,21 @@ const Game = () => {
     const interval = setInterval(() => {
       setRemainingSeconds((remainingSeconds) => {
         if (remainingSeconds <= 0) {
-          alert('SMITEC!!!');
+          history.push('/game-over');
           clearInterval(interval);
           return 0;
         }
-        save(remainingSeconds);
+        setMyData((draft) => {
+          draft.scores.timeOnSave = remainingSeconds;
+        });
+        save();
         return remainingSeconds - 1;
       });
     }, 1000);
     return () => clearInterval(interval);
   }, [myData]);
 
-  const save = (remainingSeconds) => {
+  const save = () => {
     const buildingsToSave = myData.buildings
       .filter((building) => building.sort !== 'Cemetery')
       .map((building) => {
@@ -104,7 +107,7 @@ const Game = () => {
     );
 
     const mySave = JSON.stringify({
-      myTime: remainingSeconds,
+      myTime: myData.scores.timeOnSave,
       myTubes: myData.scores.tubes,
       myR: myData.scores.R,
       buildings: buildingsToSave,
@@ -117,16 +120,12 @@ const Game = () => {
 
   return (
     <>
-      <Header />
+      <Header pageName="hra" />
 
       <div className="container game">
         <div className="container game__side">
           <GameNav />
-          <Inventory
-            myData={myData}
-            remainingSeconds={remainingSeconds}
-            clicked={clicked}
-          />
+          <Inventory myData={myData} clicked={clicked} />
         </div>
 
         <div className="main game__main">
@@ -134,10 +133,10 @@ const Game = () => {
             setSelectedBuilding={setSelectedBuilding}
             selectedBuilding={selectedBuilding}
             selectedSort={selectedSort}
-            changeR={changeR}
-            changeTubes={changeTubes}
             remainingSeconds={remainingSeconds}
             setRemainingSeconds={setRemainingSeconds}
+            changeR={changeR}
+            changeTubes={changeTubes}
             clicked={clicked}
             myData={myData}
             setMyData={setMyData}

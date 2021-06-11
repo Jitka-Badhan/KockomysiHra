@@ -1,0 +1,99 @@
+.certificate {
+  justify-content: space-evenly;
+  background-color: #197278;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.certificate__photo {
+  position: relative;
+}
+
+.certificate__img {
+  height: 70vh;
+  width: 50vh;
+}
+
+.certificate__text > div {
+  font-family: 'Amatic SC';
+  font-size: 32px;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.certificate__text > div:last-of-type {
+  font-family: 'Pacifico';
+  font-size: 24px;
+  top: 80%;
+}
+
+.certificate__seal {
+  position: absolute;
+  width: 3rem;
+  bottom: -1.5rem;
+  right: 1rem;
+}
+
+.certificate__scores {
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: #edddd4;
+  height: 70vh;
+  width: 50vh;
+  border-radius: 5px;
+}
+
+.scores__heading > div:first-of-type {
+  font-weight: 700;
+}
+
+.scores__heading,
+.scores__rank {
+  padding: 0 2rem;
+}
+
+.scores__score h4 {
+  margin: 0;
+}
+
+.scores__score > table {
+  margin: 0 auto;
+}
+
+.scores__title {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.certificate__buttons {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.certificate__buttons .button {
+  text-decoration: none;
+}
+
+.certificate__buttons img {
+  width: 2rem;
+}
+
+.certificate__buttons p {
+  background-color: #c44536;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 5px 10px;
+}
+
+.certificate__buttons p:hover,
+.certificate__buttons p:active,
+.certificate__buttons p:focus {
+  background-color: #197278;
+}
