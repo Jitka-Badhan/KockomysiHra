@@ -30,7 +30,7 @@ const TheEnd = ({ situation, myData }) => {
   }, []);
 
   return (
-    <div className="pop_up">
+    <div className="the_end__pop_up">
       <p>Došel Ti {situation}, musíš se vrátit domů...</p>
       <button onClick={() => history.push('/game-over')}>Ok</button>
     </div>

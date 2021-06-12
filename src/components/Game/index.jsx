@@ -130,30 +130,29 @@ const Game = () => {
     <>
       <Header pageName="hra" />
 
-      <div className="container game">
+      <div className={theEnd ? 'container game blurred' : 'container game'}>
         <div className="container game__side">
           <GameNav />
           <Inventory myData={myData} clicked={clicked} />
         </div>
 
-        {!theEnd && (
-          <div className="main game__main">
-            <Map
-              setSelectedBuilding={setSelectedBuilding}
-              selectedBuilding={selectedBuilding}
-              selectedSort={selectedSort}
-              remainingSeconds={remainingSeconds}
-              setRemainingSeconds={setRemainingSeconds}
-              changeR={changeR}
-              changeTubes={changeTubes}
-              clicked={clicked}
-              myData={myData}
-              setMyData={setMyData}
-            />
-          </div>
-        )}
-        {theEnd && <TheEnd situation={endSituation} myData={myData} />}
+        <div className="main game__main">
+          <Map
+            setSelectedBuilding={setSelectedBuilding}
+            selectedBuilding={selectedBuilding}
+            selectedSort={selectedSort}
+            remainingSeconds={remainingSeconds}
+            setRemainingSeconds={setRemainingSeconds}
+            changeR={changeR}
+            changeTubes={changeTubes}
+            clicked={clicked}
+            myData={myData}
+            setMyData={setMyData}
+          />
+        </div>
       </div>
+
+      {theEnd && <TheEnd situation={endSituation} myData={myData} />}
     </>
   );
 };
