@@ -4,13 +4,42 @@ import { db } from '../../db';
 
 import Header from '../Header';
 import Certificate from './Certificate';
+import SharePopup from './SharePopup';
 
 const GameOver = () => {
+  const [shareClicked, setShareClicked] = useState(false);
   const [myScores, setMyScores] = useState(undefined);
+  const [myIndex, setMyIndex] = useState(0);
+  const [totalPlayers, setTotalPlayers] = useState(0);
   const player_id = localStorage.getItem('player_id');
 
   useEffect(() => {
-    db.collection('players')
+    const playersRef = db.collection('players');
+    let allPlayers = [];
+
+    playersRef
+      .orderBy('score', 'desc')
+      .get()
+      .then((doc) => {
+        doc.docs.forEach((doc) => {
+          const data = doc.data();
+          const id = doc.id;
+          data.id = id;
+          allPlayers.push(data);
+        });
+
+        setMyIndex(
+          allPlayers.indexOf(
+            allPlayers.find(
+              (player) => player.id === localStorage.getItem('player_id'),
+            ),
+          ),
+        );
+
+        setTotalPlayers(allPlayers.length);
+      });
+
+    playersRef
       .doc(player_id)
       .get()
       .then((doc) => {
@@ -27,14 +56,19 @@ const GameOver = () => {
 
   return (
     <>
-      {myScores && (
-        <>
-          <Header pageName="vyhodnocení" />
-          <section className="main certificate__main">
-            <Certificate myScores={myScores} />
-          </section>
-        </>
-      )}
+      <Header pageName="certifikát" />
+      <section className="main certificate__main">
+        {myScores && (
+          <Certificate
+            myScores={myScores}
+            myIndex={myIndex}
+            totalPlayers={totalPlayers}
+            shareClicked={shareClicked}
+            setShareClicked={setShareClicked}
+          />
+        )}
+        {shareClicked && <SharePopup setShareClicked={setShareClicked} />}
+      </section>
     </>
   );
 };

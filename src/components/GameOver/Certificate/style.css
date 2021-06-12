@@ -45,6 +45,7 @@
   background-color: #edddd4;
   height: 70vh;
   width: 50vh;
+  max-width: 60vh;
   border-radius: 5px;
 }
 
@@ -58,7 +59,7 @@
 
 .scores__heading,
 .scores__rank {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .scores__score h4 {
@@ -82,6 +83,9 @@
 
 .certificate__buttons .button {
   text-decoration: none;
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
 }
 
 .certificate__buttons img {
@@ -106,4 +110,27 @@
 
 .score__R td {
   font-weight: 700;
+}
+
+@media print {
+  .header {
+    justify-content: center;
+  }
+
+  .certificate {
+    border: 5px solid #197278;
+    border-radius: 10px;
+  }
+
+  .certificate__buttons,
+  .header__img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scores__heading,
+  .scores__rank {
+    padding: 0 3rem;
+  }
 }

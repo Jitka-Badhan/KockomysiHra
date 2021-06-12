@@ -1,0 +1,19 @@
+.pop-up__share {
+  position: absolute;
+  top: calc(100% – 15vh);
+  left: calc(100% - 70vw);
+  width: 60vw;
+  height: 60vh;
+  border: 5px solid #283d3b;
+  border-radius: 5px;
+  background-color: #edddd4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
