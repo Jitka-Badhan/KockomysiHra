@@ -420,23 +420,23 @@ const data = {
     {
       scoreUp: 5,
       scoreDown: 4,
-      name: 'Si král!',
+      name: 'Jsi král!',
       pic: './assets/ranks/rank1.png',
       text: 'Podařilo se Ti převzít vládu nad městem, myšky se radují, kočky jsou na ústupu.',
     },
     {
       scoreUp: 4,
       scoreDown: 3,
-      name: 'Stal si se ministrem zdravotnictví!',
+      name: 'Stal ses ministrem zdravotnictví!',
       pic: './assets/ranks/rank2.png',
-      text: 'Myšky Tě zvolili do funkce ministra a převzali vládu nad městem.',
+      text: 'Myšky Tě zvolily do funkce ministra a převzaly vládu nad městem.',
     },
     {
       scoreUp: 3,
       scoreDown: 2,
       name: 'Agent myších služeb',
       pic: './assets/ranks/rank3.png',
-      text: 'Převrat se nezdařil, nicméně kočky poznaly, zač je toho loket a začaly myšky tolerovat. Jako první krok přijali zpět původní název města.',
+      text: 'Převrat se nezdařil, nicméně kočky poznaly, zač je toho loket a začaly myšky tolerovat. Jako první krok přijaly zpět původní název města.',
     },
     {
       scoreUp: 2,
@@ -448,9 +448,9 @@ const data = {
     {
       scoreUp: 1,
       scoreDown: 0,
-      name: 'Skončil si ve vězení.... ',
+      name: 'Skončil jsi ve vězení... ',
       pic: './assets/ranks/rank5.png',
-      text: 'Myšky se nadále třesou strachy, kočky  kralují a Tebe zajali jako odstrašující příklad pro případ, že by se někdo další chtěl pokusit o převrat.',
+      text: 'Myšky se nadále třesou strachy, kočky  kralují a Tebe zajaly jako odstrašující příklad pro případ, že by se někdo další chtěl pokusit o převrat.',
     },
   ],
 };

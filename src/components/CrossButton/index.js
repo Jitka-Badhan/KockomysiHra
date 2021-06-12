@@ -3,7 +3,7 @@ import './style.css';
 
 const CrossButton = ({ closeIt }) => (
   <img
-    src="/assets/cross.svg"
+    src="../../assets/cross.svg"
     alt="cross"
     className="top-right cancel"
     onClick={closeIt}

@@ -27,7 +27,7 @@ const Form = ({ blurApplied, toggleForm }) => {
         console.error('Error writing document: ', error);
       });
 
-    setNick('');
+    // setNick('');
     setIsSubmitted(true);
   };
 
@@ -38,7 +38,7 @@ const Form = ({ blurApplied, toggleForm }) => {
           toggleForm(false);
         }}
       />
-      <form>
+      <form className={isSubmitted ? 'form__form hidden' : 'form__form'}>
         <label>
           <div className="form__text">Zadej svůj nickname myšího agenta:</div>
           <input type="text" onChange={handleChange} value={nick} />
@@ -47,8 +47,8 @@ const Form = ({ blurApplied, toggleForm }) => {
       </form>
       <div className={isSubmitted ? 'welcome' : 'welcome hidden'}>
         <div className="welcome__text">
-          Vítám Tě mezi námi, agente {localStorage.getItem('player_nick')}!
-          Dovol mi Tě seznámit se smutným příběhem našeho myšího společenství...
+          Vítám Tě mezi námi, agente <strong>{nick}</strong>! Dovol mi Tě
+          seznámit se smutným příběhem našeho myšího společenství...
         </div>
         <Link to="/intro" className="button">
           Pokračovat na Intro
