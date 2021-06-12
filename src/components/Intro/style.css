@@ -4,7 +4,9 @@
 
 .intro__img {
   width: 50vw;
-  max-width: 80vmin;
+  max-width: 60vmin;
+  height: 50vw;
+  max-height: 60vmin;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -36,25 +38,26 @@
 }
 
 .intro__button {
+  border: none;
   background-color: #c44536;
   color: white;
   align-items: center;
   text-decoration: none;
   font-weight: 700;
+  font-size: 16px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0.5rem 1rem;
 }
 
 .intro__button:enabled:hover {
   background-color: #197278;
-  transform: scale(1.1);
 }
 
-.intro__button:first-of-type > img {
+.intro__button:first-child > img {
   margin-left: 1rem;
 }
 
-.intro__button:last-of-type > img {
+.intro__button:last-child > img {
   margin-right: 1rem;
 }
 
@@ -66,8 +69,17 @@
   margin: 0;
 }
 
+.to_game {
+  background-color: #197278;
+}
+
+.to_game:hover,
+.to_game:active,
+.to_game:focus {
+  transform: scale(1.2);
+  background-color: #772e25;
+}
+
 button:disabled {
   background-color: grey;
 }
-
-

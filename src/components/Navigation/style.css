@@ -1,8 +1,8 @@
 .navigation {
   display: flex;
   justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .navigation > a {
@@ -20,8 +20,13 @@
 .navigation > a:focus {
   /* background-color: #f9dc5c; */
   background-color: #197278;
-  color: white;
   transform: scale(1.2);
+}
+
+.navigation div:hover,
+.navigation div:active,
+.navigation div:focus {
+  filter: invert();
 }
 
 .nav__icon {
@@ -30,10 +35,10 @@
   margin: auto;
 }
 
-.nav__icon:hover,
-.nav__icon:active,
-.nav__icon:focus {
-  filter: invert();
+.navigation .nav__icon:hover,
+.navigation .nav__icon:active,
+.navigation .nav__icon:focus {
+  filter: none;
 }
 
 .navigation p {
