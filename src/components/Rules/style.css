@@ -2,6 +2,10 @@
   margin-right: 2rem;
 }
 
+.rules__rules {
+  justify-content: space-between;
+}
+
 .rules__rule {
   align-items: center;
   margin-bottom: 2rem;
@@ -12,14 +16,10 @@
 }
 
 .rules__column {
-  flex-basis: 35vw;
+  flex-basis: 37vw;
   padding: 2rem;
   background-color: #edddd4;
   border-radius: 5px;
-}
-
-.rules__column:first-of-type {
-  margin-right: 5rem;
 }
 
 .rules__img {
@@ -30,10 +30,9 @@
   border-radius: 50%;
 }
 
-/* .question-mark {
-  height: 3rem;
-  padding: 2rem;
-} */
+.question_mark {
+  padding: 1.5rem;
+}
 
 .rules__rule:nth-of-type(2n + 2) > .rules__img {
   margin-right: 0;
@@ -41,7 +40,7 @@
 }
 
 .rules__text {
-  text-align: justify;
+  text-align: left;
 }
 
 .rules__column > .rules__rule:last-of-type {
@@ -64,26 +63,34 @@
 .rules__epilogue {
   background-color: #197278;
   margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .epilogue__text {
   margin-right: 3rem;
 }
 
-.rules__epilogue > button {
+.rules__epilogue > .button {
   background-color: #c44536;
+  text-decoration: none;
   color: white;
+  align-self: center;
   flex-basis: 20%;
   font-size: 16px;
   font-weight: 700;
   border: none;
   border-radius: 5px;
+  padding: 0.5rem 0;
 }
 
-.rules__epilogue > button:hover,
-.rules__epilogue > button:active,
-.rules__epilogue > button:focus {
+.rules__epilogue > .button:hover,
+.rules__epilogue > .button:active,
+.rules__epilogue > .button:focus {
   transform: scale(1.2);
   background-color: #772e25;
+}
+
+@media screen and (min-width: 1200px) {
+  .rules__text {
+    text-align: justify;
+  }
 }
