@@ -72,7 +72,7 @@ const Map = ({
         </>
       ) : (
         <div className="card__content">
-          <div className="map__heading">Město Mňau-chen</div>
+          <div className="map__heading"></div>
           <div className="map">
             <svg
               id="map_of_clickable_objects"

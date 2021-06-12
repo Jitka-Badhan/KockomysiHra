@@ -10,7 +10,9 @@ const Milk = ({ setSelectedBuilding }) => {
       <h4>V budově jsi něco našel</h4>
       <img src="../../../assets/milk.png" className="specialItem__img" />
       <div className="specialItem__text">
-        <p>Kočky tu nechaly plechovku se sladkým kondenzovaným mlékem.</p>
+        <p>Speciální limitovaná edice kondenzovaného mléka.</p>
+        <p>Toto 25 let zrající mléko je vyráběné v Japonsku z mléka krav Wagyu.</p>
+        <p>Je zpracováno podle tradičního receptu kočičího mistra Hikari-Čiči-Hina.</p>
       </div>
       <div className="card__buttons">
         <button className="cancel" onClick={() => setSelectedBuilding()}>

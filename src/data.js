@@ -250,7 +250,7 @@ const data = {
             button: 'B',
             text: '4',
             pic: '',
-            points: 0,
+            points: 1,
             finished: 'Černá kočka jde s virem domů.',
           },
           {
@@ -264,7 +264,7 @@ const data = {
             button: 'D',
             text: '8',
             pic: '',
-            points: 1,
+            points: 0,
             finished: 'Matematika Ti moc nejde...',
           },
         ],
