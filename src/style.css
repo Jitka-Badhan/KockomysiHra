@@ -12,7 +12,9 @@ body {
   height: 100vh;
 }
 
-div {
+div,
+a,
+button {
   /* cursor: pointer; */
   cursor: url(../public/mouse_for_mouse2.png), pointer;
 }
