@@ -14,7 +14,7 @@ body {
 
 div {
   /* cursor: pointer; */
-  /* cursor: url(../public/Mouse\ Normal\ Select.cur), pointer, auto; */
+  cursor: url(../public/mouse_for_mouse2.png), pointer;
 }
 
 h1 {
