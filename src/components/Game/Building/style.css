@@ -96,6 +96,15 @@
   margin-left: 2rem;
 }
 
+.printer__button:hover,
+.printer__button:active,
+.printer__button:focus,
+.magnifier__button:hover,
+.magnifier__button:active,
+.magnifier__button:focus {
+  transform: scale(1.2);
+}
+
 @media screen and (min-width: 1080px) {
   .quizz__text h4 {
     margin-top: 15px;

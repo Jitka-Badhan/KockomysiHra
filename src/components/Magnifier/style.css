@@ -13,3 +13,8 @@
 .magnified_pic {
   width: 80vh;
 }
+
+.down {
+  margin-bottom: 2rem;
+  align-self: flex-end;
+}
