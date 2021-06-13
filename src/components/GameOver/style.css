@@ -1,4 +1,7 @@
 .certificate__main {
   height: calc(100vh - 4rem);
+}
+
+.toSaveAsPng {
   position: relative;
 }

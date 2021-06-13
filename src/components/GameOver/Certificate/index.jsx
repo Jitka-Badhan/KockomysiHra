@@ -7,10 +7,9 @@ const Certificate = ({
   myScores,
   myIndex,
   totalPlayers,
-  shareClicked,
-  setShareClicked,
+  handleShareButton,
 }) => {
-  const rank =
+  const myRank =
     myScores.score > 0
       ? data.winner_ranks.find(
           (item) =>
@@ -20,22 +19,16 @@ const Certificate = ({
 
   return (
     <>
-      <div
-        className={
-          shareClicked
-            ? 'container certificate blurred'
-            : 'container certificate'
-        }
-      >
+      <div className="container certificate">
         <div className="certificate__photo">
           <img
-            src={rank.pic}
+            src={myRank.pic}
             alt="photo of mouse puppet"
             className="certificate__img"
           />
           <div className="certificate__text">
             <div>Agent: {myScores.nick}</div>
-            <div>{rank.name}</div>
+            <div>{myRank.name}</div>
           </div>
           <img
             src="/assets/seal.png"
@@ -45,8 +38,8 @@ const Certificate = ({
         </div>
         <div className="container certificate__scores">
           <div className="scores__heading">
-            <div>{rank.name}</div>
-            <div>{rank.text}</div>
+            <div>{myRank.name}</div>
+            <div>{myRank.text}</div>
           </div>
           <div className="scores__score">
             <h4>Výsledek Tvého snažení</h4>
@@ -76,10 +69,7 @@ const Certificate = ({
             {totalPlayers}.
           </div>
           <div className="container certificate__buttons">
-            <button
-              className="button share"
-              onClick={() => setShareClicked(true)}
-            >
+            <button className="button share" onClick={handleShareButton}>
               <img src="/assets/share.svg" alt="share icon" />
               <p>Sdílej</p>
             </button>
