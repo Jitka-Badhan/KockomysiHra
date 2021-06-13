@@ -71,7 +71,7 @@ const data = {
       ],
       quizz: {
         name: 'Hospoda',
-        pic: '/assets/quizzes/Pub_final_better.png',
+        pic: '/assets/quizzes/pub_final2.png',
         text: 'Která kočka žere především myši?',
         answers: [
           {
@@ -363,7 +363,7 @@ const data = {
       mapImg: '/assets/buildings/house_modern_icon.png',
       column: '3',
       cardImg: '/assets/buildings/house_modern.jpg',
-      hintImg: '/assets/quizzes/pub_hint_better.png',
+      hintImg: '/assets/quizzes/pub_hint.png',
       description: ['V budově byla ukryta tato indicie:'],
       quizz: {
         hint: {
