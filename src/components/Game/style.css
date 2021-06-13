@@ -18,8 +18,8 @@
 .game__main {
   position: relative;
   text-align: center;
-  /* background-color: #a2dbe2; */
-  background-color: #edddd4;
+  background-color: #698f3f;
+  /* background-color: #edddd4; */
   border-radius: 5px;
   height: 85vh;
   flex-basis: 75%;
@@ -27,7 +27,9 @@
   overflow: hidden;
   margin: 0;
   padding: 0 1rem;
+  border: 3px solid #197278;
 }
+
 
 .card {
   height: 100%;

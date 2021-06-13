@@ -4,7 +4,7 @@ import './style.css';
 const Footer = () => {
   return (
     <footer className="container footer">
-      <a href="" className="footer__button">
+      <a href="https://musing-curie-1c14fb.netlify.app/" className="footer__button">
         O projektu
       </a>
       <div className="footer__text">

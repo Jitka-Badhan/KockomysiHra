@@ -9,6 +9,7 @@
   width: 100%;
   background-image: url(../../../assets/map/map.jpg);
   background-size: cover;
+  border: 3px solid black;
 }
 
 #map_of_clickable_objects {

@@ -1,11 +1,29 @@
 .cemetery__img {
-  width: 70%;
+  max-width: 80%;
   max-height: 50%;
+  min-width: 80%;
+  border: 2px solid black;
 }
 
-.cemetery__text h4,
+/* .cemetery__text h4,
 .cemetery__text p {
   margin: 0;
+} */
+
+.cemetery__text h4 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: 'Amatic SC';
+  font-size: 54px;
+}
+
+.cemetery__text p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
 }
 
 .paragraph {

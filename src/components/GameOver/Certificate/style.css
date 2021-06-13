@@ -1,3 +1,5 @@
+
+
 .certificate {
   justify-content: space-evenly;
   background-color: #197278;
@@ -15,18 +17,17 @@
 }
 
 .certificate__text > div {
-  /* font-family: 'Pacifico'; */
+  font-family: 'Courgette', cursive;
   font-size: 28px;
   position: absolute;
   top: 70%;
   width: 100%;
   text-align: center;
   font-weight: 700;
-  color: #197278;
+  color: white;
 }
 
 .certificate__text > div:first-of-type {
-  /* font-family: 'Pacifico'; */
   font-size: 28px;
   top: 60%;
 }
@@ -57,6 +58,13 @@
   font-weight: 700;
 }
 
+.scores__heading > div:last-of-type {
+  /* font-weight: 700;
+  margin-bottom: 15px; */
+  font-family: 'Courgette', cursive;
+  font-size: 20 px;
+}
+
 .scores__heading,
 .scores__rank {
   padding: 0 1rem;
@@ -65,15 +73,29 @@
 .scores__score h4 {
   margin: 0;
   text-decoration: underline;
+  font-family: 'Courgette', cursive;
+  font-size: 22px;
 }
 
 .scores__score > table {
   margin: 0 auto;
 }
 
+.scores__cell {
+  font-family: 'Courgette', cursive;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .scores__title {
   font-size: larger;
   font-weight: 700;
+}
+
+.scores__rank {
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
 }
 
 .certificate__buttons {

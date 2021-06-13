@@ -5,15 +5,30 @@
   align-items: center;
 }
 
-.game__hints h4 {
-  margin: 0;
-}
-
 .hint__mouse__img {
-  width: 25vh;
+  min-width: 25vh;
+  max-width: 35vh;
 }
 
 .hint__img {
-  width: 50%;
+  width: 30%;
   margin-top: 1rem;
+}
+
+.hint__title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+}
+
+.hint h4 {
+  margin: 0;
+  font-family: 'Amatic SC';
+  font-size: 54px;
+}
+
+.hint_text_hint {
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
 }
