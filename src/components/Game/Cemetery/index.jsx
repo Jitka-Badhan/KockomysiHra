@@ -32,10 +32,18 @@ const Cemetery = ({
   const showTheHint = (e) => {
     const hintFor = myData.buildings.find(
       (building) => building.name === e.target.id,
-    ).quizz;
-    setQuizzToHint(hintFor);
+    );
+    setQuizzToHint(hintFor.quizz);
     setHintWasChosen(true);
-    setRemainingSeconds(remainingSeconds - 300);
+    !hintFor.quizz.hint.isActive && setRemainingSeconds(remainingSeconds - 300);
+    !hintFor.quizz.hint.isActive &&
+      setMyData((draft) => {
+        draft.buildings[
+          myData.buildings.indexOf(hintFor)
+        ].quizz.hint.isActive = true;
+      });
+
+    console.log(hintFor.quizz.hint.isActive);
   };
 
   return (

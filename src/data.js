@@ -104,6 +104,7 @@ const data = {
           },
         ],
         hint: {
+          isActive: false,
           text: '',
           pic: '/assets/quizzes/hint_pub.jpg',
         },
@@ -159,6 +160,7 @@ const data = {
           },
         ],
         hint: {
+          isActive: false,
           text: 'Každý obrázek reprezentuje jeden znak',
           pic: '',
         },
@@ -214,6 +216,7 @@ const data = {
           },
         ],
         hint: {
+          isActive: false,
           text: 'Co chceš radit, hledej cestu!',
           pic: '',
         },
@@ -269,6 +272,7 @@ const data = {
           },
         ],
         hint: {
+          isActive: false,
           text: 'Zde platí pravidla jako u klasického sudoku. Navíc v každé barevné skupince vidíš součet čísel v ní obsažených (čísla ve skupince nesmí být stejná).',
           pic: '',
         },
@@ -324,6 +328,7 @@ const data = {
           },
         ],
         hint: {
+          isActive: false,
           text: 'Některé kočky se rády schovávají',
           pic: '',
         },
