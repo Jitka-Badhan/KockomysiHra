@@ -24,7 +24,6 @@ const Map = ({
 
   return (
     <div className="card game__map">
-
       {selectedBuilding ? (
         <>
           {selectedSort === 'Riddle' && (
@@ -81,8 +80,6 @@ const Map = ({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 191.19 123.62"
             >
-              <title>mapa_objects</title>
-
               <ellipse
                 cx="37.49"
                 cy="16.76"
