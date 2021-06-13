@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Milk from './Milk';
 import CrossButton from '../../CrossButton';
 import Magnifier from '../../Magnifier';
+import AccessDenied from './AccessDenied';
 
 const Building = ({
   selectedBuilding,
@@ -75,9 +76,17 @@ const Building = ({
     setBuildingActive(false);
   };
 
+  const accessDenied =
+    selectedBuilding.name === 'Továrna' &&
+    !myData.buildings.find((building) => building.sort === 'Municipal').quizz
+      .isSolved;
+
   return (
     <>
-      {!magnify && (
+      {accessDenied && (
+        <AccessDenied setSelectedBuilding={setSelectedBuilding} />
+      )}
+      {!magnify && !accessDenied && (
         <div className="card game__building">
           {!quizzActive && !quizzSolved && (
             <>

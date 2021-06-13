@@ -275,7 +275,7 @@ const data = {
         isActive: false,
         isSolved: false,
       },
-      isActive: false,
+      isActive: true,
     },
     {
       name: 'Obchoďák',

@@ -1,0 +1,29 @@
+.game__accessDenied {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game__accessDenied h4 {
+  margin: 0;
+  font-family: 'Amatic SC';
+  font-size: 48px;
+}
+
+.accessDenied__img {
+  max-height: 40%;
+  filter: opacity(0.7);
+}
+
+.accessDenied__text p {
+  margin-bottom: 4px;
+  margin-top: 4px;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  font-size: 24px;
+}
+
+.accessDenied__text p:first-of-type {
+  font-weight: 700;
+}

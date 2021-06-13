@@ -39,7 +39,7 @@ const SharePopup = ({ myScores, setShareClicked, myNewImgUrl }) => {
           <img src="../../../assets/download.svg" alt="" className="button" />
         </a>
         <EmailShareButton
-          url="https://blissful-kirch-ce92ad.netlify.app/"
+          url="https://kockomysihra.netlify.app/"
           subject="Kočkomyší hra"
           body="Zkus si zahrát..."
           className="button"
@@ -47,14 +47,14 @@ const SharePopup = ({ myScores, setShareClicked, myNewImgUrl }) => {
           <EmailIcon round />
         </EmailShareButton>
         <FacebookShareButton
-          url="https://blissful-kirch-ce92ad.netlify.app/"
+          url="https://kockomysihra.netlify.app/"
           quote={`Dnes jsem hrál Kočkomyší hru a skončil jsem s R ${myScore} takto: "${myRank}". :-) Jak daleko se dostanete vy?`}
           className="button"
         >
           <FacebookIcon round />
         </FacebookShareButton>
         <TwitterShareButton
-          url="https://blissful-kirch-ce92ad.netlify.app/"
+          url="https://kockomysihra.netlify.app/"
           title="Kočkomyší hra"
           hashtags={['rébusy', 'únikovka', 'SmíchemProtiKovidu']}
           className="button"
@@ -62,7 +62,7 @@ const SharePopup = ({ myScores, setShareClicked, myNewImgUrl }) => {
           <TwitterIcon round />
         </TwitterShareButton>
         <WhatsappShareButton
-          url="https://blissful-kirch-ce92ad.netlify.app/"
+          url="https://kockomysihra.netlify.app/"
           title="Kočkomyší hra – těžký rébusy a super zážitek"
           className="button"
         >

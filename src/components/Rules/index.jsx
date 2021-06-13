@@ -12,13 +12,13 @@ const Rules = () => {
       <Navigation home={true} rules={false} game={true} />
 
       <section className="rules__main">
-        <div className="rules__intro">
+        <div className="rules__intro font_pacifico">
           Agente <i>{localStorage.getItem('player_nick')}</i>, děkujeme, že ses
           dobrovolně přihlásil pomoci myšímu společenství vypořádat se
           s arogantními kočkami! Zde najdeš přehled všeho, co potřebuješ znát,
-          než se pustíš do mise. Můžeš sem nahlédnout kdykoli v průběhu hry. Hra se 
-          sama ukládá, když budeš potřebovat odjet z města a načerpat síly, o svůj herní 
-          pokrok nepřijdeš.
+          než se pustíš do mise. Můžeš sem nahlédnout kdykoli v průběhu hry. Hra
+          se sama ukládá, když budeš potřebovat odjet z města a načerpat síly, o
+          svůj herní pokrok nepřijdeš.
         </div>
         <div className="container rules__rules">
           <div className="rules__column">
@@ -62,16 +62,16 @@ const Rules = () => {
               </div>
             </div>
             <div className="container rules__rule">
-            <img
+              <img
                 src="assets/rules/eRko.png"
                 alt="printscreen7"
                 className="rules__img"
               />
               <div className="rules__text">
-                Tvým úkolem je co nejvíce mezi kočkami rozšířit nákazu - 
-                zvýšit <strong> reprodukční číslo R</strong>. To se Ti povede, 
-                když správně vyluštíš všechny rébusy. Za každý rébus můžeš zvýšit 
-                R maximálně o 1&nbsp;bod.
+                Tvým úkolem je co nejvíce mezi kočkami rozšířit nákazu - zvýšit{' '}
+                <strong> reprodukční číslo R</strong>. To se Ti povede, když
+                správně vyluštíš všechny rébusy. Za každý rébus můžeš zvýšit R
+                maximálně o 1&nbsp;bod.
               </div>
             </div>
           </div>
@@ -79,16 +79,16 @@ const Rules = () => {
           <div className="rules__column">
             <div className="container rules__rule">
               <img
-                  src="assets/rules/hodinky2.png"
-                  alt="printscreen5"
-                  className="rules__img"
-                />
-                <div className="rules__text">
-                  Získáváš také digitální <strong>hodinky</strong>, které Ti
-                  odměřují čas. Na vyřešení všech rébusů máš
-                  <strong> 60&nbsp;minut</strong>, než kočky zareagují na epidemii
-                  a zavedou přísná opatření.
-                </div>
+                src="assets/rules/hodinky2.png"
+                alt="printscreen5"
+                className="rules__img"
+              />
+              <div className="rules__text">
+                Získáváš také digitální <strong>hodinky</strong>, které Ti
+                odměřují čas. Na vyřešení všech rébusů máš
+                <strong> 60&nbsp;minut</strong>, než kočky zareagují na epidemii
+                a zavedou přísná opatření.
+              </div>
             </div>
             <div className="container rules__rule">
               <img
@@ -104,7 +104,7 @@ const Rules = () => {
               </div>
             </div>
             <div className="container rules__rule">
-            <img
+              <img
                 src="assets/quizzes/Sudoku_final2.png"
                 alt="printscreen5"
                 className="rules__img"

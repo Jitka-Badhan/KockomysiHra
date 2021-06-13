@@ -132,7 +132,7 @@ const Game = () => {
 
       <div className={theEnd ? 'container game blurred' : 'container game'}>
         <div className="container game__side">
-          <GameNav />
+          <GameNav setSelectedBuilding={setSelectedBuilding} />
           <Inventory myData={myData} clicked={clicked} />
         </div>
 

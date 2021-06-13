@@ -17,7 +17,7 @@ const Item = ({ building, clicked }) => {
         <img id={building.name} src={building.mapImg} />
       </div>
       <img
-        src="../../../../assets/logo_mouse_footprint_red.png"
+        src="../../../../assets/logo_mouse_footprint.png"
         className={
           !building.quizz.isSolved ||
           (building.name === 'Obchoďák' && building.didMutate)

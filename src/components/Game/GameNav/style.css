@@ -6,26 +6,33 @@
   justify-content: space-evenly;
 }
 
-.game__nav .nav__icon {
+.game__nav .icon {
   filter: invert();
+  width: 2rem;
+  display: block;
+  margin: auto;
 }
 
-.game__nav > a {
+.game__nav > button {
+  border: none;
+  border-radius: 5px;
+  background: inherit;
+  font-weight: 700;
+}
+
+.game__nav > a,
+.game__nav > button {
   margin-right: 0;
   color: white;
 }
 
 .game__nav > a:hover,
 .game__nav > a:active,
-.game__nav > a:hover {
+.game__nav > a:focus,
+.game__nav > button:hover,
+.game__nav > button:active {
   /* background-color: #743880; */
   background-color: #772e25;
   color: white;
   transform: scale(1.2);
-}
-
-.nav__icon:hover,
-.nav__icon:active,
-.nav__icon:focus {
-  filter: invert();
 }

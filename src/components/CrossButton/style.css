@@ -1,15 +1,26 @@
-.top-right {
+.cross_button {
   position: absolute;
-  width: 2.5rem;
   top: 5px;
   right: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 10px;
   border-radius: 5px;
+}
+
+.top-right {
+  width: 100%;
 }
 
 .top-right:hover,
 .top-right:active,
 .top-right:focus {
+  filter: invert();
+}
+
+.cross_button:hover,
+.cross_button:active,
+.cross_button:focus {
   /* background-color: #f9dc5c; */
   background-color: #197278;
 }
