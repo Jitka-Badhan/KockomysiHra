@@ -348,6 +348,9 @@ const data = {
       hintImg: '/assets/quizzes/library_hint_better.png',
       description: ['V budově byla ukryta tato indicie:'],
       quizz: {
+        hint: {
+          isActive: undefined,
+        },
         isActive: false,
         isSolved: false,
       },
@@ -363,6 +366,9 @@ const data = {
       hintImg: '/assets/quizzes/pub_hint_better.png',
       description: ['V budově byla ukryta tato indicie:'],
       quizz: {
+        hint: {
+          isActive: undefined,
+        },
         isActive: false,
         isSolved: false,
       },
@@ -390,6 +396,9 @@ const data = {
         ],
       ],
       quizz: {
+        hint: {
+          isActive: undefined,
+        },
         isActive: false,
         isSolved: false,
       },

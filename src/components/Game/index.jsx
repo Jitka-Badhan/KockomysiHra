@@ -36,6 +36,7 @@ const Game = () => {
           draft.buildings[index].isActive = item.isActive;
           draft.buildings[index].quizz.isActive = item.quizzActive;
           draft.buildings[index].quizz.isSolved = item.quizzSolved;
+          draft.buildings[index].quizz.hint.isActive = item.hintActive;
         });
       });
   }, []);
@@ -105,6 +106,7 @@ const Game = () => {
           isActive: building.isActive,
           quizzActive: building.quizz.isActive,
           quizzSolved: building.quizz.isSolved,
+          hintActive: building.quizz.hint.isActive,
         };
       });
     const cemetery = myData.buildings.find(
