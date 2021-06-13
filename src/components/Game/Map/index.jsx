@@ -24,6 +24,7 @@ const Map = ({
 
   return (
     <div className="card game__map">
+
       {selectedBuilding ? (
         <>
           {selectedSort === 'Riddle' && (
