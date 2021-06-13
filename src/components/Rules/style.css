@@ -9,6 +9,7 @@
 .rules__rule {
   align-items: center;
   margin-bottom: 2rem;
+  display: flex;
 }
 
 .rules__rule:nth-of-type(2n + 2) {
@@ -20,6 +21,8 @@
   padding: 2rem;
   background-color: #edddd4;
   border-radius: 5px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .rules__img {
@@ -29,10 +32,10 @@
   border: 3px solid #283d3b;
   border-radius: 50%;
 }
-
+/* 
 .question_mark {
   padding: 1.5rem;
-}
+} */
 
 .rules__rule:nth-of-type(2n + 2) > .rules__img {
   margin-right: 0;
@@ -58,6 +61,8 @@
 .rules__intro {
   background-color: #c44536;
   margin-bottom: 2rem;
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
 }
 
 .rules__epilogue {
@@ -67,6 +72,8 @@
 
 .epilogue__text {
   margin-right: 3rem;
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
 }
 
 .rules__epilogue > .button {
@@ -92,5 +99,13 @@
 @media screen and (min-width: 1200px) {
   .rules__text {
     text-align: justify;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .rules__rules {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
