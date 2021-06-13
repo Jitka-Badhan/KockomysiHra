@@ -16,6 +16,7 @@ const Counters = ({ myData }) => {
       </div>
       <div className="countR">
         <div className="countR__count">{myData.scores.R.toFixed(1)}</div>
+        <div className="countR__label">Reprodukční číslo R</div>
       </div>
       <div className="game__counter watch">
         <img

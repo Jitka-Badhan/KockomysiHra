@@ -16,7 +16,9 @@ const Rules = () => {
           Agente <i>{localStorage.getItem('player_nick')}</i>, děkujeme, že ses
           dobrovolně přihlásil pomoci myšímu společenství vypořádat se
           s arogantními kočkami! Zde najdeš přehled všeho, co potřebuješ znát,
-          než se pustíš do mise. Můžeš sem nahlédnout kdykoli v průběhu hry.
+          než se pustíš do mise. Můžeš sem nahlédnout kdykoli v průběhu hry. Hra se 
+          sama ukládá, když budeš potřebovat odjet z města a načerpat síly, o svůj herní 
+          pokrok nepřijdeš.
         </div>
         <div className="container rules__rules">
           <div className="rules__column">
@@ -48,7 +50,7 @@ const Rules = () => {
             </div>
             <div className="container rules__rule">
               <img
-                src="assets/rules/zkumavka.png"
+                src="assets/rules/zkumavka2.png"
                 alt="printscreen4"
                 className="rules__img"
               />
@@ -60,16 +62,16 @@ const Rules = () => {
               </div>
             </div>
             <div className="container rules__rule">
-              <img
-                src="assets/rules/hodinky.png"
-                alt="printscreen5"
+            <img
+                src="assets/rules/eRko.png"
+                alt="printscreen7"
                 className="rules__img"
               />
               <div className="rules__text">
-                Získáváš také digitální <strong>hodinky</strong>, které Ti
-                odměřují čas. Na vyřešení všech rébusů máš
-                <strong> 60&nbsp;minut</strong>, než kočky zareagují na epidemii
-                a zavedou přísná opatření.
+                Tvým úkolem je co nejvíce mezi kočkami rozšířit nákazu - 
+                zvýšit <strong> reprodukční číslo R</strong>. To se Ti povede, 
+                když správně vyluštíš všechny rébusy. Za každý rébus můžeš zvýšit 
+                R maximálně o 1&nbsp;bod.
               </div>
             </div>
           </div>
@@ -77,16 +79,16 @@ const Rules = () => {
           <div className="rules__column">
             <div className="container rules__rule">
               <img
-                src="assets/rules/rebus.jpeg"
-                alt="printscreen5"
-                className="rules__img"
-              />
-              <div className="rules__text">
-                K řešení <strong>rébusu</strong> si nachystej papír a tužku,
-                umělou inteligenci, kočičího zajatce, cokoli je povoleno!
-                Odpověď si ale pořádně rozmysli, protože každý rébus lze řešit
-                jen jednou. Všechny rébusy lze vytisknout.
-              </div>
+                  src="assets/rules/hodinky2.png"
+                  alt="printscreen5"
+                  className="rules__img"
+                />
+                <div className="rules__text">
+                  Získáváš také digitální <strong>hodinky</strong>, které Ti
+                  odměřují čas. Na vyřešení všech rébusů máš
+                  <strong> 60&nbsp;minut</strong>, než kočky zareagují na epidemii
+                  a zavedou přísná opatření.
+                </div>
             </div>
             <div className="container rules__rule">
               <img
@@ -102,22 +104,22 @@ const Rules = () => {
               </div>
             </div>
             <div className="container rules__rule">
-              <img
-                src="assets/rules/domu.png"
-                alt="printscreen7"
+            <img
+                src="assets/quizzes/Sudoku_final2.png"
+                alt="printscreen5"
                 className="rules__img"
               />
               <div className="rules__text">
-                <strong>Uložení hry</strong> probíhá automaticky. Pokud tedy
-                potřebuješ na nějakou dobu odjet z města a načerpat nové síly, o
-                svůj pokrok nepřijdeš. Ke hře se můžeš vrátit např. z domovské
-                stránky.
+                K řešení <strong>rébusu</strong> si nachystej papír a tužku,
+                umělou inteligenci, kočičího zajatce, cokoli je povoleno!
+                Odpověď si ale pořádně rozmysli, protože každý rébus lze řešit
+                jen jednou. Všechny rébusy lze vytisknout.
               </div>
             </div>
             <div className="container rules__rule">
               <img
-                src="../../assets/rules/question-mark_icon.svg"
-                alt="question mark icon"
+                src="../../assets/quizzes/in_cape.png"
+                alt="cemetery mouse"
                 className="rules__img question_mark"
               />
               <div className="rules__text">

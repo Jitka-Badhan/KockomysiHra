@@ -50,3 +50,17 @@
   padding: 0px;
   margin-right: 0;
 }
+
+.countR__label {
+  /* font-family: 'Courgette', cursive; */
+  font-family: 'Open Sans';
+  font-size: 15px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.countR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
