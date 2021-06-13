@@ -131,6 +131,13 @@ const Building = ({
                         className="magnifier__button"
                         onClick={toggleMagnify}
                       />
+                      <img
+                        src="../../../assets/print.svg"
+                        className="printer__button"
+                        onClick={() => {
+                          window.print();
+                        }}
+                      />
                     </div>
                     <div className="quizz__text">
                       <h4>{selectedBuilding.quizz.text}</h4>
@@ -144,7 +151,6 @@ const Building = ({
                                   buttonClicked(tableCell);
                                 }}
                               >
-                                {/* {tableCell.button}{' '} */}
                                 {tableCell.text !== '' ? (
                                   tableCell.text
                                 ) : (

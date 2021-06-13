@@ -20,6 +20,11 @@ const Hint = ({ quizzToHint, backHome, toggleMagnify }) => {
           src="../../../assets/magnifier.svg"
           className="magnifier__button"
           onClick={toggleMagnify}
+          style={
+            quizzToHint.hint.pic === ''
+              ? { display: 'none' }
+              : { display: 'inline-block' }
+          }
         />
         <p className="hint_text_hint">{quizzToHint.hint.text}</p>
       </div>
