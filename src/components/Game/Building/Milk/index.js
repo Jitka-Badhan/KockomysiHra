@@ -7,7 +7,7 @@ const Milk = ({ setSelectedBuilding }) => {
   return (
     <div className="card game__specialItem">
       <CrossButton closeIt={() => setSelectedBuilding()} />
-      <h4>V budově jsi něco našel</h4>
+      <h4>V budově jsi něco našel:</h4>
       <img src="../../../assets/milk.png" className="specialItem__img" />
       <div className="specialItem__text">
         <p>Speciální limitovaná edice kondenzovaného mléka.</p>

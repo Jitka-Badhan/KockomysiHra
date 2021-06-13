@@ -7,6 +7,8 @@
 
 .game__indication h4 {
   margin: 0;
+  font-family: 'Amatic SC';
+  font-size: 42px;
 }
 
 .building__img {
@@ -19,7 +21,9 @@
 }
 
 .indication__text p {
-  margin: 0;
+  margin: 5px;
+  font-family: 'Courgette', cursive;
+  font-size: 24px;
 }
 
 .magnifier__button {

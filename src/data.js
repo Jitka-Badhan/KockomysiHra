@@ -3,8 +3,8 @@ const data = {
   scores: {
     R: 0,
     tubes: 5,
-    timeOnStart: 360,
-    timeOnSave: 360,
+    timeOnStart: 3600,
+    timeOnSave: 3600,
   },
   intro: [
     {
@@ -77,35 +77,35 @@ const data = {
           {
             button: 'A',
             text: '',
-            pic: '/assets/quizzes/cat_black.png',
+            pic: '/assets/buttons/black_L.png',
             points: 1,
             finished: 'Zde kočky už nezachlastají.',
           },
           {
             button: 'B',
             text: '',
-            pic: '/assets/quizzes/cat_grey.png',
+            pic: '/assets/buttons/brown_R.png',
             points: 0,
             finished: 'Kočky si na Tebe dají rundu.',
           },
           {
             button: 'C',
             text: '',
-            pic: '/assets/quizzes/cat_white.png',
+            pic: '/assets/buttons/pink_L.png',
             points: 0,
             finished: 'Kočky si na Tebe dají rundu.',
           },
           {
             button: 'D',
             text: '',
-            pic: '/assets/quizzes/cat_orange.png',
+            pic: '/assets/buttons/grey_L.png',
             points: 0,
             finished: 'Kočky si na Tebe dají rundu.',
           },
         ],
         hint: {
           text: '',
-          pic: '/assets/photos/photo-like_square.png',
+          pic: '/assets/quizzes/pub_hint.png',
         },
         isActive: false,
         isSolved: false,
@@ -132,28 +132,28 @@ const data = {
           {
             button: 'A',
             text: '',
-            pic: '/assets/quizzes/cat_black.png',
+            pic: '/assets/buttons/black_R.png',
             points: 0,
             finished: 'Tos teda netrefil.',
           },
           {
             button: 'B',
             text: '',
-            pic: '/assets/quizzes/cat_white.png',
+            pic: '/assets/buttons/white_R.png',
             points: 0.2,
             finished: 'Společenská kočka vypadá jinak.',
           },
           {
             button: 'C',
             text: '',
-            pic: '/assets/quizzes/cat_orange.png',
+            pic: '/assets/buttons/brown_R.png',
             points: 1,
             finished: 'Atmosféra na párty byla toxická.',
           },
           {
             button: 'D',
             text: '',
-            pic: '/assets/quizzes/cat_grey.png',
+            pic: '/assets/buttons/grey_R.png',
             points: 0.6,
             finished: 'Společenská kočka vypadá jinak.',
           },
@@ -181,34 +181,34 @@ const data = {
       ],
       quizz: {
         name: 'Park',
-        pic: '/assets/quizzes/Bludiste_final3.jpg',
+        pic: '/assets/quizzes/Bludiste_final2.jpg',
         text: 'Ke kterým kočkám se dostaneš?',
         answers: [
           {
             button: 'A',
             text: '',
-            pic: '/assets/quizzes/cat_black.png',
+            pic: '/assets/buttons/black_R-white_L.png',
             points: 0,
             finished: 'Máš smůlu, kočkám si slunění nepřekazil.',
           },
           {
             button: 'B',
             text: '',
-            pic: '/assets/quizzes/cat_grey.png',
+            pic: '/assets/buttons/brown_L-grey_L.png',
             points: 1,
             finished: 'Zahrada teď patří myším.',
           },
           {
             button: 'C',
             text: '',
-            pic: '/assets/quizzes/cat_sick.png',
+            pic: '/assets/buttons/black_R-brown_L-grey_L.png',
             points: 0,
             finished: 'Máš smůlu, kočkám si slunění nepřekazil.',
           },
           {
             button: 'D',
             text: '',
-            pic: '/assets/quizzes/cat_healthy.png',
+            pic: '/assets/buttons/black_R-white_L-grey_L.png',
             points: 0,
             finished: 'Máš smůlu, kočkám si slunění nepřekazil.',
           },
@@ -236,7 +236,7 @@ const data = {
       ],
       quizz: {
         name: 'Továrna',
-        pic: '/assets/quizzes/Sudoku_final.jpg',
+        pic: '/assets/quizzes/Sudoku_final2.png',
         text: 'Které číslo hlídá černá kočka?',
         answers: [
           {
@@ -341,7 +341,7 @@ const data = {
       column: '1',
       cardImg: '/assets/buildings/house_rustic.jpg',
       hintImg: '/assets/quizzes/library_hint_better.png',
-      description: ['V budově byla ukryta tato indicie.'],
+      description: ['V budově byla ukryta tato indicie:'],
       quizz: {
         isActive: false,
         isSolved: false,
@@ -356,7 +356,7 @@ const data = {
       column: '3',
       cardImg: '/assets/buildings/house_modern.jpg',
       hintImg: '/assets/quizzes/pub_hint_better.png',
-      description: ['V budově byla ukryta tato indicie.'],
+      description: ['V budově byla ukryta tato indicie:'],
       quizz: {
         isActive: false,
         isSolved: false,

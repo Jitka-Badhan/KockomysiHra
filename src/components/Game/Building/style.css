@@ -1,6 +1,8 @@
 .building__img {
-  width: 70%;
+  max-width: 80%;
   max-height: 50%;
+  min-width: 80%;
+  border: 2px solid black;
 }
 
 .card__buttons button {
@@ -28,9 +30,17 @@
   transform: scale(1.2);
 }
 
-.building__text h4,
+.building__text h4 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: 'Amatic SC';
+  font-size: 54px;
+}
+
 .building__text p {
   margin: 0;
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
 }
 
 .municipal_house h4 {
@@ -41,18 +51,19 @@
 
 .quizz {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .quizz__imgs {
   position: relative;
-  width: 70vh;
+  max-width: 70vh;
   max-height: 70vh;
 }
 
 .quizz__img {
   position: relative;
   width: 100%;
+  border: 2px solid black;
 }
 
 .magnifier__icon {
@@ -69,6 +80,17 @@
   flex-direction: column;
   justify-content: center;
   max-width: 25%;
+}
+
+.quizz__text h4 {
+  font-family: 'Courgette', cursive;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1080px) {
+  .quizz__text h4 {
+    margin-top: 15px;
+  }
 }
 
 .quizz__text button {
@@ -129,3 +151,5 @@
 .result__text p {
   margin: 0;
 }
+
+

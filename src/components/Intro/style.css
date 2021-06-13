@@ -9,10 +9,11 @@
   max-height: 60vmin;
   border-radius: 5px;
   overflow: hidden;
+  border: 3px solid #197278;
 }
 
 .intro__text {
-  background-color: #edddd4;
+  background-color: #698f3f;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,11 +22,14 @@
   line-height: 1;
   border-radius: 5px;
   margin-left: 2rem;
+  border: 3px solid #197278;
 }
 
 .intro__text > p {
-  font-family: 'Pacifico';
-  font-size: larger;
+  font-family: 'Courgette', cursive;
+  font-size: 2rem;
+  /* color: aliceblue; */
+  color: black;
 }
 
 .intro__text > p:last-of-type {

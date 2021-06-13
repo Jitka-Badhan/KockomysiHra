@@ -7,6 +7,8 @@
 
 .game__specialItem h4 {
   margin: 0;
+  font-family: 'Amatic SC';
+  font-size: 48px;
 }
 
 .specialItem__img {
@@ -14,6 +16,9 @@
 }
 
 .specialItem__text p {
-  margin: 0;
+  margin-bottom: 4px;
+  margin-top: 4px;
   text-align: center;
+  font-family: 'Courgette', cursive;
+  font-size: 24px;
 }

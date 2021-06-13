@@ -11,6 +11,7 @@ const Cemetery = ({
   backHome,
   myData,
   setMyData,
+  toggleMagnify,
 }) => {
   const [visited, setVisited] = useState(selectedBuilding.visited);
   const [hintWasChosen, setHintWasChosen] = useState(false);
@@ -116,7 +117,11 @@ const Cemetery = ({
         </>
       )}
       {visited && hintWasChosen && (
-        <Hint quizzToHint={quizzToHint} backHome={backHome} />
+        <Hint 
+        quizzToHint={quizzToHint} 
+        backHome={backHome} 
+        toggleMagnify={toggleMagnify}
+        />
       )}
     </div>
   );

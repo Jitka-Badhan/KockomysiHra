@@ -1,3 +1,7 @@
+body {
+  background-color: #edddd4;
+}
+
 .home__main {
   position: relative;
   width: 100%;
@@ -6,7 +10,7 @@
 
 .home__main h1 {
   font-family: 'Amatic SC';
-  font-size: 64px;
+  font-size: 72px;
   line-height: 1;
   text-align: center;
   text-shadow: 2px 2px silver;
@@ -49,6 +53,7 @@
 
 .home__img {
   border: 3px solid #197278;
+  border-radius: 5px;
 }
 
 .blurred {
