@@ -105,7 +105,7 @@ const data = {
         ],
         hint: {
           text: '',
-          pic: '/assets/quizzes/pub_hint.png',
+          pic: '/assets/quizzes/hint_pub.jpg',
         },
         isActive: false,
         isSolved: false,
